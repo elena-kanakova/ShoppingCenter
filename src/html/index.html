@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Архистрой</title>
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- @endif -->
+</head>
+<body>
+<div id="wrapper">
+    @@include('./_header.html')
+    @@include('./_index-section-1.html')
+    @@include('./_index-section-2.html')
+    @@include('./_index-section-3.html')
+    @@include('./_index-section-4.html')
+</div>
+</body>
+</html>

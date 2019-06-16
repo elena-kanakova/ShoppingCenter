@@ -1,0 +1,87 @@
+#section-1 {
+  width: 100%;
+}
+
+.section-1_slider-wrap {
+
+  .pagination {
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+    .dots {
+      .dot {
+        display: block;
+        margin-bottom: 30px;
+        width: 25px;
+        height: 2px;
+        background: white;
+      }
+
+      .number {
+        display: block;
+        margin-top: -12px;
+        margin-left: 13px;
+        font: 22px $DinBold;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    .dots.active {
+
+      .dot {
+        width: 50px;
+      }
+    }
+  }
+}
+
+#section-1_slider {
+
+  .slide {
+    padding-top: 240px;
+    padding-bottom: 314px;
+    background: url("../img/index__section-1_bg.jpg") center -160px no-repeat;
+    background-size: 1920px auto;
+    height: 100%;
+
+    @include mq('desktop') {
+      background: url("../img/index__section-1_bg-1280.jpg") center -160px no-repeat;
+      background-size: 1280px auto;
+    }
+
+    @include mq('tablet') {
+      background: url("../img/index__section-1_bg-768.jpg") center -160px no-repeat;
+      background-size: 768px auto;
+    }
+
+    @include mq('phone') {
+      background: url("../img/index__section-1_bg-414.jpg") center -160px no-repeat;
+      background-size: 414px auto;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .text {
+      margin-left: 160px;
+
+      p {
+        font: 78px/88px $DinBlack;
+        font-weight: 900;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+
+    .btn-more {
+      margin-top: 50px;
+      margin-left: 160px;
+
+      @include btn-more;
+    }
+  }
+
+}

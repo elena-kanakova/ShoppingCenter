@@ -1,0 +1,74 @@
+#section-6 {
+  width: 100%;
+  max-width: 1920px;
+  height: 516px;
+  @include auto;
+  background: url(../img/section-6_arenda_bg.jpg) center top no-repeat;
+
+  .container {
+    padding: 160px 0 140px;
+    justify-content: space-between;
+  }
+}
+
+.section-6__title-text {
+  .title {
+    h2 {
+      margin-bottom: 10px;
+      font: 52px $DinBold;
+      font-weight: bold;;
+      color: white;
+    }
+  }
+
+  .text {
+    p {
+      margin: 25px 0;
+      font: 16px/24px $DinPro;
+      font-weight: 400;
+      color: white;
+    }
+  }
+}
+
+.section-6__logo {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: white;
+
+  &:before {
+    @include pseudo(1,90px,-90px,auto,auto);
+    position: absolute;
+    width: 1px;
+    height: 55px;
+    background: white;
+  }
+
+  &:after {
+    @include pseudo(1,90px,auto,-90px,auto);
+    position: absolute;
+    width: 1px;
+    height: 55px;
+    background: white;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.section-6__btn {
+  p {
+    margin-bottom: 40px;
+    font: 26px/36px $DinBold;
+    font-weight: bold;;
+    color: white;
+  }
+
+  @include btn-more(220px, 50px, $green);
+  button {
+    background: $green;
+  }
+}

@@ -8,6 +8,10 @@ $DinLight: DINRoundProLight, sans-serif;
 $DinBlack: DINRoundProBlack, sans-serif;
 $DinMedi: DINRoundProMedi, sans-serif;
 $DinBold: DINRoundProBold, sans-serif;
+$grey: #a3a3a3;
+$light-grey: #ebebeb;
+$green: #00a84f;
+$blue: #008ad2;
 
 /* Миксины */
 
@@ -90,6 +94,37 @@ $breakpoints: (
       position: relative;
     }
   }
+}
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    opacity:1;
+    font: 15px $DinMedi;
+    font-weight: 500;
+    color: $grey;
+  }/* webkit */
+  ::-moz-placeholder          {
+    opacity:1;
+    font: 15px $DinMedi;
+    font-weight: 500;
+    color: $grey;
+  }/* Firefox 19+ */
+  :-moz-placeholder           {
+    opacity:1;
+    font: 15px $DinMedi;
+    font-weight: 500;
+    color: $grey;
+  }/* Firefox 18- */
+  :-ms-input-placeholder      {
+    opacity:1;
+    font: 15px $DinMedi;
+    font-weight: 500;
+    color: $grey;
+  }/* IE */
+
+  :focus::-webkit-input-placeholder {opacity:0;}/* webkit */
+  :focus::-moz-placeholder          {opacity:0;}/* Firefox 19+ */
+  :focus:-moz-placeholder           {opacity:0;}/* Firefox 18- */
+  :focus:-ms-input-placeholder      {opacity:0;}/* IE */
 }
 
 /* flex классы */
@@ -381,7 +416,7 @@ $breakpoints: (
     width: 45px;
     height: 45px;
     background: white;
-    border: 1px solid #ebebeb;
+    border: 1px solid $light-grey;
     border-radius: 50%;
 
     @include mq-custom(1180px) {

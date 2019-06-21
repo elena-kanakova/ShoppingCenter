@@ -69,7 +69,7 @@
       font: 16px/20px $DinBold;
       font-weight: 600;
       color: #000000;
-      border-bottom: 2px solid #00a84f;
+      border-bottom: 2px solid $green;
     }
   }
 }
@@ -89,7 +89,7 @@
         width: 2000px;
         height: 2px;
         margin-right: 39px;
-        background: #00a84f;
+        background: $green;
       }
     }
 
@@ -102,7 +102,7 @@
         width: 2000px;
         height: 2px;
         margin-left: 39px;
-        background: #00a84f;
+        background: $green;
       }
     }
   }

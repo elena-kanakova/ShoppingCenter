@@ -132,12 +132,7 @@
 
     .btn-order {
       margin-top: 15px;
-      @include btn-more(165px,35px,white,14px,black);
-
-      button {
-        background: white;
-        cursor: pointer;
-      }
+      @include btn-more(165px,35px,white,white,14px,black);
     }
   }
 }

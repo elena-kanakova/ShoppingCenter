@@ -1,4 +1,4 @@
-#section-7 {
+#section-map {
   width: 100%;
   max-width: 1920px;
   @include auto;
@@ -8,10 +8,10 @@
   }
 }
 
-.section-7__address-wrap {
+.section-map__address-wrap {
   position: relative;
   z-index: 2;
-  margin-top: -207px;
+  margin-top: -217px;
   justify-content: space-between;
   box-shadow: 0 0 25px 0 rgba(.75,.75,.75,.5);
 
@@ -34,7 +34,7 @@
       p {
         font: 18px/36px $DinBold;
         font-weight: bold;
-        color: #2e2222;
+        color: $dark-grey;
       }
     }
 
@@ -42,7 +42,7 @@
       p {
         font: 14px/18px $DinPro;
         font-weight: 400;
-        color: #2e2222;
+        color: $dark-grey;
         text-align: center;
       }
     }

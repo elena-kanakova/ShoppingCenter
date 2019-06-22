@@ -1,0 +1,69 @@
+#section-where {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  @include auto;
+  justify-content: space-between;
+
+  .element {
+    width: 33.3%;
+    flex: 33.3%;
+    padding: 99px 30px 70px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(1) {
+      background: url("../img/section-where_element-1_bg.png") #f8f9fb center center no-repeat;
+    }
+
+    &:nth-child(2) {
+      background: url("../img/section-where_element-2_bg.jpg") center center no-repeat;
+      background-size: cover;
+
+      .title {
+        h3 {
+          color: white;
+        }
+      }
+
+      .text {
+        p {
+          color: white;
+        }
+      }
+
+      .button {
+        @include btn-more($background: white, $font-color: black);
+      }
+    }
+
+    &:nth-child(3) {
+      background: url("../img/section-where_element-3_bg.png") #f8f9fb center center no-repeat;
+    }
+
+    .title {
+      h3 {
+        font: 26px $DinMedi;
+        font-weight: 500;
+        color: #b75593;
+        text-transform: uppercase;
+      }
+    }
+
+    .text {
+      margin-top: 38px;
+
+      p {
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: black;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 60px;
+    @include btn-more($width: 200px, $height: 55px, $border-color: #d7d7d7, $font-color: black);
+  }
+}

@@ -67,8 +67,5 @@
     color: white;
   }
 
-  @include btn-more(220px, 50px, $green);
-  button {
-    background: $green;
-  }
+  @include btn-more(220px, 50px, $green, $green);
 }

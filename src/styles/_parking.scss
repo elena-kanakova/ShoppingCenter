@@ -1,0 +1,165 @@
+#parking {
+  width: 100%;
+  max-width: 1920px;
+  @include auto;
+  padding: 88px 0 0;
+  background-image:  url("../img/parking_car-bg.png"), url("../img/parking_circle-2.png");
+  background-position: right 98px, -15px center;
+  background-repeat: no-repeat, no-repeat;
+
+  .container {
+    padding: 0;
+  }
+}
+
+.parking__title-desc {
+  width: 50%;
+  flex: 1 1 50%;
+  justify-content: space-between;
+
+  .title {
+    h2 {
+      font: 52px/20px $DinBold;
+      font-weight: bold;
+      color: $dark-grey;
+      text-transform: uppercase;
+    }
+  }
+
+  .desc {
+    align-items: center;
+
+    .icon {
+      margin-right: 22px;
+
+      img {
+        display: block;
+      }
+    }
+
+    .text {
+      p {
+        font: 14px/20px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+
+        span {
+          font: 14px/20px $DinBold;
+          font-weight: bold;
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+}
+
+.parking__top_content-wrap {
+  padding: 69px 0 60px;
+  width: 50%;
+  flex: 1 1 50%;
+
+  .title-2 {
+    h3 {
+      font: 18px/36px $DinBold;
+      font-weight: 600;
+      color: $dark-grey;
+    }
+  }
+
+  .time-desc {
+    margin-top: 38px;
+    align-items: center;
+
+    .icon {
+      margin-right: 14px;
+    }
+
+    .desc {
+      margin-right: 20px;
+
+      p {
+        font: 16px/36px $DinBold;
+        font-weight: bold;
+        color: $dark-grey;
+      }
+    }
+
+    .time {
+      p {
+        font: 16px/36px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.parking__bottom {
+  position: relative;
+  z-index: -1;
+  padding: 79px 0 95px;
+  background: #f8f9fb;
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    .circle-bottom {
+      position: absolute;
+      z-index: 2;
+      left: 508px;
+      bottom: -195px;
+    }
+  }
+}
+
+.parking__bottom-title {
+  width: 50%;
+  flex: 1 1 50%;
+
+  h3 {
+    font: 18px/36px $DinBold;
+    font-weight: 600;
+    color: $dark-grey;
+  }
+}
+
+.parking__bottom_content-wrap {
+  width: 50%;
+  flex: 1 1 50%;
+
+  .content {
+    margin-right: 48px;
+    justify-content: space-between;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    .price {
+      font: 16px/36px $DinPro;
+      font-weight: 400;
+      color: $dark-grey;
+    }
+
+    .time {
+      margin-right: 20px;
+    }
+
+    .desc {
+      margin-top: 20px;
+
+      p {
+        font: 12px/16px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.parking__btn {
+  margin-top: 50px;
+
+  @include btn-more(240px,50px,$green,$green);
+}

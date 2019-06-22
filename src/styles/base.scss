@@ -12,6 +12,7 @@ $grey: #a3a3a3;
 $light-grey: #ebebeb;
 $green: #00a84f;
 $blue: #008ad2;
+$dark-grey: #2e2222;
 
 /* Миксины */
 
@@ -60,13 +61,14 @@ $breakpoints: (
 
 /* extends */
 
-@mixin btn-more($width: 190px, $height: 55px, $border-color: white, $font-size: 14px, $font-color: white) {
+@mixin btn-more($width: 190px, $height: 55px, $border-color: white, $background: none, $font-size: 14px, $font-color: white) {
   button {
     width: $width;
     height: $height;
     border: 1px solid $border-color;
     border-radius: 30px;
-    background: none;
+    background: $background;
+    cursor: pointer;
   }
 
   span {
@@ -102,19 +104,19 @@ $breakpoints: (
     font-weight: 500;
     color: $grey;
   }/* webkit */
-  ::-moz-placeholder          {
+  ::-moz-placeholder {
     opacity:1;
     font: 15px $DinMedi;
     font-weight: 500;
     color: $grey;
   }/* Firefox 19+ */
-  :-moz-placeholder           {
+  :-moz-placeholder {
     opacity:1;
     font: 15px $DinMedi;
     font-weight: 500;
     color: $grey;
   }/* Firefox 18- */
-  :-ms-input-placeholder      {
+  :-ms-input-placeholder {
     opacity:1;
     font: 15px $DinMedi;
     font-weight: 500;
@@ -143,6 +145,14 @@ $breakpoints: (
 
 .wrap {
   flex-wrap: wrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.green {
+  color: $green;
 }
 
 /*Контейнер для всего сайта */

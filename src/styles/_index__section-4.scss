@@ -271,7 +271,7 @@
 
 .section-4__btn-all {
   margin-top: -20px;
-  @include btn-more(240px,55px,#d7d7d7,14px,black);
+  @include btn-more(240px,55px,#d7d7d7,none,14px,black);
 
   button {
     @include auto;

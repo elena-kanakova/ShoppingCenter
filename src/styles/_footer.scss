@@ -1,0 +1,151 @@
+#footer {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+  background: #f9f9f9;
+
+  .container {
+    padding: 108px 0 68px;
+    justify-content: space-between;
+  }
+}
+
+.footer__left-part {
+  justify-content: space-between;
+
+  .logos {
+
+    img {
+      margin-right: 65px;
+      display: block;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .address {
+    margin-top: 48px;
+
+    p {
+      font: 14px/26px $DinMedi;
+      font-weight: 500;
+      color: #212121;
+    }
+  }
+
+  .copyright {
+    margin-top: 64px;
+    font: 13px/26px $DinPro;
+    font-weight: 400;
+    color: #212121;
+  }
+}
+
+.footer__center {
+  justify-content: space-between;
+
+  .phone-logo {
+    justify-content: center;
+    align-items: center;
+    background: url("../img/footer-phone-logo.png") center center no-repeat;
+
+    .logo {
+      position: relative;
+      margin-right: 20px;
+
+      img {
+        display: block;
+      }
+    }
+
+    .phone {
+      a {
+        display: block;
+        font: 24px/18px $DinBold;
+        font-weight: bold;
+        color: #080808;
+      }
+    }
+  }
+
+  .footer-menu {
+    margin-top: 42px;
+
+    ul {
+      justify-content: space-between;
+
+      li {
+        margin-right: 37px;
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+          font: 15px/26px $DinMedi;
+          font-weight: 500;
+          color: #212121;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    margin-top: 63px;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      align-items: center;
+
+      img {
+        display: block;
+        margin-right: 20px;
+      }
+
+      span {
+        display: block;
+        font: 13px/26px $DinPro;
+        font-weight: 400;
+        color: #212121;
+      }
+    }
+  }
+}
+
+.footer__right-part {
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .intel {
+    img {
+      display: block;
+    }
+  }
+
+  .time {
+    margin-top: 50px;
+
+    p {
+      font: 14px/26px $DinMedi;
+      font-weight: 500;
+      color: #212121;
+    }
+  }
+
+  .up {
+    margin-top: 40px;
+    margin-bottom: -20px;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+    box-shadow: 0 0 20px 0 rgba(.75,.75,.75,.4);
+    cursor: pointer;
+  }
+}

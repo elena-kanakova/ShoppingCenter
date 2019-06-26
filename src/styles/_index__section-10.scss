@@ -5,12 +5,13 @@
   @include auto;
 }
 
-.section-10__slider-wrap {
+.section-10__slider_nav-wrap {
   position: relative;
 }
 
 .section-10__slider-nav {
   position: absolute;
+  z-index: 2;
   width: 322px;
   height: 65px;
   left: 50%;
@@ -34,13 +35,17 @@
   }
 
   .numbers {
-    span {
+    width: auto !important;
+
+    .slide-number {
       font: 18px $DinBold;
       font-weight: bold;
       color: #000;
     }
 
     .active {
+      font: 18px $DinBold;
+      font-weight: bold;
       color: $green;
     }
   }
@@ -48,6 +53,8 @@
 
 #section-10__slider {
   .slide {
+    width: auto !important;
+
     img {
       display: block;
     }

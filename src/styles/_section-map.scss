@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 65px 35px 40px;
+    padding: 65px 30px 40px;
     width: 33%;
     flex: 1 1 33%;
     border-right: 1px solid $light-grey;
@@ -32,7 +32,7 @@
 
     .title {
       p {
-        font: 18px/36px $DinBold;
+        font: 18px $DinBold;
         font-weight: bold;
         color: $dark-grey;
       }
@@ -83,13 +83,17 @@
         border: none;
       }
     }
+
+    img {
+      display: block;
+    }
   }
 }
 
 .metro-wrap {
 
   .desc {
-    margin-top: 70px;
+    margin-top: 75px;
   }
 
   .show {
@@ -97,7 +101,7 @@
   }
 
   .icon {
-    margin-top: 40px;
+    margin-top: 38px;
   }
 }
 
@@ -112,7 +116,7 @@
   }
 
   .icon {
-    margin-top: 25px;
+    margin-top: 23px;
   }
 }
 

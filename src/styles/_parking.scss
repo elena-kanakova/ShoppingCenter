@@ -2,13 +2,24 @@
   width: 100%;
   max-width: 1920px;
   @include auto;
-  padding: 88px 0 0;
+  padding: 84px 0 0;
   background-image:  url("../img/parking_car-bg.png"), url("../img/parking_circle-2.png");
   background-position: right 98px, -15px center;
   background-repeat: no-repeat, no-repeat;
 
   .container {
     padding: 0;
+  }
+
+  .circle-bottom_wrap {
+    position: relative;
+
+    .circle-bottom {
+      position: absolute;
+      z-index: 2;
+      left: 508px;
+      bottom: -89px;
+    }
   }
 }
 
@@ -19,7 +30,7 @@
 
   .title {
     h2 {
-      font: 52px/20px $DinBold;
+      font: 52px $DinBold;
       font-weight: bold;
       color: $dark-grey;
       text-transform: uppercase;
@@ -54,20 +65,20 @@
 }
 
 .parking__top_content-wrap {
-  padding: 69px 0 60px;
+  padding: 60px 0 58px;
   width: 50%;
   flex: 1 1 50%;
 
   .title-2 {
     h3 {
-      font: 18px/36px $DinBold;
+      font: 18px $DinBold;
       font-weight: 600;
       color: $dark-grey;
     }
   }
 
   .time-desc {
-    margin-top: 38px;
+    margin-top: 36px;
     align-items: center;
 
     .icon {
@@ -78,7 +89,7 @@
       margin-right: 20px;
 
       p {
-        font: 16px/36px $DinBold;
+        font: 16px $DinBold;
         font-weight: bold;
         color: $dark-grey;
       }
@@ -86,7 +97,7 @@
 
     .time {
       p {
-        font: 16px/36px $DinPro;
+        font: 16px $DinPro;
         font-weight: 400;
         color: $dark-grey;
       }
@@ -103,13 +114,7 @@
   .container {
     position: relative;
     z-index: 1;
-
-    .circle-bottom {
-      position: absolute;
-      z-index: 2;
-      left: 508px;
-      bottom: -195px;
-    }
+    background: url('../img/parking-P-icon.png') 417px top no-repeat;
   }
 }
 
@@ -118,7 +123,7 @@
   flex: 1 1 50%;
 
   h3 {
-    font: 18px/36px $DinBold;
+    font: 18px $DinBold;
     font-weight: 600;
     color: $dark-grey;
   }
@@ -137,7 +142,8 @@
     }
 
     .price {
-      font: 16px/36px $DinPro;
+      margin-top: 33px;
+      font: 16px $DinPro;
       font-weight: 400;
       color: $dark-grey;
     }

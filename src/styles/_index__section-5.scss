@@ -6,7 +6,8 @@
   background-size: cover;
 
   .container {
-    padding: 115px 0;
+    padding-top: 125px;
+    padding-bottom: 114px;
   }
 }
 
@@ -62,13 +63,26 @@
   }
 }
 
-.section-5__slider-cafe_wrap {
-  position: relative;
-  margin-top: 130px;
-  padding: 71px 79px;
+.section-5__content-top {
+  margin-top: 115px;
+  padding: 71px 0 49px;
   background: #f9f9f9;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+
+  .btn-all {
+    margin-top: 44px;
+    @include btn-more (190px,55px,#d7d7d7,none,14px,black);
+
+    button {
+      @include auto;
+    }
+  }
+}
+
+.section-5__slider-cafe_nav-wrap {
+  position: relative;
+  padding: 0 85px 0;
 
   .slider-nav {
     @include slider-nav;
@@ -88,23 +102,13 @@
       background: url("../img/slider-icon_next.png") center center no-repeat;
     }
   }
-
-  .btn-all {
-    margin-top: 45px;
-    @include btn-more (190px,55px,#d7d7d7,none,14px,black);
-
-    button {
-      @include auto;
-    }
-  }
 }
 
 #section-5__slider-cafe {
   justify-content: space-between;
 
   .slide {
-    margin-right: 38px;
-    width: 230px;
+    width: 230px !important;
     height: 268px;
     background: white;
     border: 1px solid #ebebeb;
@@ -167,6 +171,8 @@
 
   .slider-dots {
     position: absolute;
+    z-index: 5;
+    width: auto !important;
     bottom: 28px;
     left: 50%;
     transform: translateX(-50%);

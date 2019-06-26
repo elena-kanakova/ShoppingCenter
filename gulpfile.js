@@ -31,7 +31,7 @@ var path = {
     },
     src: {
         root: 'src/',
-        html: 'src/html/**/[^_]*.html',
+        html: 'src/html/[^_]*.html',
         sass: 'src/styles/**/*.scss',
         scripts: 'src/scripts/**/*.js',
         css: 'src/css/',
@@ -132,9 +132,11 @@ gulp.task('img', function () {
 // Склеивание и минимизация скриптов
 // development
 gulp.task('js:dev', function(done) {
+
     gulp.src(path.src.scripts)
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(path.src.js));
+        .pipe(gulp.dest(path.src.js))
+        .pipe(browserSync.stream());
     done();
 });
 
@@ -150,6 +152,7 @@ gulp.task('js:prod', function(done) {
 // Препроцессинг html
 // development
 gulp.task('html:dev', function(done) {
+
     gulp.src(path.src.html)
         .pipe(preprocess({context: {NODE_ENV: 'development', DEBUG: true}}))
         .pipe(fileinclude({
@@ -178,16 +181,16 @@ gulp.task('html:prod', function(done) {
 // development
 gulp.task('watch:dev', function(done) {
 
-    browserSync.init({
-        server: "src/"
-    });
+    var files = [ '*.html', 'css/*.css', 'js/*.js', 'styles/*.scss', 'scripts/**/*.js', 'html/**/[^_]*.html' ];
+    browserSync.init(files, { server: { baseDir: './src' } });
 
-    gulp.watch("src/styles/*.scss", gulp.parallel('html:dev','sass:dev','js:dev'));
-    gulp.watch("src/*.html").on('change', () => {
+    gulp.watch('src/styles/*.scss', gulp.parallel('sass:dev'));
+    gulp.watch('src/scripts/*.js', gulp.parallel('js:dev'));
+    gulp.watch('src/html/*.html', gulp.parallel('html:dev'));
+    gulp.watch('src/**/*.html').on('change', () => {
         browserSync.reload();
         done();
     });
-
     done();
 });
 

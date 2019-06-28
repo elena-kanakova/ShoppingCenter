@@ -5,16 +5,41 @@
   @include auto;
   justify-content: space-between;
 
+  @include mq('tablet') {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .element {
     width: 33.3%;
-    flex: 33.3%;
+    flex: 1 1 33.3%;
     padding: 97px 30px 68px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 
+    @include mq('tablet') {
+      width: 100%;
+      flex: 1 1 100%;
+      padding: 40px 24px 37px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
     &:nth-child(1) {
       background: url("../img/section-where_element-1_bg.png") #f8f9fb center center no-repeat;
+
+      @include mq('tablet') {
+        padding: 60px 24px 37px;
+        background: url("../img/section-where_element-1_bg.png") #f8f9fb 98% center no-repeat;
+      }
+
+      @include mq('phone') {
+        padding: 40px 24px 37px;
+        background: url("../img/section-where_element-1_bg-414.png") #f8f9fb 98% 20px no-repeat;
+        border-bottom: 1px solid #e1e1e1;
+      }
     }
 
     &:nth-child(2) {
@@ -23,23 +48,38 @@
 
       .title {
         h3 {
-          color: white;
+          color: #286cfb;
         }
       }
 
-      .text {
-        p {
-          color: white;
-        }
+      @include mq('tablet') {
+        background: #f8f9fb;
+        background-size: cover;
       }
 
-      .button {
-        @include btn-more($background: white, $font-color: black);
+      @include mq('phone') {
+        background: url("../img/section-where_element-2_bg-414.png") #f8f9fb 98% 20px no-repeat;
+        border-bottom: 1px solid #e1e1e1;
       }
     }
 
     &:nth-child(3) {
       background: url("../img/section-where_element-3_bg.png") #f8f9fb center center no-repeat;
+
+      .title {
+        h3 {
+          color: #ce6fab;
+        }
+      }
+
+      @include mq('tablet') {
+        background: url("../img/section-where_element-3_bg.png") #f8f9fb 98% center no-repeat;
+      }
+
+      @include mq('phone') {
+        background: url("../img/section-where_element-3_bg-414.png") #f8f9fb 98% 20px no-repeat;
+        border-bottom: 1px solid #e1e1e1;
+      }
     }
 
     .title {
@@ -54,10 +94,20 @@
     .text {
       margin-top: 33px;
 
+      @include mq('tablet') {
+        width: 80%;
+      }
+
       p {
         font: 16px/24px $DinPro;
         font-weight: 400;
         color: black;
+
+        br {
+          @include mq('tablet') {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -65,5 +115,20 @@
   .button {
     margin-top: 60px;
     @include btn-more($width: 200px, $height: 55px, $border-color: #d7d7d7, $font-color: black);
+
+    @include mq('phone') {
+      margin-top: -15px;
+      margin-left: 90%;
+
+      @include btn-more($width: 35px, $height: 35px, $border-color: #d7d7d7);
+
+      span {
+        display: none;
+      }
+
+      img {
+        margin-left: 0;
+      }
+    }
   }
 }

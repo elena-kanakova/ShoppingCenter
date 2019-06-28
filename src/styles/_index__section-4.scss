@@ -4,26 +4,53 @@
   @include auto;
 
   .container {
-    padding-top: 100px;
+    padding-top: 96px;
     padding-bottom: 100px;
+
+    @include mq('tablet') {
+      padding-top: 79px;
+      padding-bottom: 84px;
+    }
+
+    @include mq('phone') {
+      padding-top: 55px;
+      padding-bottom: 44px;
+    }
   }
 }
 
 .section-4__title {
   h2 {
-    font: 52px/20px $DinBold;
+    font: 52px $DinBold;
     font-weight: 600;
     color: #000;
     text-align: center;
+
+    @include mq('phone') {
+      font: 32px $DinBold;
+      font-weight: 600;
+    }
   }
 }
 
 .section-4__content-wrap {
-  margin-top: 60px;
+  margin-top: 56px;
   justify-content: space-between;
+
+  @include mq('tablet') {
+    flex-direction: column;
+  }
+
+  @include mq('phone') {
+    margin-top: 25px;
+  }
 }
 
 #section-4_map-search {
+
+  @include mq('tablet') {
+    order: 1;
+  }
 
   input {
     padding-left: 26px;
@@ -34,6 +61,14 @@
     border-bottom-left-radius: 30px;
     border: 1px solid $light-grey;
     background: none;
+
+    @include mq('tablet') {
+      width: 100%;
+    }
+
+    @include mq('phone') {
+      height: 50px;
+    }
   }
 
   @include placeholder;
@@ -47,14 +82,27 @@
     background: $green;
     cursor: pointer;
 
+    @include mq('phone') {
+      width: 80px;
+      height: 50px;
+    }
+
     span {
       font: 15px $DinMedi;
       font-weight: 500;
       color: white;
+
+      @include mq('phone') {
+        display: none;
+      }
     }
 
     img {
       margin-left: 12px;
+
+      @include mq('phone') {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -68,13 +116,38 @@
 .section-4__tab-nav_wrap {
   background: url("../img/section-4_nav-left_border.png") 20px top no-repeat;
 
+  @include mq('tablet') {
+    background: none;
+    padding: 0 27px;
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mq('phone') {
+    padding: 0;
+    order: 2;
+  }
+
   .tab-nav {
     cursor: pointer;
     padding: 35px 0;
     justify-content: flex-start;
 
+    @include mq('phone') {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &:nth-child(1) {
       margin-left: 70px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+        padding: 0;
+      }
 
       .number-floor {
         p {
@@ -85,6 +158,10 @@
 
     &:nth-child(2) {
       margin-left: 17px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+      }
 
       .number-floor {
         p {
@@ -104,6 +181,10 @@
     &:nth-child(4) {
       margin-left: 10px;
 
+      @include mq('tablet') {
+        margin-left: 0;
+      }
+
       .number-floor {
         p {
           background: #81b930;
@@ -113,6 +194,10 @@
 
     &:nth-child(5) {
       margin-left: 58px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+      }
 
       .number-floor {
         p {
@@ -124,6 +209,10 @@
     .number-floor {
       position: relative;
       margin-right: 15px;
+
+      @include mq('phone') {
+        margin-right: 0;
+      }
 
       &:before {
         @include pseudo(1,-6px,-6px,-6px,-6px);
@@ -145,6 +234,10 @@
     }
 
     .name-floor {
+      @include mq('phone') {
+        margin-top: 8px;
+      }
+
       p {
         font: 14px $DinPro;
         font-weight: 400;
@@ -171,6 +264,14 @@
 .section-4__tab-content_wrap {
   align-items: center;
 
+  @include mq('tablet') {
+    order: 3;
+
+    @include mq('tablet') {
+      margin-top: 53px;
+    }
+  }
+
   .maps-wrap {
     position: relative;
     margin-top: 50px;
@@ -181,6 +282,10 @@
       top: 180px;
       left: -150px;
       position: absolute;
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
 
     .compass_p {
@@ -188,6 +293,10 @@
       top: 180px;
       right: -70px;
       position: absolute;
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
 
     .map_floor {
@@ -201,32 +310,84 @@
   .compass_c {
     margin-left: 80%;
     margin-bottom: -15px;
+
+    @include mq('tablet') {
+      display: none;
+    }
   }
 }
 
 .section-4__right-elements {
   background: url("../img/section-4_nav-right_border.png") left top no-repeat;
 
+  @include mq('tablet') {
+    background: none;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  @include mq('phone') {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   .element {
     align-items: center;
     justify-content: flex-end;
+
+    @include mq('phone') {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
     &:nth-child(1) {
       margin-top: 160px;
       margin-bottom: 54px;
       margin-right: 15px;
+
+      @include mq('tablet') {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 56px;
+      }
+
+      @include mq('phone') {
+        margin-right: 0;
+      }
     }
 
     &:nth-child(2) {
       margin-right: 0;
       margin-bottom: 54px;
+
+      @include mq('tablet') {
+        margin-bottom: 0;
+        margin-right: 56px;
+      }
+
+      @include mq('phone') {
+        margin-right: 0;
+      }
     }
 
     &:nth-child(3) {
       margin-right: 5px;
+
+      @include mq('tablet') {
+        margin-right: 0;
+      }
     }
 
     .text {
+
+      @include mq('phone') {
+        order: 2;
+        margin-top: 5px;
+      }
 
       p {
         font: 14px $DinPro;
@@ -241,6 +402,11 @@
       margin-left: 15px;
       @extend %nav-elements;
       background: white;
+
+      @include mq('phone') {
+        order: 1;
+        margin-left: 0;
+      }
 
       &:before {
         @include pseudo(1,-6px,-6px,-6px,-6px);
@@ -263,16 +429,97 @@
       }
     }
   }
+
+  .element-btn {
+    display: none;
+
+    @include mq('phone') {
+      display: flex;
+    }
+
+    .left {
+      width: 50px;
+      height: 50px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border: 1px solid #d7d7d7;
+      background: none;
+    }
+
+    .right {
+      width: 50px;
+      height: 50px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      border: 1px solid #d7d7d7;
+      border-left: none;
+      background: none;
+    }
+  }
 }
 
 .section-4__modal-about {
-  position: absolute;
   display: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  z-index: 2;
+  padding: 50px 33px;
+  background: white;
+  text-align: center;
+
+  .shop_title {
+    h3 {
+      font: 22px $DinBold;
+      font-weight: 600;
+      color: black;
+    }
+  }
+
+  .shop_text {
+    margin-top: 20px;
+
+    p {
+      font: 14px $DinPro;
+      font-weight: 400;
+      color: black;
+    }
+  }
+
+  .shop_site {
+    margin-top: 25px;
+
+    a {
+      display: block;
+      font: 16px $DinPro;
+      font-weight: 400;
+      color: $green;
+      text-decoration: none;
+    }
+  }
+
+  .shop_logo {
+    margin-top: 25px;
+
+    img {
+      display: block;
+    }
+  }
+
+
 }
 
 .section-4__btn-all {
   margin-top: -20px;
   @include btn-more(240px,55px,#d7d7d7,none,14px,black);
+
+  @include mq('tablet') {
+    margin-top: 63px;
+  }
+
+  @include mq('phone') {
+    margin-top: 40px;
+  }
 
   button {
     @include auto;

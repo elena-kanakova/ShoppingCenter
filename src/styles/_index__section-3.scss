@@ -36,9 +36,9 @@
     padding-top: 100px;
     padding-bottom: 80px;
 
-    @include mq-custom(740px) {
+    @include mq('phone') {
       padding-top: 50px;
-      padding-bottom: 60px;
+      padding-bottom: 58px;
     }
   }
 }
@@ -49,51 +49,46 @@
   width: 100%;
   flex: 1 1 100%;
 
-  @include mq-custom(1024px) {
-    padding-left: 5px;
-    padding-right: 5px;
+  @include mq('tablet') {
+    align-items: center;
   }
 
   .title {
-    width: 50%;
-    flex: 1 1 50%;
+    order: 1;
 
     h2 {
-      order: 1;
       font: 52px $DinBold;
       font-weight: 600;
       color: white;
       text-transform: uppercase;
 
-      @include mq-custom(1200px) {
-        order: 2;
-        width: 100%;
-        flex: 1 1 100%;
-      }
-
-      @include mq-custom(740px) {
+      @include mq('phone') {
         font: 32px $DinBold;
         font-weight: 600;
       }
     }
+  }
+
+  .desc {
+    order: 4;
+    width: 100%;
+    flex: 1 1 100%;
+    margin-top: 10px;
+
+    @include mq('tablet') {
+      order: 3;
+      width: auto;
+      flex: 0 0 auto;
+      margin-top: 17px;
+    }
 
     p {
-      order: 3;
-      width: 100%;
-      flex: 1 1 100%;
-      margin-top: 10px;
       font: 26px $DinPro;
       font-weight: 400;
       color: white;
       text-transform: uppercase;
 
-      @include mq-custom(1200px) {
-        order: 2;
-        width: auto;
-        flex: 1 1 auto;
-      }
-
-      @include mq-custom(740px) {
+      @include mq('phone') {
         font: 18px $DinPro;
         font-weight: 400;
       }
@@ -102,15 +97,19 @@
 
   .date {
     order: 2;
-    width: 50%;
-    flex: 1 1 50%;
     align-items: center;
     justify-content: center;
 
-    @include mq-custom(1200px) {
-      order: 3;
-      width: auto;
-      flex: 1 1 auto;
+    @include mq('tablet') {
+      order: 4;
+      flex: 0 0 auto;
+      justify-content: flex-start;
+      margin-left: 45px;
+      margin-top: 17px;
+    }
+
+    @include mq('phone') {
+      margin-left: 0;
     }
 
     .icon {
@@ -133,7 +132,7 @@
           font-weight: 400;
         }
 
-        @include mq-custom(740px) {
+        @include mq('phone') {
           font: 15px/36px $DinPro;
           font-weight: 400;
         }
@@ -142,13 +141,14 @@
   }
 
   .cinema-logo {
+    order: 3;
 
     img {
       display: block;
     }
 
-    @include mq-custom(1024px) {
-      margin-top: 10px;
+    @include mq('tablet') {
+      order: 2;
     }
   }
 }
@@ -223,6 +223,10 @@
     width: 222px !important;
     @include auto;
 
+    @include mq('phone') {
+      width: auto !important;
+    }
+
     .poster {
       position: relative;
       margin-top: 10px;
@@ -243,6 +247,10 @@
         z-index: 2;
         display: block;
         max-width: 212px;
+
+        @include mq('phone') {
+          max-width: 178px;
+        }
       }
     }
 

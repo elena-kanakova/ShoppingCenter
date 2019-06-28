@@ -7,6 +7,26 @@
   background-position: right 98px, -15px center;
   background-repeat: no-repeat, no-repeat;
 
+  @include mq('desktop') {
+    background-image:  url("../img/parking_car-bg-1280.png"), url("../img/parking_circle-2-1280.png");
+    background-position: right 98px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  @include mq('tablet') {
+    padding: 102px 0 0;
+    background-image:  url("../img/parking_car-bg-768.png");
+    background-position: right 218px;
+    background-repeat: no-repeat;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0 0;
+    background-image:  url("../img/parking_car-bg-414.png");
+    background-position: right 45%;
+    background-repeat: no-repeat;
+  }
+
   .container {
     padding: 0;
   }
@@ -19,6 +39,22 @@
       z-index: 2;
       left: 508px;
       bottom: -89px;
+
+      @include mq('tablet') {
+        left: auto;
+        right: -56px;
+      }
+      @include mq('phone') {
+        bottom: -62px;
+        right: 15px;
+      }
+
+      img {
+        @include mq('phone') {
+          width: 125px;
+          height: 125px;
+        }
+      }
     }
   }
 }
@@ -28,17 +64,36 @@
   flex: 1 1 50%;
   justify-content: space-between;
 
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include mq('phone') {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .title {
     h2 {
       font: 52px $DinBold;
       font-weight: bold;
       color: $dark-grey;
       text-transform: uppercase;
+
+      @include mq('phone') {
+        font: 32px $DinBold;
+        font-weight: bold;
+      }
     }
   }
 
   .desc {
     align-items: center;
+
+    @include mq('phone') {
+      margin-top: 25px;
+    }
 
     .icon {
       margin-right: 22px;
@@ -58,6 +113,16 @@
           font: 14px/20px $DinBold;
           font-weight: bold;
           color: $dark-grey;
+
+          @include mq('phone') {
+            font: 12px $DinBold;
+            font-weight: bold;
+          }
+        }
+
+        @include mq('phone') {
+          font: 12px $DinPro;
+          font-weight: 400;
         }
       }
     }
@@ -69,11 +134,38 @@
   width: 50%;
   flex: 1 1 50%;
 
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 60px 0 70px;
+  }
+
+  @include mq('phone') {
+    padding: 35px 0 38px;
+  }
+
   .title-2 {
+
+    @include mq('tablet') {
+      width: 70%;
+      flex: 1 1 70%;
+      margin-bottom: 20px;
+    }
+
+    @include mq('phone') {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
     h3 {
       font: 18px $DinBold;
       font-weight: 600;
       color: $dark-grey;
+
+      @include mq('phone') {
+        font: 16px $DinBold;
+        font-weight: 600;
+      }
     }
   }
 
@@ -81,12 +173,27 @@
     margin-top: 36px;
     align-items: center;
 
+    @include mq('tablet') {
+      width: 50%;
+      flex: 1 1 50%;
+      flex-wrap: wrap;
+    }
+
+    @include mq('phone') {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
     .icon {
       margin-right: 14px;
     }
 
     .desc {
       margin-right: 20px;
+
+      @include mq('phone') {
+        margin-right: 0;
+      }
 
       p {
         font: 16px $DinBold;
@@ -96,10 +203,22 @@
     }
 
     .time {
+      @include mq('tablet') {
+        width: 100%;
+        flex: 1 1 100%;
+        margin-top: 10px;
+        padding-right: 30px;
+      }
+
       p {
         font: 16px $DinPro;
         font-weight: 400;
         color: $dark-grey;
+
+        @include mq('phone') {
+          font: 14px $DinPro;
+          font-weight: 400;
+        }
       }
     }
   }
@@ -114,13 +233,18 @@
   .container {
     position: relative;
     z-index: 1;
-    background: url('../img/parking-P-icon.png') 417px top no-repeat;
+    background: url('../img/parking-P-icon.png') 417px 45% no-repeat;
   }
 }
 
 .parking__bottom-title {
   width: 50%;
   flex: 1 1 50%;
+
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+  }
 
   h3 {
     font: 18px $DinBold;
@@ -132,6 +256,15 @@
 .parking__bottom_content-wrap {
   width: 50%;
   flex: 1 1 50%;
+
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include mq('phone') {
+    flex-direction: column;
+  }
 
   .content {
     margin-right: 48px;
@@ -146,6 +279,11 @@
       font: 16px $DinPro;
       font-weight: 400;
       color: $dark-grey;
+
+      @include mq('phone') {
+        font: 14px $DinPro;
+        font-weight: 400;
+      }
     }
 
     .time {
@@ -168,4 +306,8 @@
   margin-top: 50px;
 
   @include btn-more(240px,50px,$green,$green);
+
+  @include mq('phone') {
+    @include btn-more(188px,45px,$green,$green);
+  }
 }

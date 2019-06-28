@@ -5,9 +5,27 @@
   background: url(../img/section-5_bg.jpg) center top no-repeat;
   background-size: cover;
 
+  @include mq('desktop') {
+    background: url(../img/section-5_bg-1280.jpg) center top no-repeat;
+    background-size: cover;
+  }
+
+  @include mq('desktop') {
+    background: url(../img/section-5_bg-768.jpg) center top no-repeat;
+    background-size: cover;
+  }
+
   .container {
-    padding-top: 125px;
-    padding-bottom: 114px;
+    padding-top: 96px;
+    padding-bottom: 107px;
+
+    @include mq('phone') {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 60px;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -16,22 +34,49 @@
 }
 
 .section-5__title-desc-about {
+
+  @include mq('tablet') {
+    width: 100%;
+  }
+
   .title {
     h2 {
       font: 52px $DinBold;
       font-weight: 600;
       color: white;
       text-transform: uppercase;
+
+      @include mq('phone') {
+        font: 32px $DinBold;
+        font-weight: 600;
+      }
     }
   }
 
   .desc {
     margin-top: 40px;
     margin-bottom: 45px;
+    width: 50%;
+
+    @include mq('phone') {
+      margin-top: 20px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
     p {
       font: 16px/24px $DinPro;
       font-weight: 400;
       color: white;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(desktop) {
+      margin-top: 30px;
+      margin-bottom: 40px;
     }
   }
 
@@ -41,6 +86,11 @@
 }
 
 .section-5__text {
+
+  @include mq('tablet') {
+    display: none;
+  }
+
   .number {
     p {
       font: 203px/150px $DinBlack;
@@ -70,6 +120,15 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 
+  @include mq('tablet') {
+    margin-top: 134px;
+  }
+
+  @include mq('phone') {
+    margin-top: 55px;
+    padding: 40px 0;
+  }
+
   .btn-all {
     margin-top: 44px;
     @include btn-more (190px,55px,#d7d7d7,none,14px,black);
@@ -83,6 +142,10 @@
 .section-5__slider-cafe_nav-wrap {
   position: relative;
   padding: 0 85px 0;
+
+  @include mq('phone') {
+    padding: 0;
+  }
 
   .slider-nav {
     @include slider-nav;
@@ -113,6 +176,10 @@
     background: white;
     border: 1px solid #ebebeb;
     border-radius: 20px;
+
+    @include mq('phone') {
+      width: 181px !important;
+    }
 
     &:nth-last-child(1) {
       margin-right: 0;
@@ -169,6 +236,10 @@
 .section-5__slider-banner_wrap {
   position: relative;
 
+  @include mq('phone') {
+    padding-bottom: 74px;
+  }
+
   .slider-dots {
     position: absolute;
     z-index: 5;
@@ -195,6 +266,16 @@
 
     .dot.active {
       background: $green;
+    }
+  }
+}
+
+#section-5__slider-banner {
+  .slide {
+    overflow: hidden;
+
+    img {
+      display: block;
     }
   }
 }

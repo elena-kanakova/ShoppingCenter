@@ -3,9 +3,23 @@
   height: 100%;
   @include auto;
   background: url("../img/shop-center_bg.jpg") center top no-repeat;
+  background-size: cover;
+
+  @include mq('desktop') {
+    background: url("../img/shop-center_bg-1280.jpg") center top no-repeat;
+  }
+
+  @include mq('tablet') {
+    background: url("../img/shop-center_bg-768.jpg") center top no-repeat;
+  }
 
   .container {
     justify-content: space-between;
+
+    @include mq('tablet') {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -14,26 +28,55 @@
   width: 50%;
   flex: 1 1 50%;
 
+  @include mq('desktop') {
+    padding-top: 176px;
+  }
+
+  @include mq('tablet') {
+    padding-top: 70px;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
   .title {
     h2 {
       font: 36px/48px $DinBold;
       font-weight: bold;
       color: white;
+
+      @include mq('tablet') {
+        font: 22px/30px $DinBold;
+        font-weight: bold;
+      }
+
     }
   }
 
   .text {
     margin-top: 60px;
 
+    @include mq('tablet') {
+      margin-top: 24px;
+    }
+
     p {
       font: 16px/24px $DinPro;
       font-weight: 400;
       color: white;
+
+      @include mq('tablet') {
+        font: 14px/22px $DinPro;
+        font-weight: 400;
+      }
     }
   }
 
   .logos {
     margin-top: 65px;
+
+    @include mq('tablet') {
+      margin-top: 35px;
+    }
 
     img {
       display: block;
@@ -41,6 +84,10 @@
 
       &:nth-last-child(1) {
         margin-right: 0;
+      }
+
+      @include mq('phone') {
+        max-height: 45px;
       }
     }
   }
@@ -53,6 +100,23 @@
   flex: 1 1 50%;
   justify-content: flex-end;
 
+  @include mq('desktop') {
+    padding-top: 176px;
+    padding-bottom: 176px;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include mq('tablet') {
+    padding-top: 40px;
+    padding-bottom: 59px;
+  }
+
+  @include mq('phone') {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
   .element {
     position: relative;
     width: 231px;
@@ -60,23 +124,30 @@
     border: 1px solid white;
     cursor: pointer;
 
+    @include mq('desktop') {
+      width: 261px;
+      height: 150px;
+    }
+
+    @include mq('tablet') {
+      width: 240px;
+      height: 170px;
+    }
+
+    @include mq('tablet') {
+      width: 50%;
+      height: 106px;
+    }
+
     &:before {
       @include  pseudo;
       width: 100%;
       height: 100%;
-    }
 
-    /*&:hover {
-      &:before {
-        z-index: 1;
-        top: -20px;
-        left: -20px;
-        width: 270px;
-        height: 210px;
-        border: 1px solid white;
-        background: white;
+      @include mq('desktop') {
+        display: none;
       }
-    }*/
+    }
 
     img {
       position: relative;
@@ -92,6 +163,13 @@
       height: 210px;
       border: 1px solid white;
       background: white;
+
+      @include mq('desktop') {
+        top: -10px;
+        left: -12px;
+        width: 280px;
+        height: 170px;
+      }
     }
   }
 }

@@ -235,5 +235,5 @@ gulp.task('dev', gulp.series(
 
 gulp.task('prod', gulp.series(
     'clean:prod',
-    gulp.parallel('html:prod','sass:prod','js:prod','img')
+    gulp.parallel('html:prod','sass:prod','js:prod')
 ));

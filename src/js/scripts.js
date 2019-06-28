@@ -15,7 +15,7 @@ var section_1_slider = new Swiper('.section-1__slider-wrap', {
         bulletClass: 'dots',
         bulletActiveClass: 'active',
         renderBullet: function (index, className) {
-            return '<div class="dots flex ' + className + '"><span class="dot"></span><span class="number">' + (index + 1) + '</span></div>';
+            return '<div class="dots flex ' + className + '"><span class="dot"></span><span class="number">0 ' + (index + 1) + '</span></div>';
         },
     }
 });
@@ -30,14 +30,18 @@ var section_2_slider = new Swiper('.section-2__slider-wrap', {
         prevEl: '.section-2__slider-nav .prev',
     },
     breakpoints: {
-        360: {
+        414: {
+            spaceBetween: 0,
+            centeredSlides: true,
             slidesPerView: 1
         },
-        740: {
+        768: {
+            spaceBetween: 0,
             centeredSlides: true,
             slidesPerView: 1
         },
         1280: {
+            centeredSlides: false,
             slidesPerView: 2
         }
     }
@@ -53,8 +57,9 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
         prevEl: '.section-3__slider-nav .prev',
     },
     breakpoints: {
-        360: {
-            slidesPerView: 1
+        414: {
+            centeredSlides: false,
+            slidesPerView: 2
         },
         740: {
             centeredSlides: true,
@@ -79,11 +84,10 @@ var section_5_slider = new Swiper('.section-5__slider-cafe_wrap', {
         prevEl: '.section-5__slider-nav .prev',
     },
     breakpoints: {
-        360: {
-            slidesPerView: 1
+        414: {
+            slidesPerView: 2
         },
-        740: {
-            centeredSlides: true,
+        768: {
             slidesPerView: 2
         },
         1024: {
@@ -127,6 +131,16 @@ var section_10_slider = new Swiper('.section-10__slider-wrap', {
             return '<span class="' + currentClass + '"></span>' +
                 '<span> / </span>' +
                 '<span class="' + totalClass + '"></span>';
+        }
+    },
+    breakpoints: {
+        414: {
+            centeredSlides: true,
+            slidesPerView: 1
+        },
+        768: {
+            centeredSlides: true,
+            slidesPerView: 1
         }
     }
 });

@@ -31,8 +31,25 @@
       left: 40px;
     }
 
+    @include mq('tablet') {
+      top: auto;
+      left: 0;
+      bottom: 185px;
+    }
+
+    .pagination-wrap {
+
+      @include mq('tablet') {
+        display: flex;
+      }
+    }
+
     .dots {
       cursor: pointer;
+
+      @include mq('tablet') {
+        margin-right: 30px;
+      }
 
       .dot {
         display: block;
@@ -40,6 +57,10 @@
         width: 25px;
         height: 2px;
         background: white;
+
+        @include mq('tablet') {
+          margin-bottom: 0;
+        }
       }
 
       .number {
@@ -49,10 +70,18 @@
         font: 22px $DinBold;
         font-weight: bold;
         color: white;
+
+        @include mq('tablet') {
+          margin-left: 22px;
+        }
       }
     }
 
     .dots.active {
+
+      @include mq('tablet') {
+        margin-right: 47px;
+      }
 
       .number {
         display: block;
@@ -71,32 +100,48 @@
     padding-top: 235px;
     padding-bottom: 314px;
     background: url("../img/index__section-1_bg.jpg") center -160px no-repeat;
-    background-size: 1920px auto;
     height: 100%;
 
     @include mq('desktop') {
       background: url("../img/index__section-1_bg-1280.jpg") center top no-repeat;
-      background-size: 1280px auto;
       padding-top: 185px;
       padding-bottom: 174px;
     }
 
     @include mq('tablet') {
+      padding-bottom: 358px;
       background: url("../img/index__section-1_bg-768.jpg") center -160px no-repeat;
-      background-size: 768px auto;
+    }
+
+    @include mq-custom(720px) {
+      background: url("../img/index__section-1_bg-768.jpg") center top no-repeat;
     }
 
     @include mq('phone') {
-      background: url("../img/index__section-1_bg-414.jpg") center -160px no-repeat;
-      background-size: 414px auto;
+      padding-top: 136px;
+      padding-bottom: 325px;
+      background: url("../img/index__section-1_bg-414.jpg") center top no-repeat;
     }
 
     .container {
       position: relative;
+
+      @include mq('phone') {
+        padding: 0;
+      }
+
+      @include mq-custom(380px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     .text {
       margin-left: 160px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+      }
 
       p {
         font: 78px/88px $DinBlack;
@@ -108,12 +153,46 @@
           font: 68px/88px $DinBlack;
           font-weight: 900;
         }
+
+        @include mq('tablet') {
+          font: 68px/78px $DinBlack;
+          font-weight: 900;
+        }
+
+        @include mq-custom(650px) {
+          font: 58px/68px $DinBlack;
+          font-weight: 900;
+        }
+
+        @include mq-custom(650px) {
+          font: 48px/58px $DinBlack;
+          font-weight: 900;
+        }
+
+        @include mq('phone') {
+          font: 36px $DinBlack;
+          font-weight: 900;
+        }
+
+        @include mq-custom(380px) {
+          font: 30px $DinBlack;
+          font-weight: 900;
+        }
       }
     }
 
     .btn-more {
       margin-top: 50px;
       margin-left: 160px;
+
+      @include mq('tablet') {
+        margin-top: 101px;
+        margin-left: 0;
+      }
+
+      @include mq('phone') {
+        margin-top: 50px;
+      }
 
       @include btn-more;
 

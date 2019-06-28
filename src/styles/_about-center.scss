@@ -5,6 +5,26 @@
   background-image:url(../img/about-center_bg_left-circle.png), url(../img/about-center_bg_right-circle.png), url(../img/about-center_bg.jpg);
   background-position:  -65px center, right center, center top;
   background-repeat: no-repeat, no-repeat, no-repeat;
+
+  @include mq('desktop') {
+    background-image:url(../img/about-center_bg-1280.jpg);
+    background-position:  center top;
+    background-repeat: no-repeat;
+  }
+
+  @include mq('tablet') {
+    background-image:url(../img/about-center_bg-768.jpg);
+    background-position:  center top;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    @include mq('tablet') {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
 }
 
 .about-center_left-part {
@@ -13,22 +33,48 @@
   padding-top: 210px;
   padding-right: 20px;
 
+  @include mq('desktop') {
+    padding-right: 0;
+  }
+
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+    padding-top: 70px;
+    padding-right: 0;
+  }
+
   .title {
     h2 {
       font: 32px/40px $DinBold;
       font-weight: bold;
       color: white;
+      text-transform: uppercase;
+
+      @include mq('phone') {
+        font: 24px/36px $DinBold;
+        font-weight: bold;
+      }
     }
   }
 
   .text {
     margin-top: 60px;
 
+    @include mq('tablet') {
+      margin-top: 40px;
+    }
+
     p {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       font: 16px/24px $DinPro;
       font-weight: 500;
       color: white;
+
+      @include mq('phone') {
+        font: 14px/20px $DinPro;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -46,22 +92,101 @@
   margin-top: 125px;
   margin-bottom: 135px;
 
+  @include mq('desktop') {
+    margin-right: -44px;
+  }
+
+  @include mq('tablet') {
+    width: 100%;
+    flex: 1 1 100%;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 63px;
+    margin-right: 0;
+    flex-wrap: nowrap;
+  }
+
+  @include mq('phone') {
+    margin-bottom: 60px;
+  }
+
   .insta-wrap {
     width: 100%;
     flex: 1 1 100%;
-    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+
+    @include mq('tablet') {
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      flex: 0 0 200px;
+      order: 2;
+      margin-left: -24px;
+    }
+
+    @include mq('phone') {
+      z-index: 2;
+      width: 110px;
+      flex: 0 0 110px;
+    }
 
     .insta {
       padding-bottom: 60px;
       @extend %circle;
       background: rgb(238,47,65);
       background: linear-gradient(0deg, rgba(238,47,65,1) 0%, rgba(243,104,63,1) 100%);
+
+      @include mq('tablet') {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        flex: 0 0 110px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    @include mq('tablet') {
+      padding-bottom: 0;
     }
   }
 
   .vk-wrap {
-    margin-left: 35px;
     margin-top: -111px;
+    width: 50%;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include mq('desktop') {
+      margin-left: 0;
+    }
+
+    @include mq('tablet') {
+      margin-top: 0;
+      margin-left: 0;
+      position: relative;
+      z-index: 2;
+      order: 1;
+      width: 200px;
+      flex: 0 0 200px;
+    }
+
+    @include mq('phone') {
+      z-index: 1;
+      width: 110px;
+      flex: 0 0 110px;
+    }
 
     .vk {
       padding-right: 30px;
@@ -69,12 +194,46 @@
       @extend %circle;
       background: rgb(74,118,168);
       background: linear-gradient(0deg, rgba(74,118,168,1) 0%, rgba(98,142,192,1) 100%);
+
+      @include mq('tablet') {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
     }
   }
 
   .fb-wrap {
     margin-left: -22px;
     margin-top: -111px;
+    width: 50%;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-start;
+
+    @include mq('tablet') {
+      margin-top: 0;
+      margin-left: -24px;
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      flex: 0 0 200px;
+      order: 3;
+    }
+
+    @include mq('phone') {
+      z-index: 3;
+      width: 110px;
+      flex: 0 0 110px;
+    }
 
     .fb {
       padding-left: 30px;
@@ -82,22 +241,58 @@
       @extend %circle;
       background: rgb(66,103,178);
       background: linear-gradient(0deg, rgba(66,103,178,1) 0%, rgba(53,84,148,1) 100%);
+
+      @include mq('tablet') {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-top: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
     }
   }
 
   .text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: 25px;
+
+    @include mq('tablet') {
+      margin-left: 0;
+      margin-top: 20px;
+
+      @include mq('phone') {
+        margin-top: 0;
+      }
+    }
 
     .number {
       font: 32px/24px $DinBold;
       font-weight: bold;
       color: white;
+
+      @include mq('phone') {
+        font: 18px/24px $DinBold;
+        font-weight: bold;
+      }
     }
 
     .text {
-      font: 14px/24px $DinPro;
+      font: 14px $DinPro;
       font-weight: 400;
       color: white;
+
+      @include mq('phone') {
+        font: 8px $DinPro;
+        font-weight: 400;
+      }
     }
   }
 
@@ -106,7 +301,6 @@
     z-index: 1;
     width: 150px;
     height: 150px;
-    margin-left: 15px;
     margin-top: 5px;
     left: 50%;
     top: 50%;
@@ -114,5 +308,25 @@
     border-radius: 50%;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+
+    @include mq('tablet') {
+      position: relative;
+      left: auto;
+      top: 0;
+      transform: translate(0,0);
+      width: 200px;
+      height: 200px;
+      margin-top: 0;
+      margin-left: -24px;
+      order: 4;
+      z-index: 2;
+    }
+
+    @include mq('phone') {
+      z-index: 4;
+      width: 110px;
+      height: 110px;
+      flex: 0 0 110px;
+    }
   }
 }

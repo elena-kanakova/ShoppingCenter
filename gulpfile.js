@@ -31,7 +31,7 @@ var path = {
     },
     src: {
         root: 'src/',
-        html: 'src/html/[^_]*.html',
+        html: 'src/html/**/[^_]*.html',
         sass: 'src/styles/**/*.scss',
         scripts: 'src/scripts/**/*.js',
         css: 'src/css/',
@@ -184,13 +184,9 @@ gulp.task('watch:dev', function(done) {
     var files = [ '*.html', 'css/*.css', 'js/*.js', 'styles/*.scss', 'scripts/**/*.js', 'html/**/[^_]*.html' ];
     browserSync.init(files, { server: { baseDir: './src' } });
 
-    gulp.watch('src/styles/*.scss', gulp.parallel('sass:dev'));
-    gulp.watch('src/scripts/*.js', gulp.parallel('js:dev'));
-    gulp.watch('src/html/*.html', gulp.parallel('html:dev'));
-    gulp.watch('src/**/*.html').on('change', () => {
-        browserSync.reload();
-        done();
-    });
+    gulp.watch('src/sass/**/*.sass', gulp.parallel('sass:dev'));
+    gulp.watch('src/scripts/*.js');
+    gulp.watch('src/**/[^_]*.html');
     done();
 });
 

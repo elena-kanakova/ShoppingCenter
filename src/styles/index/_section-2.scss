@@ -135,6 +135,14 @@
   }
 }
 
+.section-2__tab-content {
+  display: none;
+}
+
+.section-2__tab-content.active {
+  display: block;
+}
+
 .section-2__slider_nav-wrap {
   position: relative;
 }

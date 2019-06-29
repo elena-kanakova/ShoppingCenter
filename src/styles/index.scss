@@ -1,0 +1,19 @@
+/* Переменные */
+@import 'base/variables';
+
+/* Миксины */
+@import 'base/mixins';
+
+@import "index/section-1";
+@import "index/section-2";
+@import "index/section-3";
+@import "index/section-4";
+@import "index/section-5";
+@import "index/section-6";
+@import "general_sections/section-map";
+@import "general_sections/parking";
+@import "general_sections/about-center";
+@import "index/section-10";
+@import "general_sections/section-where";
+@import "general_sections/shop-center";
+@import "general_elements/footer";

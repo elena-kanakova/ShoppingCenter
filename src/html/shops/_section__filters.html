@@ -3,9 +3,9 @@
         <div class="filters_wrap">
             <form action="" method="get" class="filter-form flex">
                 <div class="open-filter">
-                    <button class="js-open">Открыть фильтр</button>
+                    <button type="button" class="flex center js-open-filter"><img src="img/filter-icon-768.png" alt="Иконка"><span>Открыть фильтр</span></button>
                 </div>
-                <div class="filter__search">
+                <div class="filter filter__search">
                     <label for="filter-search">
                         <input type="text" id="filter-search" name="filter-search" class="input-search" placeholder="Поиск магазина">
                     </label>
@@ -45,13 +45,13 @@
                         <option value="В">В</option>
                     </select>
                 </div>
-                <div class="filter filter__list-type flex">
+                <div class="filter__list-type flex">
                     <input type="radio" id="list-type1" name="list-type" value="off" checked="">
-                    <label class="list-type1" for="list-type1">
+                    <label class="list-type1 js-block" for="list-type1">
                         <span>Плитка</span>
                     </label>
                     <input type="radio" id="list-type2" name="list-type" value="on">
-                    <label class="list-type2 flex center" for="list-type2">
+                    <label class="list-type2 flex center js-list" for="list-type2">
                         <span>Список</span>
                     </label>
                 </div>
@@ -59,3 +59,76 @@
         </div>
     </div>
 </section>
+<div id="filter-open_modal">
+    <div class="container">
+        <div class="filter-modal__btn-back">
+            <button class="flex center js-btn-back">
+                <img src="img/shop_left.svg" alt="Назад">
+                <span>Вернуться назад</span>
+            </button>
+        </div>
+        <div class="filter-modal__title">
+            <span>Фильтр магазинов</span>
+        </div>
+        <div class="filter-form_modal flex column">
+            <div class="filter__search_modal">
+                <label for="filter-search_modal">
+                    <input type="text" id="filter-search_modal" name="filter-search" class="input-search" placeholder="Поиск магазина">
+                </label>
+            </div>
+            <div class="filters_wrap flex wrap">
+                <div class="filter-modal category">
+                    <div class="title">
+                        <span>Категории</span>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>Где поесть</li>
+                            <li>Развлечения</li>
+                            <li>Для детей</li>
+                            <li>Магазин</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-modal floors">
+                    <div class="title">
+                        <span>Этажи</span>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>0 этаж</li>
+                            <li>1 этаж</li>
+                            <li>2 этаж</li>
+                            <li>3 этаж</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-modal letters">
+                    <div class="title">
+                        <span>Алфавит</span>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>От А до Я</li>
+                            <li>От Я до А</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-modal view">
+                    <div class="title">
+                        <span>Отображение</span>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="js-block">Плитка</li>
+                            <li class="js-list">Список</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="filter-modal__btn-close">
+            <button class="js-btn-close"><span>Закрыть окно</span></button>
+        </div>
+    </div>
+</div>

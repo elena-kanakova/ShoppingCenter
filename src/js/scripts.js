@@ -17,7 +17,7 @@ $(function(){
     });
 });
 
-$('select').each(function() {
+$('.filter-form select').each(function() {
     var $this = $(this)
         , numberOfOptions = $(this).children('option').length;
     $this.addClass('select_hidden');
@@ -76,6 +76,24 @@ $('.filter__list-type > label').on('click', function(e) {
             $("input[type='submit'].filterApply").trigger('click');
         }
     }
+});
+
+$('.js-block').on('click', function (e) {
+    $('.block-type').addClass('active');
+    $('.list-type').removeClass('active');
+});
+
+$('.js-list').on('click', function (e) {
+    $('.list-type').addClass('active');
+    $('.block-type').removeClass('active');
+});
+
+$('.js-open-filter').on('click', function (e) {
+    $('#filter-open_modal').fadeIn(300);
+});
+
+$('.js-btn-close').on('click', function (e) {
+    $('#filter-open_modal').fadeOut(300);
 });
 //Some popup code
 //Слайдеры

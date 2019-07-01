@@ -21,6 +21,10 @@
     color: white;
   }
 
+  li.active {
+    text-decoration: underline;
+  }
+
   span {
     margin: 0 10px;
     font: 12px $DinLight;
@@ -37,5 +41,10 @@
     font-weight: bold;
     color: white;
     text-align: center;
+
+    @include mq('phone') {
+      font: 32px $DinBold;
+      font-weight: bold;
+    }
   }
 }

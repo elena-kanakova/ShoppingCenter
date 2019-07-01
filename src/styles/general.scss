@@ -117,6 +117,8 @@
 /* Шапка */
 #main-header {
   width: 100%;
+  max-width: 1920px;
+  @include auto;
   background: #f8f9fb;
   border-bottom: 1px solid #f0ebeb;
   overflow: hidden;
@@ -440,5 +442,3 @@
     }
   }
 }
-
-@import "index";

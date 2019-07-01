@@ -1,5 +1,6 @@
 #shop-center {
   width: 100%;
+  max-width: 1920px;
   height: 100%;
   @include auto;
   background: url("../img/shop-center_bg.jpg") center top no-repeat;

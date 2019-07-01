@@ -79,30 +79,30 @@ $breakpoints: (
     }
   }
 }
-@mixin placeholder {
+@mixin placeholder($color:#000000,$font-size:15px) {
   ::-webkit-input-placeholder {
     opacity:1;
-    font: 15px $DinMedi;
+    font: $font-size $DinMedi;
     font-weight: 500;
-    color: $grey;
+    color: $color;
   }/* webkit */
   ::-moz-placeholder {
     opacity:1;
-    font: 15px $DinMedi;
+    font: $font-size $DinMedi;
     font-weight: 500;
-    color: $grey;
+    color: $color;
   }/* Firefox 19+ */
   :-moz-placeholder {
     opacity:1;
-    font: 15px $DinMedi;
+    font: $font-size $DinMedi;
     font-weight: 500;
-    color: $grey;
+    color: $color;
   }/* Firefox 18- */
   :-ms-input-placeholder {
     opacity:1;
-    font: 15px $DinMedi;
+    font: $font-size $DinMedi;
     font-weight: 500;
-    color: $grey;
+    color: $color;
   }/* IE */
 
   :focus::-webkit-input-placeholder {opacity:0;}/* webkit */

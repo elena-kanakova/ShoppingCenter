@@ -44,15 +44,15 @@ var path = {
         sass: 'src/styles/**/*.scss',
         scripts: 'src/scripts/**/*.js'
     },
-    clean_dev: ['src/css/*.css', 'src/index.html', 'src/js/*.js'],
-    clean_prod: ['prod/css/*.css', 'prod/index.html', 'prod/js/*.js']
+    clean_dev: ['src/css/*.css', 'src/index.html', 'src/shops.html', 'src/js/*.js'],
+    clean_prod: ['prod/css/*.css', 'prod/index.html', 'prod/shops.html', 'prod/js/*.js']
 };
 
 // Конфиги для локального вебсервера
 var webserver = {
     dev: {
         server: {
-            baseDir: './src'
+            baseDir: './src',
         },
         tunnel: true,
         host: 'localhost',
@@ -180,13 +180,22 @@ gulp.task('html:prod', function(done) {
 
 // development
 gulp.task('watch:dev', function(done) {
-
+    //browserSync(webserver.dev);
+    /**/
     var files = [ '*.html', 'css/*.css', 'js/*.js', 'styles/*.scss', 'scripts/**/*.js', 'html/**/[^_]*.html' ];
-    browserSync.init(files, { server: { baseDir: './src' } });
+    browserSync.init(files, {
+        server: {
+            baseDir: "./src",
+            directory: true
+        } });
 
-    gulp.watch('src/sass/**/*.sass', gulp.parallel('sass:dev'));
-    gulp.watch('src/scripts/*.js');
-    gulp.watch('src/**/[^_]*.html');
+    gulp.watch('src/styles/**/*.scss', gulp.parallel('sass:dev'));
+    gulp.watch('src/scripts/*.js', gulp.parallel('js:dev'));
+    gulp.watch('src/html/**/*.html', gulp.parallel('html:dev'));
+    gulp.watch('src/**/*.html').on('change', () => {
+        browserSync.reload();
+        done();
+    });
     done();
 });
 

@@ -1,0 +1,112 @@
+#rent-modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('../img/rent_modal-bg.jpg') left top no-repeat;
+  background-size: cover;
+}
+
+.rent-modal_wrap {
+  padding: 200px 238px 200px 0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.back-wrap {
+  padding: 0 120px 0 88px;
+
+  .back {
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+
+  img {
+    display: block;
+    margin-left: 23px;
+  }
+
+  .text-back {
+    font: 16px $DinPro;
+    font-weight: 400;
+    color: white;
+  }
+}
+
+.rent-modal__form_wrap {
+  .form-title {
+    h3 {
+      font: 52px $DinBold;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .form-desc {
+    margin-top: 42px;
+
+    p {
+      font: 22px $DinPro;
+      font-weight: 400;
+      color: white;
+    }
+  }
+}
+
+.rent__form {
+  .input-wrap {
+    position: relative;
+    width: 50%;
+    height: 60px;
+
+    input {
+      @include input-rent;
+      height: 100%;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 19px;
+
+      span {
+        font: 14px $DinPro;
+        font-weight: 400;
+        color: white;
+      }
+    }
+  }
+
+  .phone {
+    position: relative;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    span {
+      display: block;
+      margin-top: -27px;
+    }
+
+    &:before {
+      @include pseudo(1,0,0,auto,auto);
+      width: 14px;
+      height: 1px;
+      background: white;
+    }
+
+    &:after {
+      @include pseudo(1,auto,0,auto,0);
+      width: 90px;
+      height: 1px;
+      background: white;
+    }
+    label {
+    }
+  }
+}

@@ -42,6 +42,10 @@
     color: white;
     text-align: center;
 
+    @include mq-custom(450px) {
+      font: 48px $DinBold;
+    }
+
     @include mq('phone') {
       font: 32px $DinBold;
       font-weight: bold;

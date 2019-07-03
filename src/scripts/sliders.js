@@ -23,6 +23,8 @@ var section_2_slider = new Swiper('.section-2__slider-wrap', {
     spaceBetween: 40,
     loop: true,
     setWrapperSize: true,
+    observer: true,
+    observeParents: true,
     navigation: {
         nextEl: '.section-2__slider-nav .next',
         prevEl: '.section-2__slider-nav .prev',
@@ -33,12 +35,23 @@ var section_2_slider = new Swiper('.section-2__slider-wrap', {
             centeredSlides: true,
             slidesPerView: 1
         },
-        768: {
+        820: {
             spaceBetween: 0,
             centeredSlides: true,
             slidesPerView: 1
         },
+        1100: {
+            spaceBetween: 5,
+            centeredSlides: true,
+            slidesPerView: 2
+        },
+        1230: {
+            spaceBetween: 5,
+            centeredSlides: false,
+            slidesPerView: 2
+        },
         1280: {
+            spaceBetween: 20,
             centeredSlides: false,
             slidesPerView: 2
         }
@@ -113,9 +126,8 @@ var section_5_slider_2 = new Swiper('.section-5__slider-banner_wrap', {
 var section_10_slider = new Swiper('.section-10__slider-wrap', {
     slidesPerView: 4,
     spaceBetween: 0,
-    loop: false,
-    setWrapperSize: false,
-    centeredSlides: false,
+    loop: true,
+    centeredSlides: true,
     navigation: {
         nextEl: '.section-10__slider-nav .next',
         prevEl: '.section-10__slider-nav .prev',
@@ -129,16 +141,6 @@ var section_10_slider = new Swiper('.section-10__slider-wrap', {
             return '<span class="' + currentClass + '"></span>' +
                 '<span> / </span>' +
                 '<span class="' + totalClass + '"></span>';
-        }
-    },
-    breakpoints: {
-        414: {
-            centeredSlides: true,
-            slidesPerView: 1
-        },
-        768: {
-            centeredSlides: true,
-            slidesPerView: 1
         }
     }
 });

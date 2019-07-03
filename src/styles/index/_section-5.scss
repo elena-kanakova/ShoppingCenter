@@ -1,4 +1,4 @@
-#section-5 {
+#index__section-5 {
   width: 100%;
   max-width: 1920px;
   @include auto;
@@ -27,255 +27,315 @@
       padding-bottom: 0;
     }
   }
-}
 
-.section-5__top-content {
-  justify-content: space-between;
-}
-
-.section-5__title-desc-about {
-
-  @include mq('tablet') {
-    width: 100%;
+  .section-5__top-content {
+    justify-content: space-between;
   }
 
-  .title {
-    h2 {
-      font: 52px $DinBold;
-      font-weight: 600;
-      color: white;
-      text-transform: uppercase;
+  .section-5__title-desc-about {
 
-      @include mq('phone') {
-        font: 32px $DinBold;
-        font-weight: 600;
-      }
-    }
-  }
-
-  .desc {
-    margin-top: 40px;
-    margin-bottom: 45px;
-    width: 50%;
-
-    @include mq('phone') {
-      margin-top: 20px;
-      margin-bottom: 25px;
+    @include mq('tablet') {
       width: 100%;
     }
 
-    p {
-      font: 16px/24px $DinPro;
-      font-weight: 400;
-      color: white;
+    .title {
+      h2 {
+        font: 52px $DinBold;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
 
-      br {
-        display: none;
+        @include mq-custom(450px) {
+          font: 48px $DinBold;
+        }
+
+        @include mq('phone') {
+          font: 32px $DinBold;
+          font-weight: 600;
+        }
       }
     }
 
-    @include mq(desktop) {
-      margin-top: 30px;
-      margin-bottom: 40px;
+    .desc {
+      margin-top: 40px;
+      margin-bottom: 45px;
+      width: 50%;
+
+      @include mq('phone') {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        width: 100%;
+      }
+
+      p {
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: white;
+
+        br {
+          display: none;
+        }
+      }
+
+      @include mq(desktop) {
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .btn-more {
+      @include btn-more;
+
+      button {
+        transition: all .3s linear;
+
+        span {
+          background: url('../img/arrow_small_white.svg') 99% center no-repeat;
+          background-size: 5px 9px;
+          transition: all .3s linear;
+        }
+
+        &:hover {
+          background: $green;
+          border: 1px solid $green;
+        }
+      }
     }
   }
 
-  .btn-more {
-    @include btn-more;
-  }
-}
+  .section-5__text {
 
-.section-5__text {
+    @include mq('tablet') {
+      display: none;
+    }
 
-  @include mq('tablet') {
-    display: none;
-  }
+    .number {
+      p {
+        font: 203px/150px $DinBlack;
+        font-weight: 900;
+        letter-spacing: -10px;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
 
-  .number {
-    p {
-      font: 203px/150px $DinBlack;
-      font-weight: 900;
-      letter-spacing: -10px;
-      color: white;
-      text-transform: uppercase;
+    .text {
+      p {
+        margin-top: 50px;
+        font: 26px/36px $DinPro;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        text-align: right;
+      }
     }
   }
 
-  .text {
-    p {
-      margin-top: 50px;
-      font: 26px/36px $DinPro;
-      font-weight: 400;
-      color: white;
-      text-transform: uppercase;
-      text-align: right;
+  .section-5__content-top {
+    margin-top: 115px;
+    padding: 71px 0 49px;
+    background: #f9f9f9;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    @include mq('tablet') {
+      margin-top: 134px;
     }
-  }
-}
-
-.section-5__content-top {
-  margin-top: 115px;
-  padding: 71px 0 49px;
-  background: #f9f9f9;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-
-  @include mq('tablet') {
-    margin-top: 134px;
-  }
-
-  @include mq('phone') {
-    margin-top: 55px;
-    padding: 40px 0;
-  }
-
-  .btn-all {
-    margin-top: 44px;
-    @include btn-more (190px,55px,#d7d7d7,none,14px,black);
-
-    button {
-      @include auto;
-    }
-  }
-}
-
-.section-5__slider-cafe_nav-wrap {
-  position: relative;
-  padding: 0 85px 0;
-
-  @include mq('phone') {
-    padding: 0;
-  }
-
-  .slider-nav {
-    @include slider-nav;
-
-    .prev, .next {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .prev {
-      left: 29px;
-      background: url("../img/slider-icon_prev.png") center center no-repeat;
-    }
-
-    .next {
-      right: 29px;
-      background: url("../img/slider-icon_next.png") center center no-repeat;
-    }
-  }
-}
-
-#section-5__slider-cafe {
-  justify-content: space-between;
-
-  .slide {
-    width: 230px !important;
-    height: 268px;
-    background: white;
-    border: 1px solid #ebebeb;
-    border-radius: 20px;
 
     @include mq('phone') {
-      width: 181px !important;
+      margin-top: 55px;
+      padding: 40px 0;
     }
 
-    &:nth-last-child(1) {
-      margin-right: 0;
-    }
+    .btn-all {
+      margin-top: 44px;
+      @include btn-more (190px,55px,#d7d7d7,none,14px,black);
 
-    .cafe-logo {
-      height: 158px;
-      border-bottom: 1px solid #ebebeb;
+      button {
+        margin: 0 auto;
+        transition: all .3s linear;
 
-      img {
-        display: block;
-      }
-    }
+        span {
+          background: url('../img/arrow_small_right.svg') 99% center no-repeat;
+          background-size: 5px 9px;
+          transition: all .3s linear;
+        }
 
-    .cafe-about {
-      padding: 36px 20px 20px;
+        &:hover {
+          background: $green;
 
-      .name {
-        p {
-          font: 16px/22px $DinMedi;
-          font-weight: 500;
-          color: #311e1e;
+          span {
+            color: white;
+            background: url('../img/arrow_small_white.svg') 99% center no-repeat;
+            background-size: 5px 9px;
+          }
         }
       }
     }
+  }
 
-    .location-more {
-      justify-content: space-between;
-      align-items: center;
+  .section-5__slider-cafe_nav-wrap {
+    position: relative;
+    padding: 0 85px 0;
 
-      .location {
-        p {
-          font: 12px/22px $DinMedi;
-          font-weight: 500;
-          color: #7c7c7c;
+    @include mq('phone') {
+      padding: 0;
+    }
+
+    .slider-nav {
+      @include slider-nav;
+
+      .prev, .next {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .prev {
+        left: 29px;
+        background: url("../img/arrow_left_black.svg") center center no-repeat;
+        background-size: 16px 26px;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        &:hover {
+          background: url("../img/arrow_left_green.svg") center center no-repeat;
+          background-size: 16px 26px;
+        }
+
+        &:hover {
+
         }
       }
 
-      .btn-more {
-        width: 25px;
-        height: 25px;
-        padding: 8px 11px;
-        border-radius: 50%;
-        background: $green;
+      .next {
+        right: 29px;
+        background: url("../img/arrow_right_black.svg") center center no-repeat;
+        background-size: 16px 26px;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        &:hover {
+          background: url("../img/arrow_right_gereen.svg") center center no-repeat;
+          background-size: 16px 26px;
+        }
+      }
+    }
+  }
+
+  #section-5__slider-cafe {
+    justify-content: space-between;
+
+    .slide {
+      width: 230px !important;
+      height: 268px;
+      background: white;
+      border: 1px solid #ebebeb;
+      border-radius: 20px;
+      cursor: pointer;
+
+      @include mq('phone') {
+        width: 181px !important;
+      }
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+
+      .cafe-logo {
+        height: 158px;
+        border-bottom: 1px solid #ebebeb;
 
         img {
           display: block;
         }
       }
-    }
-  }
-}
 
-.section-5__slider-banner_wrap {
-  position: relative;
+      .cafe-about {
+        padding: 36px 20px 20px;
 
-  @include mq('phone') {
-    padding-bottom: 74px;
-  }
+        .name {
+          p {
+            font: 16px/22px $DinMedi;
+            font-weight: 500;
+            color: #311e1e;
+          }
+        }
+      }
 
-  .slider-dots {
-    position: absolute;
-    z-index: 5;
-    width: auto !important;
-    bottom: 28px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 30px;
-    background: white;
-    justify-content: center;
-    border-radius: 20px;
+      .location-more {
+        justify-content: space-between;
+        align-items: center;
 
-    .dot {
-      margin-right: 12px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #d7d7d7;
+        .location {
+          p {
+            font: 12px/22px $DinMedi;
+            font-weight: 500;
+            color: #7c7c7c;
+          }
+        }
 
-      &:nth-last-child(1) {
-        margin-right: 0;
+        .btn-more {
+          width: 25px;
+          height: 25px;
+          padding: 8px 11px;
+          border-radius: 50%;
+          background: url('../img/shop_left.svg') #00a84f;
+        }
       }
     }
+  }
 
-    .dot.active {
-      background: $green;
+  .section-5__slider-banner_wrap {
+    position: relative;
+
+    @include mq('phone') {
+      padding-bottom: 74px;
+    }
+
+    .slider-dots {
+      position: absolute;
+      z-index: 5;
+      width: auto !important;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 30px;
+      background: white;
+      justify-content: center;
+      border-radius: 20px;
+
+      .dot {
+        margin-right: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #d7d7d7;
+        cursor: pointer;
+
+        &:hover {
+          background: $green;
+          transition: all .3s linear;
+        }
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+
+      .dot.active {
+        background: $green;
+      }
     }
   }
-}
 
-#section-5__slider-banner {
-  .slide {
-    overflow: hidden;
+  #section-5__slider-banner {
+    .slide {
+      overflow: hidden;
+      cursor: pointer;
 
-    img {
-      display: block;
+      img {
+        display: block;
+      }
     }
   }
 }

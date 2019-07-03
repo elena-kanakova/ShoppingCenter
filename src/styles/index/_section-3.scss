@@ -1,4 +1,4 @@
-#section-3 {
+#index__section-3 {
   width: 100%;
   max-width: 1920px;
   @include auto;
@@ -41,243 +41,323 @@
       padding-bottom: 58px;
     }
   }
-}
 
-.section-3__title-wrap {
-  justify-content: space-between;
-  margin-bottom: 40px;
-  width: 100%;
-  flex: 1 1 100%;
-
-  @include mq('tablet') {
-    align-items: center;
-  }
-
-  .title {
-    order: 1;
-
-    h2 {
-      font: 52px $DinBold;
-      font-weight: 600;
-      color: white;
-      text-transform: uppercase;
-
-      @include mq('phone') {
-        font: 32px $DinBold;
-        font-weight: 600;
-      }
-    }
-  }
-
-  .desc {
-    order: 4;
+  .section-3__title-wrap {
+    justify-content: space-between;
+    margin-bottom: 40px;
     width: 100%;
     flex: 1 1 100%;
-    margin-top: 10px;
 
     @include mq('tablet') {
-      order: 3;
-      width: auto;
-      flex: 0 0 auto;
-      margin-top: 17px;
+      align-items: center;
     }
 
-    p {
-      font: 26px $DinPro;
-      font-weight: 400;
-      color: white;
-      text-transform: uppercase;
-
-      @include mq('phone') {
-        font: 18px $DinPro;
-        font-weight: 400;
-      }
+    @include mq-custom(400px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
-  }
 
-  .date {
-    order: 2;
-    align-items: center;
-    justify-content: center;
-
-    @include mq('tablet') {
-      order: 4;
-      flex: 0 0 auto;
+    @include mq-custom(367px) {
       justify-content: flex-start;
-      margin-left: 45px;
-      margin-top: 17px;
-    }
-
-    @include mq('phone') {
-      margin-left: 0;
-    }
-
-    .icon {
-      margin-right: 20px;
-
-      img {
-        display: block;
-      }
-    }
-
-    .text {
-      p {
-        font: 26px/36px $DinPro;
-        font-weight: 400;
-        color: white;
-        text-transform: none;
-
-        @include mq-custom(1024px) {
-          font: 22px/36px $DinPro;
-          font-weight: 400;
-        }
-
-        @include mq('phone') {
-          font: 15px/36px $DinPro;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-
-  .cinema-logo {
-    order: 3;
-
-    img {
-      display: block;
-    }
-
-    @include mq('tablet') {
-      order: 2;
-    }
-  }
-}
-
-.section-3__slider_nav-wrap {
-  position: relative;
-
-  @include mq-custom(1024px) {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .slider-nav {
-    @include slider-nav;
-
-    @include mq-custom(740px) {
-      display: none;
-    }
-
-    .prev, .next {
-      top: 30%;
-      transform: translateY(-30%);
-    }
-
-    .prev {
-      left: -74px;
-      background: url("../img/slider-icon_prev-white.png") center center no-repeat;
-
-      &:before {
-        @include pseudo(1,auto,12px,auto,100%);
-        width: 2000px;
-        height: 2px;
-        margin-right: 39px;
-        background: $green;
-      }
-
-      @include mq-custom(1650px) {
-        left: -31px;
-      }
-
-      @include mq-custom(1024px) {
-        left: -15px;
-      }
-    }
-
-    .next {
-      right: -74px;
-      background: url("../img/slider-icon_next-white.png") center center no-repeat;
-
-      &:after {
-        @include pseudo(1,100%,12px,auto,auto);
-        width: 2000px;
-        height: 2px;
-        margin-left: 39px;
-        background: $green;
-      }
-
-      @include mq-custom(1650px) {
-        right: -31px;
-      }
-
-      @include mq-custom(1024px) {
-        right: -15px;
-      }
-    }
-  }
-}
-
-.section-3__slider {
-
-  .swiper-slide {
-    width: 222px !important;
-    @include auto;
-
-    @include mq('phone') {
-      width: auto !important;
-    }
-
-    .poster {
-      position: relative;
-      margin-top: 10px;
-      margin-bottom: 24px;
-      width: 212px;
-
-      &:after {
-        @include pseudo(1,10px,-10px,20px,-10px);
-        background: white;
-
-        @include mq-custom(550px) {
-          display: none;
-        }
-      }
-
-      img {
-        position: relative;
-        z-index: 2;
-        display: block;
-        max-width: 212px;
-
-        @include mq('phone') {
-          max-width: 178px;
-        }
-      }
     }
 
     .title {
-      p {
-        font: 16px $DinBold;
+      order: 1;
+
+      @include mq-custom(668px) {
+        margin-right: 20px;
+      }
+
+      h2 {
+        font: 52px $DinBold;
         font-weight: 600;
         color: white;
+        text-transform: uppercase;
+
+        @include mq-custom(450px) {
+          font: 48px $DinBold;
+        }
+
+        @include mq('phone') {
+          font: 32px $DinBold;
+          font-weight: 600;
+        }
       }
     }
 
-    .time {
-      margin-top: 20px;
+    .desc {
+      order: 4;
+      width: 100%;
+      flex: 1 1 100%;
+      margin-top: 10px;
+
+      @include mq('tablet') {
+        order: 3;
+        width: auto;
+        flex: 0 0 auto;
+        margin-top: 17px;
+      }
+
+      @include mq-custom(367px) {
+        margin-top: 0;
+        margin-left: 20px;
+      }
 
       p {
-        font: 14px $DinPro;
+        font: 26px $DinPro;
         font-weight: 400;
         color: white;
+        text-transform: uppercase;
+
+        @include mq('phone') {
+          font: 18px $DinPro;
+          font-weight: 400;
+        }
       }
     }
 
-    .btn-order {
-      margin-top: 23px;
-      @include btn-more(165px,35px,white,white,14px,black);
+    .date {
+      order: 2;
+      align-items: center;
+      justify-content: center;
+
+      @include mq('tablet') {
+        order: 4;
+        flex: 0 0 auto;
+        justify-content: flex-start;
+        margin-left: 0;
+        margin-top: 17px;
+      }
+
+      @include mq('phone') {
+        margin-left: 0;
+      }
+
+      .icon {
+        margin-right: 20px;
+
+        img {
+          display: block;
+          width: 23px;
+        }
+      }
+
+      .text {
+        p {
+          font: 26px/36px $DinPro;
+          font-weight: 400;
+          color: white;
+          text-transform: none;
+
+          @include mq-custom(1024px) {
+            font: 22px/36px $DinPro;
+            font-weight: 400;
+          }
+
+          @include mq('phone') {
+            font: 15px/36px $DinPro;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .cinema-logo {
+      order: 3;
 
       img {
+        display: block;
+      }
+
+      @include mq('tablet') {
+        margin-left: 20px;
+        order: 2;
+      }
+
+      @include mq-custom(668px) {
+        margin-left: 0;
+      }
+
+      @include mq-custom(450px) {
+        margin: 10px 0;
+      }
+
+      @include mq('phone') {
+        margin: 0;
+      }
+    }
+  }
+
+  .section-3__slider_nav-wrap {
+    position: relative;
+
+    @include mq-custom(1024px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .slider-nav {
+      @include slider-nav;
+
+      @include mq-custom(740px) {
+        display: none;
+      }
+
+      .prev, .next {
+        top: 30%;
+        transform: translateY(-30%);
+      }
+
+      .prev {
+        left: -74px;
+        background: url("../img/arrow_white_left.svg") center center no-repeat;
+        background-size: 16px 26px;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        &:hover {
+          background: url("../img/arrow_left_green.svg") center center no-repeat;
+          background-size: 16px 26px;
+        }
+
+        &:before {
+          @include pseudo(1,auto,12px,auto,100%);
+          width: 2000px;
+          height: 2px;
+          margin-right: 39px;
+          background: $green;
+        }
+
+        @include mq-custom(1650px) {
+          left: -31px;
+        }
+
+        @include mq-custom(1024px) {
+          left: -15px;
+        }
+      }
+
+      .next {
+        right: -74px;
+        background: url("../img/arrow_white_right.svg") center center no-repeat;
+        background-size: 16px 26px;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        &:hover {
+          background: url("../img/arrow_right_gereen.svg") center center no-repeat;
+          background-size: 16px 26px;
+        }
+
+        &:after {
+          @include pseudo(1,100%,12px,auto,auto);
+          width: 2000px;
+          height: 2px;
+          margin-left: 39px;
+          background: $green;
+        }
+
+        @include mq-custom(1650px) {
+          right: -31px;
+        }
+
+        @include mq-custom(1024px) {
+          right: -15px;
+        }
+      }
+    }
+  }
+
+  .section-3__slider {
+
+    .swiper-slide {
+      width: 222px !important;
+      @include auto;
+
+      &:hover {
+        .title {
+          p {
+            border-bottom: 1px solid white;
+          }
+        }
+      }
+
+      @include mq('phone') {
         width: auto !important;
+      }
+
+      .poster {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 24px;
+        width: 212px;
+
+        &:after {
+          @include pseudo(1,10px,-10px,20px,-10px);
+          background: white;
+
+          @include mq-custom(550px) {
+            display: none;
+          }
+        }
+
+        img {
+          position: relative;
+          z-index: 2;
+          display: block;
+          max-width: 212px;
+
+          @include mq('phone') {
+            max-width: 178px;
+          }
+        }
+      }
+
+      .title {
+        p {
+          display: inline;
+          font: 16px $DinBold;
+          font-weight: 600;
+          color: white;
+          border-bottom: 1px solid transparent;
+          transition: all .3s linear;
+        }
+      }
+
+      .time {
+        margin-top: 20px;
+
+        p {
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: white;
+        }
+      }
+
+      .btn-order {
+        margin-top: 23px;
+        @include btn-more(165px,35px,white,white,14px,black);
+
+        button {
+
+          span {
+            padding-right: 30px;
+            background: url('../img/ticket_2.svg') right center no-repeat;
+            background-size: 18px 10px;
+            transition: all .3s linear;
+          }
+
+          &:hover {
+            background: $green;
+            border: $green;
+
+            span {
+              color: white;
+              background: url('../img/ticket_1.svg') right center no-repeat;
+              background-size: 18px 10px;
+            }
+          }
+        }
       }
     }
   }

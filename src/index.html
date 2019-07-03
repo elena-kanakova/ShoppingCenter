@@ -15,15 +15,13 @@
         <div class="header-logo">
             <a href="#">
                 <picture>
-                    <source srcset="img/header-logo_mobile.png" media="(max-width: 500px)" alt="Лого">
-                    <source srcset="img/header-logo.png">
-                    <img src="img/header-logo.png" alt="Лого">
+                    <img src="img/logo.svg" alt="Лого">
                 </picture>
             </a>
         </div>
         <div class="header-address flex">
             <div class="header-address_icon">
-                <img src="img/address-icon.png" alt="Иконка">
+                <img src="img/head_1.svg" alt="Иконка">
             </div>
             <div class="header-address_text">
                 <p>м. Калужская <br>
@@ -33,7 +31,7 @@
         </div>
         <div class="header-time flex">
             <div class="header-time_icon">
-                <img src="img/time-icon.png" alt="Иконка">
+                <img src="img/head_2.svg" alt="Иконка">
             </div>
             <div class="header-time_text">
                 <p>Время работы <br>
@@ -45,108 +43,98 @@
             <a href="tel:+7 495 727 43 00">+7 (495) 727 43 00</a>
         </div>
         <div class="header-buttons flex">
-            <div class="btn flex center">
-                <img src="img/search-icon.png" alt="Поиск">
+            <div class="header_search-wrap">
+                <div class="btn header_btn-search flex center">
+                    <img src="img/head_search.svg" alt="Поиск">
+                </div>
+                <div class="header-search">
+                    <form action="" id="header-search">
+                        <label for="header-search_input">
+                            <span>Введите слово для поиска</span>
+                        </label>
+                        <input type="text" id="header-search_input" name="header-search_input">
+                    </form>
+                </div>
             </div>
-            <div class="btn flex center">
-                <img src="img/flag-icon.png" alt="Иконка">
+            <div class="btn location flex center" onclick="location.href='#section-map'">
+                <img src="img/head_location.svg" alt="Иконка">
             </div>
-            <div class="btn flex center">
-                <p class="text">P</p>
+            <div class="btn parking flex center" onclick="location.href='#parking'">
+                <img src="img/heap_parking.svg" alt="Иконка">
             </div>
         </div>
-        <div class="header-menu">
-            <div class="btn-menu flex column">
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-            </div>
-        </div>
+        <div class="header-menu js-menu-btn"></div>
     </div>
 </header>
 <nav id="header_main-nav">
     <div class="container">
         <ul class="flex nav">
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/shop-icon.png" alt="Иконка">
-                    <span class="shop-link">Магазины</span>
+                <a href="#" class="shop-link">
+                    <span>Магазины</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/cafe-icon.png" alt="Иконка">
-                    <span class="cafe-link">Кафе и рестораны</span>
+                <a href="#" class="cafe-link">
+                    <span>Кафе и рестораны</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/news-icon.png" alt="Иконка">
-                    <span class="news-link">Новости и акции</span>
+                <a href="#" class="news-link">
+                    <span>Новости и акции</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/cinema-icon.png" alt="Иконка">
-                    <span class="cinema-link">Кинотеатр</span>
+                <a href="#" class="cinema-link">
+                    <span>Кинотеатр</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/kids-icon.png" alt="Иконка">
-                    <span class="kids-link">Для детей</span>
+                <a href="#" class="kids-link">
+                    <span>Для детей</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/service-icon.png" alt="Иконка">
-                    <span class="service-link">Услуги</span>
+                <a href="#" class="service-link">
+                    <span>Услуги</span>
                 </a>
             </li>
         </ul>
     </div>
 </nav>
-    <section id="section-1">
+    <section id="index__section-1">
     <div class="section-1__slider_nav-wrap">
         <div class="section-1__slider-wrap swiper-container">
             <div id="section-1_slider" class="swiper-wrapper">
                 <div class="slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 414px)" srcset="img/index__section-1_bg-414.jpg">
+                        <source media="(max-width: 768px)" srcset="img/index__section-1_bg-768.jpg">
+                        <source media="(max-width: 1280px)" srcset="img/index__section-1_bg-1280.jpg">
+                        <img src="img/index__section-1_bg.jpg" alt="Слайд">
+                    </picture>
                     <div class="container">
                         <div class="text">
                             <p>Вам будут рады <br>всегда!!!</p>
                         </div>
                         <div class="btn-more">
-                            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow.png" alt="Стрелка"></button>
+                            <button class="flex center" onclick="window.open('')"><span>Подробнее</span></button>
                         </div>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 414px)" srcset="img/index__section-1_bg-414.jpg">
+                        <source media="(max-width: 768px)" srcset="img/index__section-1_bg-768.jpg">
+                        <source media="(max-width: 1280px)" srcset="img/index__section-1_bg-1280.jpg">
+                        <img src="img/index__section-1_bg.jpg" alt="Слайд">
+                    </picture>
                     <div class="container">
                         <div class="text">
                             <p>Вам будут рады <br>всегда!!!</p>
                         </div>
                         <div class="btn-more">
-                            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow.png" alt="Стрелка"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-                    <div class="container">
-                        <div class="text">
-                            <p>Вам будут рады <br>всегда!!!</p>
-                        </div>
-                        <div class="btn-more">
-                            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow.png" alt="Стрелка"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-                    <div class="container">
-                        <div class="text">
-                            <p>Вам будут рады <br>всегда!!!</p>
-                        </div>
-                        <div class="btn-more">
-                            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow.png" alt="Стрелка"></button>
+                            <button class="flex center" onclick="window.open('')"><span>Подробнее</span></button>
                         </div>
                     </div>
                 </div>
@@ -158,9 +146,9 @@
             </div>
         </div>
     </div>
-    <div class="mouse"><img src="img/section-1_mouse-icon.png" alt="Вниз"></div>
+    <div class="mouse"></div>
 </section>
-    <section id="section-2">
+    <section id="index__section-2">
     <div class="container">
         <div class="section-2__title">
             <h2>Новости и акции</h2>
@@ -178,123 +166,127 @@
                     <div class="section-2__slider-wrap swiper-container">
                         <div class="section-2__slider swiper-wrapper">
                             <article class="slide swiper-slide" onclick="window.open('')">
-                                <div class="photo flex center">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
                             <article class="slide swiper-slide" onclick="window.open('')">
-                                <div class="photo flex center">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
-                                </div>
                             </article>
                             <article class="slide swiper-slide" onclick="window.open('')">
-                                <div class="photo flex center">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
                             <article class="slide swiper-slide" onclick="window.open('')">
-                                <div class="photo flex center">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
-                                </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
                                 </div>
                             </article>
                         </div>
@@ -309,124 +301,128 @@
                 <div class="section-2__slider_nav-wrap">
                     <div class="section-2__slider-wrap swiper-container">
                         <div class="section-2__slider swiper-wrapper">
-                            <article class="slide swiper-slide" onclick="window.open('ekodomstroy.html')">
-                                <div class="photo flex center">
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
-                                </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
                                 </div>
                             </article>
                         </div>
@@ -441,124 +437,128 @@
                 <div class="section-2__slider_nav-wrap">
                     <div class="section-2__slider-wrap swiper-container">
                         <div class="section-2__slider swiper-wrapper">
-                            <article class="slide swiper-slide" onclick="window.open('ekodomstroy.html')">
-                                <div class="photo flex center">
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
+                                        <div class="text">
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
+                                        </div>
+                                    </div>
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker promo flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>HERBAE - Новый женский <br>
+                                                аромат L'Occitane!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Это торжество дикой природы олицетворение женщины, <br>
+                                                исполненной чарующей естественности и непринужденной <br>
+                                                красоты.
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-1_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-1_bg-1280.jpg">
                                         <img src="img/section-2_slide-1_bg.jpg" alt="Слайд">
                                     </picture>
                                 </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker promo flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                            </article>
+                            <article class="slide swiper-slide" onclick="window.open('')">
+                                <div class="content_wrap flex center">
+                                    <div class="section-2__slide_content">
+                                        <div class="sticker news flex center">
+                                            <span>Акция</span>
+                                        </div>
+                                        <div class="date flex">
+                                            <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
+                                            <div class="text">
+                                                <p>27 марта 2019 г.</p>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <h3>Жаждешь скорости? Торговый <br>
+                                                Центр «Калужский», дарит драйв!</h3>
+                                        </div>
                                         <div class="text">
-                                            <p>27 марта 2019 г.</p>
+                                            <p>Совершите покупки любых товаров или услуг в магазинах <br>
+                                                Торгового Центра «Калужский»</p>
                                         </div>
                                     </div>
-                                    <div class="title">
-                                        <h3>HERBAE - Новый женский <br>
-                                            аромат L'Occitane!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Это торжество дикой природы олицетворение женщины, <br>
-                                            исполненной чарующей естественности и непринужденной <br>
-                                            красоты.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="slide swiper-slide">
-                                <div class="photo flex center">
                                     <picture>
                                         <source media="(max-width: 414px)" srcset="img/section-2_slide-1_bg-500.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/section-2_slide-1_bg-768.jpg">
                                         <source media="(max-width: 1024px)" srcset="img/section-2_slide-2_bg.jpg">
                                         <source media="(max-width: 1280px)" srcset="img/section-2_slide-2_bg-1280.jpg">
                                         <img src="img/section-2_slide-2_bg.jpg" alt="Слайд">
                                     </picture>
-                                </div>
-                                <div class="section-2__slide_content">
-                                    <div class="sticker news flex center">
-                                        <span>Акция</span>
-                                    </div>
-                                    <div class="date flex">
-                                        <div class="icon"><img src="img/date-icon.png" alt="Иконка"></div>
-                                        <div class="text">
-                                            <p>27 марта 2019 г.</p>
-                                        </div>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Жаждешь скорости? Торговый <br>
-                                            Центр «Калужский», дарит драйв!</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Совершите покупки любых товаров или услуг в магазинах <br>
-                                            Торгового Центра «Калужский»</p>
-                                    </div>
                                 </div>
                             </article>
                         </div>
@@ -570,12 +570,12 @@
                 </div>
             </div>
             <div class="section-2__btn-all">
-                <button class="flex center"><span>Все новости</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+                <button class="flex center" onclick="window.open('')"><span>Все новости</span></button>
             </div>
         </div>
     </div>
 </section>
-    <section id="section-3">
+    <section id="index__section-3">
     <div class="container">
         <div class="section-3__title-wrap flex wrap">
             <div class="title">
@@ -585,7 +585,7 @@
                 <p>Кинотеатр</p>
             </div>
             <div class="date flex">
-                <div class="icon"><img src="img/date-icon-2.png" alt="Иконка"></div>
+                <div class="icon"><img src="img/time.svg" alt="Иконка"></div>
                 <div class="text">
                     <p>16 мая, Среда, 16:05</p>
                 </div>
@@ -610,7 +610,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -622,7 +622,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -634,7 +634,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -646,7 +646,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -658,7 +658,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -670,7 +670,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                     <div class="slide swiper-slide">
@@ -682,7 +682,7 @@
                             <p>ср 13:20, ср 16:15</p>
                         </div>
                         <div class="btn-order">
-                            <button class="flex center"><span>Купить билет</span><img src="img/order-cinema_icon.png" alt=""></button>
+                            <button class="flex center"><span>Купить билет</span></button>
                         </div>
                     </div>
                 </div>
@@ -694,14 +694,22 @@
         </div>
     </div>
 </section>
-    <section id="section-4">
+    <section id="index__section-4">
     <div class="container">
         <div class="section-4__title">
             <h2>СХЕМА ТЦ</h2>
         </div>
+        <div class="section-4_search-wrap flex">
+            <form id="section-4_map-search" action="" class="flex">
+                <label for="section-4_search-input">
+                    <input id="section-4_search-input" name="section-4_map-search" type="text" placeholder="Найти магазин">
+                </label>
+                <button type="submit" class="flex center"><span>Найти</span><img src="img/search-icon-white.png" alt="Иконка"></button>
+            </form>
+        </div>
         <div class="section-4__content-wrap flex">
             <div class="section-4__tab-nav_wrap">
-                <div class="tab-nav flex center">
+                <div class="tab-nav js-tab flex center">
                     <div class="number-floor flex center">
                         <p>0</p>
                     </div>
@@ -709,7 +717,7 @@
                         <p>этаж</p>
                     </div>
                 </div>
-                <div class="tab-nav flex center">
+                <div class="tab-nav js-tab flex center">
                     <div class="number-floor flex center">
                         <p>1</p>
                     </div>
@@ -717,7 +725,7 @@
                         <p>этаж</p>
                     </div>
                 </div>
-                <div class="tab-nav active flex center">
+                <div class="tab-nav js-tab flex center">
                     <div class="number-floor flex center">
                         <p>2</p>
                     </div>
@@ -725,7 +733,7 @@
                         <p>этаж</p>
                     </div>
                 </div>
-                <div class="tab-nav flex center">
+                <div class="tab-nav js-tab flex center">
                     <div class="number-floor flex center">
                         <p>3</p>
                     </div>
@@ -733,7 +741,7 @@
                         <p>этаж</p>
                     </div>
                 </div>
-                <div class="tab-nav flex center">
+                <div class="tab-nav js-tab flex center">
                     <div class="number-floor flex center">
                         <p>Р</p>
                     </div>
@@ -743,20 +751,24 @@
                 </div>
             </div>
             <div class="section-4__tab-content_wrap flex column">
-                <div class="search-wrap">
-                    <form id="section-4_map-search" action="" class="flex">
-                        <label for="section-4_search-input">
-                            <input id="section-4_search-input" name="section-4_map-search" type="text" placeholder="Найти магазин">
-                        </label>
-                        <button type="submit" class="flex center"><span>Найти</span><img src="img/search-icon-white.png" alt="Иконка"></button>
-                    </form>
-                </div>
                 <div class="maps-wrap flex">
                     <div class="compass_m">
                         <img src="img/section-4_M.png" alt="Иконка">
                     </div>
                     <div class="maps">
-                        <div class="map_floor">
+                        <div class="js-tab-cont map_floor">
+                            <img src="img/section-4_map.png" alt="Карта первого этажа">
+                        </div>
+                        <div class="js-tab-cont map_floor">
+                            <img src="img/section-4_map.png" alt="Карта первого этажа">
+                        </div>
+                        <div class="js-tab-cont map_floor">
+                            <img src="img/section-4_map.png" alt="Карта первого этажа">
+                        </div>
+                        <div class="js-tab-cont map_floor">
+                            <img src="img/section-4_map.png" alt="Карта первого этажа">
+                        </div>
+                        <div class="js-tab-cont map_floor">
                             <img src="img/section-4_map.png" alt="Карта первого этажа">
                         </div>
                     </div>
@@ -807,11 +819,11 @@
             </div>
         </div>
         <div class="section-4__btn-all">
-            <button class="flex center"><span>Все магазины</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+            <button class="flex center"><span>Все магазины</span></button>
         </div>
     </div>
 </section>
-    <section id="section-5">
+    <section id="index__section-5">
     <div class="container">
         <div class="section-5__top-content flex">
             <div class="section-5__title-desc-about">
@@ -824,7 +836,7 @@
                         японской и итальянской кухни.</p>
                 </div>
                 <div class="btn-more">
-                    <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow.png" alt="Стрелка"></button>
+                    <button class="flex center"><span>Подробнее</span></button>
                 </div>
             </div>
             <div class="section-5__text">
@@ -841,7 +853,7 @@
             <div class="section-5__slider-cafe_nav-wrap">
                 <div class="section-5__slider-cafe_wrap swiper-container">
                     <div id="section-5__slider-cafe" class="swiper-wrapper">
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-1_icon.jpg" alt="Логотип">
                             </div>
@@ -853,13 +865,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-2_icon.jpg" alt="Логотип">
                             </div>
@@ -871,13 +881,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-3_icon.jpg" alt="Логотип">
                             </div>
@@ -889,13 +897,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-4_icon.jpg" alt="Логотип">
                             </div>
@@ -907,13 +913,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-5_icon.jpg" alt="Логотип">
                             </div>
@@ -925,13 +929,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-5_icon.jpg" alt="Логотип">
                             </div>
@@ -943,13 +945,11 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide swiper-slide">
+                        <div class="slide swiper-slide" onclick="window.open('')">
                             <div class="cafe-logo flex center">
                                 <img src="img/section-5_slide-5_icon.jpg" alt="Логотип">
                             </div>
@@ -961,9 +961,7 @@
                                     <div class="location">
                                         <p>3 этаж</p>
                                     </div>
-                                    <div class="btn-more">
-                                        <img src="img/btn-arrow.png" alt="Стрелка">
-                                    </div>
+                                    <div class="btn-more"></div>
                                 </div>
                             </div>
                         </div>
@@ -977,12 +975,12 @@
                 </div>
             </div>
             <div class="btn-all">
-                <button class="flex center"><span>Посмотреть все</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+                <button class="flex center"><span>Посмотреть все</span></button>
             </div>
         </div>
         <div class="section-5__slider-banner_wrap swiper-container">
             <div id="section-5__slider-banner" class="flex swiper-wrapper">
-                <div class="slide swiper-slide">
+                <div class="slide swiper-slide" onclick="window.open('')">
                     <picture>
                         <source media="(max-width: 414px)" srcset="img/section-5_banner-414.jpg">
                         <source media="(max-width: 768px)" srcset="img/section-5_banner-768.jpg">
@@ -990,7 +988,7 @@
                         <img src="img/section-5_banner.jpg" alt="Банер">
                     </picture>
                 </div>
-                <div class="slide swiper-slide">
+                <div class="slide swiper-slide" onclick="window.open('')">
                     <picture>
                         <source media="(max-width: 414px)" srcset="img/section-5_banner-414.jpg">
                         <source media="(max-width: 768px)" srcset="img/section-5_banner-768.jpg">
@@ -998,7 +996,7 @@
                         <img src="img/section-5_banner.jpg" alt="Банер">
                     </picture>
                 </div>
-                <div class="slide swiper-slide">
+                <div class="slide swiper-slide" onclick="window.open('')">
                     <picture>
                         <source media="(max-width: 414px)" srcset="img/section-5_banner-414.jpg">
                         <source media="(max-width: 768px)" srcset="img/section-5_banner-768.jpg">
@@ -1006,7 +1004,7 @@
                         <img src="img/section-5_banner.jpg" alt="Банер">
                     </picture>
                 </div>
-                <div class="slide swiper-slide">
+                <div class="slide swiper-slide" onclick="window.open('')">
                     <picture>
                         <source media="(max-width: 414px)" srcset="img/section-5_banner-414.jpg">
                         <source media="(max-width: 768px)" srcset="img/section-5_banner-768.jpg">
@@ -1015,16 +1013,11 @@
                     </picture>
                 </div>
             </div>
-            <div class="slider-dots flex">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+            <div class="slider-dots flex"></div>
         </div>
     </div>
 </section>
-    <section id="section-6">
+    <section id="index__section-6">
     <div class="container flex">
         <div class="section-6__title-text">
             <div class="title">
@@ -1039,18 +1032,18 @@
             </div>
         </div>
         <div class="section-6__logo flex center">
-            <img src="img/section-6_tc-logo.png" alt="Лого">
+            <img src="img/k.svg" alt="Лого">
         </div>
         <div class="section-6__btn">
             <p>Наполни жизнь <br>
                 цветом</p>
-            <button class="flex center"><span>Отправить заявку</span><img src="img/mail-icon.png" alt="Иконка"></button>
+            <button class="flex center"><span>Отправить заявку</span><img src="img/mail.svg" alt="Иконка"></button>
         </div>
     </div>
 </section>
     <section id="section-map">
     <div class="section-map__map">
-        <img src="img/section-map_map.jpg" alt="Карта">
+        <div id="YMapsID"></div>
     </div>
     <div class="container">
         <div class="section-map__address-wrap flex">
@@ -1066,7 +1059,7 @@
                     <p>Показать маршрут</p>
                 </div>
                 <div class="icon">
-                    <img src="img/metro-icon.png" alt="Иконка">
+                    <img src="img/how_1.svg" alt="Иконка">
                 </div>
             </div>
             <div class="car-wrap element">
@@ -1074,11 +1067,21 @@
                     <p>На собственном трансопрте</p>
                 </div>
                 <div class="nav-tabs flex">
-                    <span class="tab active">Проезд к ТЦ из Центра</span>
-                    <span class="tab">Проезд со стороны МКАД</span>
+                    <span class="tab js-tab active">Проезд к ТЦ из Центра</span>
+                    <span class="tab js-tab">Проезд со стороны МКАД</span>
                 </div>
                 <div class="tabs-cont_wrap">
-                    <div class="js-tabs-cont desc">
+                    <div class="js-tab-cont tabs-cont desc">
+                        <p>Двигаясь по ул. Профсоюзной в сторону области повернуть
+                            налево на ул. Наметкина, и продолжить движение прямо до
+                            Севастопольского проспекта. По Севастопольскому проспекту
+                            проехать до пересечения с ул. Обручева и съехать с перекрестка
+                            с круговым движением направо в сторону ул. Профсоюзной.
+                            Проехав 1,7км по ул. Обручева повернуть направо на Научный
+                            проезд. По Научному проезду все время прямо до парковки
+                            ТЦ "Калужский".</p>
+                    </div>
+                    <div class="js-tab-cont tabs-cont desc">
                         <p>Двигаясь по ул. Профсоюзной в сторону области повернуть
                             налево на ул. Наметкина, и продолжить движение прямо до
                             Севастопольского проспекта. По Севастопольскому проспекту
@@ -1090,7 +1093,7 @@
                     </div>
                 </div>
                 <div class="icon">
-                    <img src="img/car-icon.png" alt="Иконка">
+                    <img src="img/how_2.svg" alt="Иконка">
                 </div>
             </div>
             <div class="bus-wrap element">
@@ -1098,21 +1101,39 @@
                     <p>На автобусах</p>
                 </div>
                 <div class="nav-tabs flex">
-                    <span class="tab active">28</span>
-                    <span class="tab">226</span>
-                    <span class="tab">363</span>
-                    <span class="tab">624</span>
-                    <span class="tab">642к</span>
-                    <span class="tab">642</span>
-                    <span class="tab">784</span>
-                    <span class="tab">671</span>
+                    <span class="tab js-tab active">28</span>
+                    <span class="tab js-tab">226</span>
+                    <span class="tab js-tab">363</span>
+                    <span class="tab js-tab">624</span>
+                    <span class="tab js-tab">642к</span>
+                    <span class="tab js-tab">642</span>
+                    <span class="tab js-tab">784</span>
+                    <span class="tab js-tab">671</span>
                 </div>
                 <div class="tabs-cont_wrap">
-                    <div class="tabs-cont desc">
+                    <div class="tabs-cont desc js-tab-cont">
                         <div class="desc">
                             <p>Академика Янгеля</p>
                         </div>
-                        <div class="arrow-img"><img src="img/arrow-down.png" alt="Стрелка"></div>
+                        <div class="arrow-img"><img src="img/arrow_down.svg" alt="Стрелка"></div>
+                        <div class="desc">
+                            <p>Метро Калужская (Южный вестибюль метро)</p>
+                        </div>
+                    </div>
+                    <div class="tabs-cont desc js-tab-cont">
+                        <div class="desc">
+                            <p>Академика Янгеля</p>
+                        </div>
+                        <div class="arrow-img"><img src="img/arrow_down.svg" alt="Стрелка"></div>
+                        <div class="desc">
+                            <p>Метро Калужская (Южный вестибюль метро)</p>
+                        </div>
+                    </div>
+                    <div class="tabs-cont desc js-tab-cont">
+                        <div class="desc">
+                            <p>Академика Янгеля</p>
+                        </div>
+                        <div class="arrow-img"><img src="img/arrow_down.svg" alt="Стрелка"></div>
                         <div class="desc">
                             <p>Метро Калужская (Южный вестибюль метро)</p>
                         </div>
@@ -1122,7 +1143,7 @@
                     <p>Показать маршрут</p>
                 </div>
                 <div class="icon">
-                    <img src="img/bus-icon.png" alt="Иконка">
+                    <img src="img/how_3.svg" alt="Иконка">
                 </div>
             </div>
         </div>
@@ -1136,7 +1157,7 @@
                     <h2>Паркинг</h2>
                 </div>
                 <div class="desc flex">
-                    <div class="icon"><img src="img/attention-icon.png" alt="Иконка"></div>
+                    <div class="icon"><img src="img/info.svg" alt="Иконка"></div>
                     <div class="text">
                         <p><span>Обращаем ваше внимание</span> <br>
                             сломался въезд-выезд, паркинг временно не работает</p>
@@ -1148,7 +1169,7 @@
                     <h3>Крытая многоуровневая парковка для автотранспорта работает ежедневно:</h3>
                 </div>
                 <div class="time-desc flex">
-                    <div class="icon"><img src="img/parking-in-icon.png" alt="Иконка"></div>
+                    <div class="icon"><img src="img/parking_1.svg" alt="Иконка"></div>
                     <div class="desc">
                         <p>На въезд транспорта:</p>
                     </div>
@@ -1157,7 +1178,7 @@
                     </div>
                 </div>
                 <div class="time-desc flex">
-                    <div class="icon"><img src="img/parking-out-icon.png" alt="Иконка"></div>
+                    <div class="icon"><img src="img/parking_2.svg" alt="Иконка"></div>
                     <div class="desc">
                         <p>На выезд транспорта:</p>
                     </div>
@@ -1226,11 +1247,7 @@
             <div class="insta-wrap">
                 <div class="insta flex center">
                     <div class="logo">
-                        <picture>
-                            <source media="(max-width: 414px)" srcset="img/about-center_insta-logo-414.png">
-                            <source media="(max-width: 768px)" srcset="img/about-center_insta-logo-768.png">
-                            <img src="img/about-center_insta-logo.png" alt="instagram">
-                        </picture>
+                        <img src="img/socio_big_inst.svg" alt="instagram">
                     </div>
                     <div class="text-wrap">
                         <p class="number">3 895</p>
@@ -1241,11 +1258,7 @@
             <div class="vk-wrap">
                 <div class="vk flex center">
                     <div class="logo">
-                        <picture>
-                            <source media="(max-width: 414px)" srcset="img/about-center_vk-logo-414.png">
-                            <source media="(max-width: 768px)" srcset="img/about-center_vk-logo-768.png">
-                            <img src="img/about-center_vk-logo.png" alt="vk">
-                        </picture>
+                        <img src="img/cosio_big_vk.svg" alt="vk">
                     </div>
                     <div class="text-wrap">
                         <p class="number">1 569</p>
@@ -1256,11 +1269,7 @@
             <div class="fb-wrap">
                 <div class="fb flex center">
                     <div class="logo">
-                        <picture>
-                            <source media="(max-width: 414px)" srcset="img/about-center_fb-logo-414.png">
-                            <source media="(max-width: 768px)" srcset="img/about-center_fb-logo-768.png">
-                            <img src="img/about-center_fb-logo.png" alt="fb">
-                        </picture>
+                        <img src="img/socio_big_f.svg" alt="fb">
                     </div>
                     <div class="text-wrap">
                         <p class="number">905</p>
@@ -1269,23 +1278,21 @@
                 </div>
             </div>
             <div class="about-center_icon flex center">
-                <picture>
-                    <source media="(max-width: 414px)" srcset="img/about-center_icon-414.png">
-                    <source media="(max-width: 768px)" srcset="img/about-center_icon-768.png">
-                    <img src="img/about-center_icon.png" alt="Иконка">
-                </picture>
+                <img src="img/k.svg" alt="Иконка">
             </div>
         </div>
     </div>
 </section>
-    <section id="section-10">
+    <section id="index__section-10">
     <div class="section-10__slider_nav-wrap">
         <div class="section-10__slider-wrap swiper-container">
             <div id="section-10__slider" class="flex swiper-wrapper">
-                <div class="slide swiper-slide"><img src="img/section-10_slide-1.jpg" alt="Фото"></div>
+                <div class="slide swiper-slide"><img src="img/section-10_slide-2.jpg" alt="Фото"></div>
                 <div class="slide swiper-slide"><img src="img/section-10_slide-2.jpg" alt="Фото"></div>
                 <div class="slide swiper-slide"><img src="img/section-10_slide-3.jpg" alt="Фото"></div>
-                <div class="slide swiper-slide"><img src="img/section-10_slide-4.jpg" alt="Фото"></div>
+                <div class="slide swiper-slide"><img src="img/section-10_slide-3.jpg" alt="Фото"></div>
+                <div class="slide swiper-slide"><img src="img/section-10_slide-3.jpg" alt="Фото"></div>
+                <div class="slide swiper-slide"><img src="img/section-10_slide-3.jpg" alt="Фото"></div>
             </div>
         </div>
         <div class="section-10__slider-nav flex center">
@@ -1307,7 +1314,7 @@
             </p>
         </div>
         <div class="button">
-            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+            <button class="flex center"><span>Подробнее</span></button>
         </div>
     </div>
     <div class="element flex column">
@@ -1320,7 +1327,7 @@
                 компанией.</p>
         </div>
         <div class="button">
-            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+            <button class="flex center"><span>Подробнее</span></button>
         </div>
     </div>
     <div class="element flex column">
@@ -1332,7 +1339,7 @@
                 и все что с этим связано в несколько срок</p>
         </div>
         <div class="button">
-            <button class="flex center"><span>Подробнее</span><img src="img/btn-arrow_black.png" alt="Стрелка"></button>
+            <button class="flex center"><span>Подробнее</span></button>
         </div>
     </div>
 </section>
@@ -1384,14 +1391,16 @@
             </div>
             <div class="footer__phone-logo flex">
                 <div class="logo">
-                    <img src="img/footer-logo.png" alt="Лого">
+                    <img src="img/k.svg" alt="Лого">
                 </div>
                 <div class="phone">
                     <a href="tel:+74957274300">+7 (495) 727 43 00</a>
                 </div>
             </div>
             <div class="footer__intel flex">
-                <img src="img/footer-intel-logo.png" alt="Интел М">
+                <a href="#">
+                    <img src="img/footer-intel-logo.png" alt="Интел М">
+                </a>
             </div>
         </div>
         <div class="footer__bottom-wrap flex">
@@ -1416,13 +1425,13 @@
                 </nav>
                 <div class="footer__social-links flex">
                     <div class="fb flex">
-                        <a href="#" class="flex"><img src="img/footer-fb-logo.png" alt="Лого" class="logo"><span>facebook</span></a>
+                        <a href="#" class="flex"><img src="img/Socio_facebook.svg" alt="Лого" class="logo"><span>facebook</span></a>
                     </div>
                     <div class="vk flex">
-                        <a href="#" class="flex"><img src="img/footer-vk-logo.png" alt="Лого" class="logo"><span>vkontakte</span></a>
+                        <a href="#" class="flex"><img src="img/socio_vk.svg" alt="Лого" class="logo"><span>vkontakte</span></a>
                     </div>
                     <div class="insta flex">
-                        <a href="#" class="flex"><img src="img/footer-insta-logo.png" alt="Лого" class="logo"><span>instagram</span></a>
+                        <a href="#" class="flex"><img src="img/socio_inst.svg" alt="Лого" class="logo"><span>instagram</span></a>
                     </div>
                 </div>
             </div>
@@ -1430,9 +1439,7 @@
                 <div class="footer__time">
                     <p>Время работы с 10:00 до 23:00</p>
                 </div>
-                <div class="footer__up flex center">
-                    <img src="img/arrow-up.png" alt="Наверх">
-                </div>
+                <div class="footer__up flex center"><span></span></div>
             </div>
         </div>
     </div>
@@ -1441,6 +1448,7 @@
 
 <script src="libs/jquery-3.2.1.min.js"></script>
 <script src="libs/swiper.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3158b50-9877-4e46-b70e-71cfdfdb28ae"></script>
 <script src="js/scripts.js"></script>
 
 </body>

@@ -3,15 +3,13 @@
         <div class="header-logo">
             <a href="#">
                 <picture>
-                    <source srcset="img/header-logo_mobile.png" media="(max-width: 500px)" alt="Лого">
-                    <source srcset="img/header-logo.png">
-                    <img src="img/header-logo.png" alt="Лого">
+                    <img src="img/logo.svg" alt="Лого">
                 </picture>
             </a>
         </div>
         <div class="header-address flex">
             <div class="header-address_icon">
-                <img src="img/address-icon.png" alt="Иконка">
+                <img src="img/head_1.svg" alt="Иконка">
             </div>
             <div class="header-address_text">
                 <p>м. Калужская <br>
@@ -21,7 +19,7 @@
         </div>
         <div class="header-time flex">
             <div class="header-time_icon">
-                <img src="img/time-icon.png" alt="Иконка">
+                <img src="img/head_2.svg" alt="Иконка">
             </div>
             <div class="header-time_text">
                 <p>Время работы <br>
@@ -33,62 +31,60 @@
             <a href="tel:+7 495 727 43 00">+7 (495) 727 43 00</a>
         </div>
         <div class="header-buttons flex">
-            <div class="btn flex center">
-                <img src="img/search-icon.png" alt="Поиск">
+            <div class="header_search-wrap">
+                <div class="btn header_btn-search flex center">
+                    <img src="img/head_search.svg" alt="Поиск">
+                </div>
+                <div class="header-search">
+                    <form action="" id="header-search">
+                        <label for="header-search_input">
+                            <span>Введите слово для поиска</span>
+                        </label>
+                        <input type="text" id="header-search_input" name="header-search_input">
+                    </form>
+                </div>
             </div>
-            <div class="btn flex center">
-                <img src="img/flag-icon.png" alt="Иконка">
+            <div class="btn location flex center" onclick="location.href='#section-map'">
+                <img src="img/head_location.svg" alt="Иконка">
             </div>
-            <div class="btn flex center">
-                <p class="text">P</p>
+            <div class="btn parking flex center" onclick="location.href='#parking'">
+                <img src="img/heap_parking.svg" alt="Иконка">
             </div>
         </div>
-        <div class="header-menu">
-            <div class="btn-menu flex column">
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-            </div>
-        </div>
+        <div class="header-menu js-menu-btn"></div>
     </div>
 </header>
 <nav id="header_main-nav">
     <div class="container">
         <ul class="flex nav">
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/shop-icon.png" alt="Иконка">
-                    <span class="shop-link">Магазины</span>
+                <a href="#" class="shop-link">
+                    <span>Магазины</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/cafe-icon.png" alt="Иконка">
-                    <span class="cafe-link">Кафе и рестораны</span>
+                <a href="#" class="cafe-link">
+                    <span>Кафе и рестораны</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/news-icon.png" alt="Иконка">
-                    <span class="news-link">Новости и акции</span>
+                <a href="#" class="news-link">
+                    <span>Новости и акции</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/cinema-icon.png" alt="Иконка">
-                    <span class="cinema-link">Кинотеатр</span>
+                <a href="#" class="cinema-link">
+                    <span>Кинотеатр</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/kids-icon.png" alt="Иконка">
-                    <span class="kids-link">Для детей</span>
+                <a href="#" class="kids-link">
+                    <span>Для детей</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
-                    <img src="img/service-icon.png" alt="Иконка">
-                    <span class="service-link">Услуги</span>
+                <a href="#" class="service-link">
+                    <span>Услуги</span>
                 </a>
             </li>
         </ul>

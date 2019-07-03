@@ -1,4 +1,4 @@
-#section-6 {
+#index__section-6 {
   width: 100%;
   max-width: 1920px;
   @include auto;
@@ -20,125 +20,140 @@
       padding-bottom: 42px;
     }
   }
-}
 
-.section-6__title-text {
-  @include mq('tablet') {
-    order: 1;
-  }
+  .section-6__title-text {
+    @include mq('tablet') {
+      order: 1;
+    }
 
-  .title {
-    h2 {
-      font: 52px $DinBold;
-      font-weight: bold;
-      color: white;
-      text-transform: uppercase;
-
-      @include mq('phone') {
-        font: 32px $DinBold;
+    .title {
+      h2 {
+        font: 52px $DinBold;
         font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+
+        @include mq-custom(450px) {
+          font: 48px $DinBold;
+        }
+
+        @include mq('phone') {
+          font: 32px $DinBold;
+          font-weight: bold;
+        }
       }
     }
-  }
 
-  .text {
-    p {
-      margin: 25px 0;
-      font: 16px/24px $DinPro;
-      font-weight: 400;
-      color: white;
+    .text {
+      p {
+        margin: 25px 0;
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: white;
 
-      @include mq('phone') {
-        margin: 20px 0;
-      }
+        @include mq('phone') {
+          margin: 20px 0;
+        }
 
-      br {
-        @include mq('tablet') {
-          display: none;
+        br {
+          @include mq('tablet') {
+            display: none;
+          }
         }
       }
     }
   }
-}
 
-.section-6__logo {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: white;
-
-  @include mq('tablet') {
-    order: 3;
-  }
-
-  @include mq('phone') {
-    width: 125px;
-    height: 125px;
-  }
-
-  &:before {
-    @include pseudo(1,90px,-90px,auto,auto);
-    position: absolute;
-    width: 1px;
-    height: 55px;
+  .section-6__logo {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
     background: white;
 
     @include mq('tablet') {
-      display: none;
-    }
-  }
-
-  &:after {
-    @include pseudo(1,90px,auto,-90px,auto);
-    position: absolute;
-    width: 1px;
-    height: 55px;
-    background: white;
-
-    @include mq('tablet') {
-      display: none;
-    }
-  }
-
-  img {
-    display: block;
-  }
-}
-
-.section-6__btn {
-  @include mq('tablet') {
-    margin-top: 20px;
-    order: 2;
-  }
-
-  p {
-    margin-bottom: 35px;
-    font: 26px/36px $DinBold;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-
-    @include mq('tablet') {
-      margin-bottom: 30px;
+      order: 3;
     }
 
     @include mq('phone') {
-      font: 20px/28px $DinBold;
-      font-weight: bold;
+      width: 125px;
+      height: 125px;
+    }
+
+    &:before {
+      @include pseudo(1,90px,-90px,auto,auto);
+      position: absolute;
+      width: 1px;
+      height: 55px;
+      background: white;
+
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include pseudo(1,90px,auto,-90px,auto);
+      position: absolute;
+      width: 1px;
+      height: 55px;
+      background: white;
+
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+
+    img {
+      display: block;
+      width: 82px;
     }
   }
 
-  @include btn-more(220px, 50px, $green, $green);
+  .section-6__btn {
+    @include mq('tablet') {
+      margin-top: 20px;
+      order: 2;
+    }
 
-  @include mq('phone') {
-    @include btn-more(180px, 45px, $green, $green);
-  }
+    p {
+      margin-bottom: 35px;
+      font: 26px/36px $DinBold;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
 
-  button {
-    img {
+      @include mq('tablet') {
+        margin-bottom: 30px;
+      }
+
       @include mq('phone') {
-        margin-left: 5px;
+        font: 20px/28px $DinBold;
+        font-weight: bold;
+      }
+    }
+
+    @include btn-more(220px, 50px, $green, $green);
+
+    button {
+      transition: all .3s linear;
+
+      &:hover {
+        background: #027f3d;
+        border: 1px solid #027f3d;
+      }
+    }
+
+    @include mq('phone') {
+      @include btn-more(180px, 45px, $green, $green);
+    }
+
+    button {
+      img {
+        width: 17px;
+        @include mq('phone') {
+          margin-left: 5px;
+        }
       }
     }
   }

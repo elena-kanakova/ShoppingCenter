@@ -54,15 +54,10 @@ $breakpoints: (
   }
 
   span {
-    display: block;
+    padding-right: 18px;
     font: $font-size $DinBold;
     font-weight: bold;
     color: $font-color;
-  }
-
-  img {
-    display: block;
-    margin-left: 14px;
   }
 }
 
@@ -79,6 +74,18 @@ $breakpoints: (
     }
   }
 }
+
+@mixin input-rent {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  padding: 19px;
+  font: 14px $DinPro;
+  font-weight: 400;
+  color: white;
+}
+
 @mixin placeholder($color:#000000,$font-size:15px) {
   ::-webkit-input-placeholder {
     opacity:1;

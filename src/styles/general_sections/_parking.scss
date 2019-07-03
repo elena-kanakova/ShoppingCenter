@@ -81,6 +81,10 @@
       color: $dark-grey;
       text-transform: uppercase;
 
+      @include mq-custom(668px) {
+        font: 48px $DinBold;
+      }
+
       @include mq('phone') {
         font: 32px $DinBold;
         font-weight: bold;
@@ -100,6 +104,7 @@
 
       img {
         display: block;
+        width: 20px;
       }
     }
 
@@ -186,6 +191,10 @@
 
     .icon {
       margin-right: 14px;
+
+      img {
+        width: 44px;
+      }
     }
 
     .desc {

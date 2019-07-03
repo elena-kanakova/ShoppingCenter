@@ -141,6 +141,7 @@
 
     img {
       display: block;
+      width: 39px;
     }
   }
 
@@ -160,6 +161,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 
   @include mq('tablet') {
     order: 2;
@@ -204,10 +206,16 @@
       }
 
       a {
-        display: block;
         font: 15px/26px $DinMedi;
         font-weight: 500;
         color: #212121;
+        border-bottom: 1px solid transparent;
+        transition: all .3s linear;
+
+        &:hover {
+          color: $green;
+          border-bottom: 1px solid $green;
+        }
       }
 
       @include mq('phone') {
@@ -244,6 +252,60 @@
       font: 13px/26px $DinPro;
       font-weight: 400;
       color: #212121;
+      border-bottom: 1px solid transparent;
+      transition: all .3s linear;
+    }
+  }
+
+  .fb {
+
+    img {
+      width: 9px;
+    }
+
+    &:hover {
+      a {
+        span {
+          color: #4e7aac;
+          border-bottom: 1px solid #4e7aac;
+        }
+      }
+    }
+  }
+
+  .vk {
+    border-bottom: 1px solid transparent;
+    transition: all .3s linear;
+
+    img {
+      width: 22px;
+    }
+
+    &:hover {
+      a {
+        span {
+          color: #647eb5;
+          border-bottom: 1px solid #647eb5;
+        }
+      }
+    }
+  }
+
+  .insta {
+    border-bottom: 1px solid transparent;
+    transition: all .3s linear;
+
+    img {
+      width: 19px;
+    }
+
+    &:hover {
+      a {
+        span {
+          color: #212121;
+          border-bottom: 1px solid #212121;
+        }
+      }
     }
   }
 }
@@ -280,6 +342,27 @@
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
   box-shadow: 0 0 20px 0 rgba(.75,.75,.75,.4);
   cursor: pointer;
+  transition: background .3s linear;
+
+  &:hover {
+    background: $green;
+
+    span {
+      background-color: white;
+    }
+  }
+
+  span {
+    width: 20px;
+    height: 11px;
+    transform: rotate(180deg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    background-color: black;
+    mask-image: url('../img/arrow_drop.svg');
+    mask-size: 19px auto;
+    transition: background .3s linear;
+  }
 
   @include mq('tablet') {
     position: absolute;

@@ -51,6 +51,10 @@
       color: white;
       text-transform: uppercase;
 
+      @include mq-custom(668px) {
+        font: 48px $DinBold;
+      }
+
       @include mq('phone') {
         font: 24px/36px $DinBold;
         font-weight: bold;
@@ -137,6 +141,13 @@
       background: rgb(238,47,65);
       background: linear-gradient(0deg, rgba(238,47,65,1) 0%, rgba(243,104,63,1) 100%);
 
+      .logo {
+        img {
+          max-width: 78px;
+          width: 100%;
+        }
+      }
+
       @include mq('tablet') {
         flex-direction: column;
         align-items: center;
@@ -195,6 +206,13 @@
       background: rgb(74,118,168);
       background: linear-gradient(0deg, rgba(74,118,168,1) 0%, rgba(98,142,192,1) 100%);
 
+      .logo {
+        img {
+          max-width: 107px;
+          width: 100%;
+        }
+      }
+
       @include mq('tablet') {
         flex-direction: column;
         align-items: center;
@@ -241,6 +259,13 @@
       @extend %circle;
       background: rgb(66,103,178);
       background: linear-gradient(0deg, rgba(66,103,178,1) 0%, rgba(53,84,148,1) 100%);
+
+      .logo {
+        img {
+          max-width: 49px;
+          width: 100%;
+        }
+      }
 
       @include mq('tablet') {
         flex-direction: column;
@@ -308,6 +333,11 @@
     border-radius: 50%;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+
+    img {
+      max-width: 68px;
+      width: 100%;
+    }
 
     @include mq('tablet') {
       position: relative;

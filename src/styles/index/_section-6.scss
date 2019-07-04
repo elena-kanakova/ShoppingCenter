@@ -138,6 +138,13 @@
     button {
       transition: all .3s linear;
 
+      img {
+        width: 17px;
+        @include mq('phone') {
+          margin-left: 5px;
+        }
+      }
+
       &:hover {
         background: #027f3d;
         border: 1px solid #027f3d;
@@ -146,15 +153,6 @@
 
     @include mq('phone') {
       @include btn-more(180px, 45px, $green, $green);
-    }
-
-    button {
-      img {
-        width: 17px;
-        @include mq('phone') {
-          margin-left: 5px;
-        }
-      }
     }
   }
 }

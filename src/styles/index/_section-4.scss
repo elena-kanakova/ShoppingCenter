@@ -61,15 +61,14 @@
   }
 
   #section-4_map-search {
-    input {
-      padding-left: 26px;
-      padding-right: 26px;
+
+    .input-wrap {
+      position: relative;
       width: 520px;
       height: 55px;
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;
       border: 1px solid $light-grey;
-      background: none;
 
       @include mq-custom(1024px) {
         width: 320px;
@@ -82,9 +81,37 @@
       @include mq('phone') {
         height: 50px;
       }
-    }
 
-    @include placeholder;
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 26px;
+        padding-right: 26px;
+        align-items: center;
+
+        span {
+          font: 15px $DinMedi;
+          font-weight: 500;
+          color: black;
+        }
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        padding-left: 26px;
+        padding-right: 26px;
+        background: none;
+        border: none;
+      }
+
+      input:focus + label span {
+        visibility: hidden;
+      }
+    }
 
     button {
       width: 145px;
@@ -329,7 +356,31 @@
       }
     }
 
-    .tab-nav.active {
+    .tab-nav:nth-child(1).active {
+      .number-floor {
+        p {
+          background: #c40b85;
+        }
+
+        &:before {
+          border: 1px solid #c40b85;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(2).active {
+      .number-floor {
+        p {
+          background: #ff8000;
+        }
+
+        &:before {
+          border: 1px solid #ff8000;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(3).active {
       .number-floor {
         p {
           background: $blue;
@@ -337,6 +388,30 @@
 
         &:before {
           border: 1px solid $blue;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(4).active {
+      .number-floor {
+        p {
+          background: #81b930;
+        }
+
+        &:before {
+          border: 1px solid #81b930;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(5).active {
+      .number-floor {
+        p {
+          background: #b796c5;
+        }
+
+        &:before {
+          border: 1px solid #b796c5;
         }
       }
     }

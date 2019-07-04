@@ -63,12 +63,16 @@
     flex: 0 0 auto;
   }
 
-  img {
+  a {
     display: block;
     margin-right: 65px;
 
-    &:nth-last-child(1) {
-      margin-right: 0;
+    img {
+      display: block;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
     }
   }
 }

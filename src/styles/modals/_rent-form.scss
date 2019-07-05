@@ -1,42 +1,64 @@
 #rent-modal {
+  display: none;
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: url('../img/rent_modal-bg.jpg') left top no-repeat;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+  background: url('../img/rent_modal-bg.jpg') center top no-repeat;
   background-size: cover;
 }
 
 .rent-modal_wrap {
-  padding: 200px 238px 200px 0;
+  padding: 200px 0 0 0;
   max-width: 1280px;
-  margin-left: auto;
-  margin-right: 0;
+  height: 100%;
 }
 
 .back-wrap {
+  position: relative;
   padding: 0 120px 0 88px;
+  margin-left: 305px;
+  margin-top: 10px;
 
   .back {
-    transform: rotate(-90deg);
-    transform-origin: center;
-  }
+    position:absolute;
+    top:0;
+    left:50%;
+    bottom:0;
+    height:100%;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-50%);
 
-  img {
-    display: block;
-    margin-left: 23px;
-  }
+    img {
+      width: 15px;
+      display: block;
+      margin-bottom: 23px;
+    }
 
-  .text-back {
-    font: 16px $DinPro;
-    font-weight: 400;
-    color: white;
+    .text-back {
+      margin-right: 25px;
+      font: 16px $DinPro;
+      font-weight: 400;
+      color: white;
+      transform: rotate(180deg);
+    }
   }
 }
 
 .rent-modal__form_wrap {
+  flex: 1 0 auto;
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 200px;
+
   .form-title {
     h3 {
       font: 52px $DinBold;
@@ -57,10 +79,28 @@
 }
 
 .rent__form {
-  .input-wrap {
+  margin-top: 58px;
+
+  .select_hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+
+  .select {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .input-wrap, .input-checkbox {
     position: relative;
     width: 50%;
     height: 60px;
+    margin-right: 53px;
+    margin-top: 70px;
+  }
+
+  .input-wrap {
 
     input {
       @include input-rent;
@@ -90,7 +130,15 @@
 
     span {
       display: block;
-      margin-top: -27px;
+    }
+
+    span.title {
+      position: absolute;
+      top: -8px;
+      left: 19px;
+      font: 14px $DinPro;
+      font-weight: 400;
+      color: white;
     }
 
     &:before {
@@ -102,11 +150,135 @@
 
     &:after {
       @include pseudo(1,auto,0,auto,0);
-      width: 90px;
+      width: 48%;
       height: 1px;
       background: white;
     }
     label {
     }
   }
+
+  .options {
+    &:after {
+      @include pseudo(1,$left:auto,$right:5px,$top:50%,$bottom:auto);
+      transform: translateY(-50%);
+      background: white;
+      width: 15px;
+      height: 10px;
+      mask: url('../img/arrow_drop.svg') center center no-repeat;
+      mask-size: 12px 8px;
+    }
+  }
+
+  .select_styled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 19px;
+    border-bottom: 1px solid white;
+    align-items: center;
+    font: 14px $DinPro;
+    font-weight: 400;
+    color: white;
+  }
+
+  .select_options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 8;
+    padding: 30px 24px;
+    list-style: none;
+    background: white;
+    align-items: flex-start;
+
+    li {
+      margin: 1px 0;
+      font: 14px/30px $DinPro;
+      font-weight: 400;
+      color: black;
+      transition: all .3s linear;
+
+      &:hover {
+        color: $green;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .select_options.active {
+    display: flex;
+  }
+
+  .input-checkbox {
+    width: 100%;
+
+    input {
+      display: none;
+    }
+
+    label {
+      position: relative;
+
+      &:before {
+        @include pseudo(1,0,50%,auto,auto);
+        border-radius: 3px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid white;
+        transform: translateY(-50%);
+      }
+    }
+
+    span {
+      margin-left: 42px;
+      font: 14px $DinPro;
+      font-weight: 400;
+      color: white;
+    }
+  }
+
+  .input-checkbox input[type=checkbox]:checked + label {
+    span {
+      u {
+        color: $green;
+      }
+    }
+  }
+
+  .input-checkbox input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    background: $green;
+    border: 1px solid $green;
+  }
+
+  .btn-submit_wrap {
+    @include btn-more(240px,50px,$green,$green);
+
+    button {
+      transition: all .3s linear;
+
+      span {
+        padding-right: 0;
+      }
+
+      &:hover {
+        background: #027f3d;
+      }
+    }
+  }
+}
+
+#rent-modal.active {
+  display: block;
 }

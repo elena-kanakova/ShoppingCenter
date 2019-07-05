@@ -1,8 +1,8 @@
 <div id="rent-modal" class="modal">
     <div class="container rent-modal_wrap flex">
         <div class="back-wrap">
-            <div class="back">
-                <img src="img/" alt="Назад">
+            <div class="back js-btn-rent_back">
+                <img src="img/refresh.svg" alt="Назад">
                 <span class="text-back">Вернуться назад</span>
             </div>
         </div>
@@ -20,33 +20,27 @@
                         <label for="brend_name">
                             <span>Название бренда</span>
                         </label>
-                        <input id="brend_name" type="text" name="brend_name">
+                        <input id="brend_name" type="text" name="brend_name" class="input-text">
                     </div>
                     <div class="input-wrap phone">
-                        <span>Контактсный телефон</span>
+                        <span class="title">Контактсный телефон</span>
                         <label for="phone">
                             <span>+7(</span>
                         </label>
-                        <input id="phone" type="tel" name=phone">
+                        <input id="phone" type="tel" name=phone" class="input-text">
                     </div>
                 </div>
                 <div class="select-input_wrap flex">
                     <div class="input-wrap options">
-                        <label for="company_profile">
-                            <span>Профиль компании</span>
-                        </label>
-                        <select name="company_profile" id="company_profile">
+                        <select name="company_profile" id="company_profile" data-name="Профиль компании">
                             <option value="Профиль 1">Профиль 1</option>
                             <option value="Профиль 1">Профиль 1</option>
                             <option value="Профиль 1">Профиль 1</option>
                             <option value="Профиль 1">Профиль 1</option>
                         </select>
                     </div>
-                    <div class="input-wrap">
-                        <label for="size">
-                            <span>Размер торговой площади</span>
-                        </label>
-                        <select name="size" id="size">
+                    <div class="input-wrap options">
+                        <select name="size" id="size" data-name="Размер торговой площади">
                             <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
                             <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
                             <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
@@ -54,14 +48,14 @@
                         </select>
                     </div>
                 </div>
-                <div class="input-wrap input-checkbox">
-                    <input id="section-4__form_checkbox" type="checkbox">
-                    <label for="section-4__form_checkbox" class="flex">
-                        <span>Я согласен с условиями Политики конфиденциальности</span>
+                <div class="input-checkbox">
+                    <input id="rent-form_checkbox" type="checkbox">
+                    <label for="rent-form_checkbox" class="flex">
+                        <span>Я согласен с условиями <u>Политики конфиденциальности</u></span>
                     </label>
                 </div>
                 <div class="btn-submit_wrap">
-                    <button class="btn-form_submit" type="submit"><span>Отправить</span></button>
+                    <button class="btn-form_submit" type="submit"><span>Отправить сообщение</span></button>
                 </div>
             </form>
         </div>

@@ -3,6 +3,16 @@
   max-width: 1920px;
   @include auto;
 
+  @include mq-custom(1500px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include mq-custom(1024px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   @include mq('tablet') {
     background: #f8f9fb;
   }
@@ -89,6 +99,8 @@
     }
 
     .title {
+      text-align: center;
+
       p {
         font: 18px $DinBold;
         font-weight: bold;
@@ -135,6 +147,15 @@
     }
 
     .nav-tabs {
+      @include mq-custom(1150px) {
+        flex-wrap: wrap;
+        justify-content: safe center;
+      }
+
+      @include mq-custom(360px) {
+        justify-content: flex-start;
+      }
+
       .tab {
         margin-right: 20px;
         font: 14px $DinMedi;
@@ -145,6 +166,10 @@
 
         @include mq(desktop) {
           margin-right: 10px;
+        }
+
+        @include mq-custom(1150px) {
+          margin-bottom: 10px;
         }
 
         @include mq('phone') {
@@ -286,6 +311,10 @@
         display: block;
         width: 12px;
         @include auto;
+
+        @include mq('phone') {
+          margin-left: 50px;
+        }
       }
     }
   }

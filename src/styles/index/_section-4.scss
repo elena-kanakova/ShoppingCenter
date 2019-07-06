@@ -165,8 +165,9 @@
     }
 
     @include mq('phone') {
-      padding: 0;
+      padding: 0 5px 0;
       order: 2;
+      justify-content: center;
     }
 
     .tab-nav {
@@ -178,6 +179,10 @@
         padding: 0;
         flex-direction: column;
         align-items: center;
+      }
+
+      @include mq('phone') {
+        margin-right: 15px;
       }
 
       &:nth-child(1) {
@@ -284,6 +289,10 @@
 
         @include mq-custom(900px) {
           margin-left: 0;
+        }
+
+        @include mq('phone') {
+          margin-right: 0;
         }
 
         .number-floor {
@@ -489,7 +498,7 @@
     }
 
     @include mq('phone') {
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: flex-start;
     }
 

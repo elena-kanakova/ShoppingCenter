@@ -295,7 +295,7 @@ var section_2_slider = new Swiper('.section-2__slider-wrap', {
             centeredSlides: true,
             slidesPerView: 1
         },
-        1100: {
+        1200: {
             spaceBetween: 5,
             centeredSlides: true,
             slidesPerView: 2
@@ -324,12 +324,14 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
     },
     breakpoints: {
         414: {
-            centeredSlides: false,
-            slidesPerView: 2
+            spaceBetween: 0,
+            centeredSlides: true,
+            slidesPerView: 3
         },
         740: {
+            spaceBetween: 10,
             centeredSlides: true,
-            slidesPerView: 2
+            slidesPerView: 4
         },
         1024: {
             slidesPerView: 3

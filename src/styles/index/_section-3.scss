@@ -36,6 +36,12 @@
     padding-top: 100px;
     padding-bottom: 80px;
 
+    @include mq-custom(740px) {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     @include mq('phone') {
       padding-top: 50px;
       padding-bottom: 58px;
@@ -50,6 +56,11 @@
 
     @include mq('tablet') {
       align-items: center;
+    }
+
+    @include mq-custom(740px) {
+      padding-left: 5px;
+      padding-right: 5px;
     }
 
     @include mq-custom(400px) {
@@ -194,6 +205,11 @@
     @include mq-custom(1024px) {
       padding-left: 5px;
       padding-right: 5px;
+    }
+
+    @include mq-custom(740px) {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .slider-nav {

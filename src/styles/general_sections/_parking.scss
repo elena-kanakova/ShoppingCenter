@@ -7,28 +7,72 @@
   background-position: right 98px, -15px center;
   background-repeat: no-repeat, no-repeat;
 
+  @include mq-custom(1750px) {
+    background-position: right 98px, -110px center;
+  }
+
+  @include mq-custom(1550px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image:  url("../img/parking_car-bg.png");
+    background-position: 150% 98px;
+    background-repeat: no-repeat;
+  }
+
+  @include mq-custom(1350px) {
+    background-position: 200% 98px;
+  }
+
   @include mq('desktop') {
+    padding-left: 0;
+    padding-right: 0;
     background-image:  url("../img/parking_car-bg-1280.png"), url("../img/parking_circle-2-1280.png");
-    background-position: right 98px;
+    background-position: 120% 98px;
     background-repeat: no-repeat, no-repeat;
   }
 
-  @include mq('tablet') {
+  @include mq-custom(1200px) {
+    background-position: 140% 98px;
+  }
+
+  @include mq-custom(1100px) {
+    background-position: 160% 98px;
+  }
+
+  @include mq-custom(1024px) {
     padding: 102px 0 0;
     background-image:  url("../img/parking_car-bg-768.png");
     background-position: right 218px;
     background-repeat: no-repeat;
   }
 
-  @include mq('phone') {
+  @include mq-custom(750px) {
+    background-position: 150% 218px;
+  }
+
+  @include mq-custom(640px) {
     padding: 50px 0 0;
     background-image:  url("../img/parking_car-bg-414.png");
-    background-position: right 45%;
-    background-repeat: no-repeat;
+    background-position: right 50%;
+  }
+
+
+  @include mq('phone') {
+    background-position: 110% 45%;
   }
 
   .container {
     padding: 0;
+
+    @include mq('desktop') {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include mq('phone') {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 
   .circle-bottom_wrap {
@@ -40,17 +84,18 @@
       left: 508px;
       bottom: -89px;
 
-      @include mq('tablet') {
+      @include mq-custom(1024px) {
         left: auto;
         right: -56px;
       }
-      @include mq('phone') {
+
+      @include mq-custom(640px) {
         bottom: -62px;
         right: 15px;
       }
 
       img {
-        @include mq('phone') {
+        @include mq-custom(640px) {
           width: 125px;
           height: 125px;
         }
@@ -64,12 +109,12 @@
   flex: 1 1 50%;
   justify-content: space-between;
 
-  @include mq('tablet') {
+  @include mq-custom(1024px) {
     width: 100%;
     flex: 1 1 100%;
   }
 
-  @include mq('phone') {
+  @include mq-custom(640px) {
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -95,7 +140,7 @@
   .desc {
     align-items: center;
 
-    @include mq('phone') {
+    @include mq-custom(640px) {
       margin-top: 25px;
     }
 
@@ -139,25 +184,30 @@
   width: 50%;
   flex: 1 1 50%;
 
-  @include mq('tablet') {
+  @include mq('desktop') {
+    width: 80%;
+    flex: 1 1 80%;
+  }
+
+  @include mq-custom(1024px) {
     width: 100%;
     flex: 1 1 100%;
     padding: 60px 0 70px;
   }
 
-  @include mq('phone') {
-    padding: 35px 0 38px;
+  @include mq-custom(640px) {
+    padding: 35px 0 80px;
   }
 
   .title-2 {
 
-    @include mq('tablet') {
+    @include mq-custom(1024px) {
       width: 70%;
       flex: 1 1 70%;
       margin-bottom: 20px;
     }
 
-    @include mq('phone') {
+    @include mq-custom(640px) {
       width: 100%;
       flex: 1 1 100%;
     }
@@ -178,13 +228,13 @@
     margin-top: 36px;
     align-items: center;
 
-    @include mq('tablet') {
+    @include mq-custom(1024px) {
       width: 50%;
       flex: 1 1 50%;
       flex-wrap: wrap;
     }
 
-    @include mq('phone') {
+    @include mq-custom(640px) {
       width: 100%;
       flex: 1 1 100%;
     }
@@ -200,7 +250,7 @@
     .desc {
       margin-right: 20px;
 
-      @include mq('phone') {
+      @include mq-custom(640px) {
         margin-right: 0;
       }
 
@@ -212,7 +262,7 @@
     }
 
     .time {
-      @include mq('tablet') {
+      @include mq-custom(1024px) {
         width: 100%;
         flex: 1 1 100%;
         margin-top: 10px;
@@ -250,7 +300,7 @@
   width: 50%;
   flex: 1 1 50%;
 
-  @include mq('tablet') {
+  @include mq-custom(1024px) {
     width: 100%;
     flex: 1 1 100%;
   }
@@ -266,12 +316,12 @@
   width: 50%;
   flex: 1 1 50%;
 
-  @include mq('tablet') {
+  @include mq-custom(1024px) {
     width: 100%;
     flex: 1 1 100%;
   }
 
-  @include mq('phone') {
+  @include mq-custom(640px) {
     flex-direction: column;
   }
 

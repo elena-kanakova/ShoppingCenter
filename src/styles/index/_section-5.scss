@@ -10,7 +10,7 @@
     background-size: cover;
   }
 
-  @include mq('desktop') {
+  @include mq('tablet') {
     background: url(../img/section-5_bg-768.jpg) center top no-repeat;
     background-size: cover;
   }
@@ -140,6 +140,14 @@
 
     @include mq('tablet') {
       margin-top: 134px;
+    }
+
+    @include mq-custom(565px) {
+      margin-top: 80px;
+    }
+
+    @include mq-custom(488px) {
+      margin-top: 40px;
     }
 
     @include mq('phone') {

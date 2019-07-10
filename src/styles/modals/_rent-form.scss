@@ -7,273 +7,433 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 1920px;
-  height: 100%;
+  height: 100vh;
+  min-height: 768px;
   @include auto;
-  background: url('../img/rent_modal-bg.jpg') center top no-repeat;
-  background-size: cover;
-}
+  background: url('../img/rent_modal-bg.jpg') center center no-repeat;
 
-.rent-modal_wrap {
-  padding: 200px 0 0 0;
-  max-width: 1280px;
-  height: 100%;
-}
-
-.back-wrap {
-  position: relative;
-  padding: 0 120px 0 88px;
-  margin-left: 305px;
-  margin-top: 10px;
-
-  .back {
-    position:absolute;
-    top:0;
-    left:50%;
-    bottom:0;
-    height:100%;
-    writing-mode: vertical-lr;
-    display: flex;
-    justify-content: flex-start;
-    transform: translateX(-50%);
-
-    img {
-      width: 15px;
-      display: block;
-      margin-bottom: 23px;
-    }
-
-    .text-back {
-      margin-right: 25px;
-      font: 16px $DinPro;
-      font-weight: 400;
-      color: white;
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.rent-modal__form_wrap {
-  flex: 1 0 auto;
-  height: inherit;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-bottom: 200px;
-
-  .form-title {
-    h3 {
-      font: 52px $DinBold;
-      font-weight: bold;
-      color: white;
-    }
+  @include mq-custom(1550px) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-  .form-desc {
-    margin-top: 42px;
-
-    p {
-      font: 22px $DinPro;
-      font-weight: 400;
-      color: white;
-    }
+  @include mq('desktop') {
+    background: url('../img/rent_modal-bg-1280.jpg') center center no-repeat;
   }
-}
 
-.rent__form {
-  margin-top: 58px;
-
-  .select_hidden {
-    display: none;
-    visibility: hidden;
+  @include mq('tablet') {
+    padding-left: 10px;
     padding-right: 10px;
+    background: url('../img/rent_modal-bg-768.jpg') center center no-repeat;
   }
 
-  .select {
-    cursor: pointer;
-    position: relative;
+  @include mq('phone') {
+    background: url('../img/rent_modal-bg-414.jpg') center center no-repeat;
   }
 
-  .input-wrap, .input-checkbox {
-    position: relative;
-    width: 50%;
-    height: 60px;
-    margin-right: 53px;
-    margin-top: 70px;
-  }
+  .rent-modal_wrap {
+    padding: 0;
+    max-width: 1280px;
+    height: inherit;
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: center;
 
-  .input-wrap {
-
-    input {
-      @include input-rent;
-      height: 100%;
+    @media screen and (max-height: 768px){
+      padding-top: 20px;
+      align-items: flex-start;
     }
 
-    label {
+    @include mq('tablet') {
+      padding-bottom: 130px;
+    }
+
+    @include mq-custom(640px) {
+      padding-bottom: 70px;
+    }
+  }
+
+  .back-wrap {
+    position: relative;
+    padding: 200px 50px 0 88px;
+    margin-top: 10px;
+    align-self: flex-start;
+
+    @include mq-custom(1024px) {
+      padding: 200px 20px 0 88px;
+    }
+
+    @include mq('tablet') {
+      flex-direction: row;
+      align-items: center;
+      margin: 20px auto 160px;
+      padding: 0;
+    }
+
+    @include mq-custom(640px) {
+      margin: 20px auto 100px;
+    }
+
+    @include mq('phone') {
+      margin: 20px auto 50px;
+    }
+
+    @include mq-custom(360px) {
+      margin: 20px auto 30px;
+    }
+
+    .back {
+      position:absolute;
+      top:0;
+      left:50%;
+      bottom:0;
+      height:100%;
+      writing-mode: vertical-lr;
+      display: flex;
+      justify-content: flex-start;
+      transform: translateX(-50%);
+      cursor: pointer;
+
+      @include mq('tablet') {
+        writing-mode: horizontal-tb;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        transform: none;
+      }
+
+      img {
+        width: 15px;
+        display: block;
+        margin-bottom: 23px;
+
+        @include mq('tablet') {
+          margin-bottom: 0;
+          margin-right: 15px;
+        }
+      }
+
+      .text-back {
+        margin-right: 25px;
+        font: 16px $DinPro;
+        font-weight: 400;
+        color: white;
+        transform: rotate(180deg);
+
+        @include mq('tablet') {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .rent-modal__content {
+    flex: 1 0 auto;
+    justify-content: flex-end;
+
+    @include mq('desktop') {
+      padding-top: 50px;
+    }
+
+    @include mq('tablet') {
+      padding-top: 0;
+      flex: 1 1 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-title {
+      h3 {
+        font: 52px $DinBold;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+
+        @include mq('phone') {
+          font: 32px $DinBold;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .form-desc {
+      margin-top: 42px;
+
+      p {
+        font: 22px $DinPro;
+        font-weight: 400;
+        color: white;
+
+        @include mq('phone') {
+          font: 16px $DinPro;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .rent-modal__form_wrap {
+    @include mq('tablet') {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  .rent__form {
+    margin-top: 58px;
+
+    @include mq('desktop') {
+      margin-top: 40px;
+    }
+
+    @media screen and (max-height: 768px){
+      margin-top: 20px;
+    }
+
+    .select_hidden {
+      display: none;
+      visibility: hidden;
+      padding-right: 10px;
+    }
+
+    .select {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .input-wrap, .input-checkbox {
+      position: relative;
+      width: 50%;
+      height: 60px;
+      margin-right: 53px;
+      margin-top: 70px;
+
+      @media screen and (max-height: 768px){
+        margin-top: 50px;
+      }
+
+      @include mq-custom(550px) {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 30px;
+      }
+    }
+
+    .text-input_wrap, .select-input_wrap  {
+      @include mq-custom(550px) {
+        flex-direction: column;
+      }
+    }
+
+    .input-wrap {
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      input {
+        @include input-rent;
+        width: 380px;
+        height: 100%;
+
+        @include mq('desktop') {
+          width: 330px;
+        }
+
+        @include mq-custom(1024px) {
+          width: 280px;
+        }
+
+        @include mq('tablet') {
+          width: 100%;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 21px 19px 19px;
+
+        span {
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: white;
+        }
+      }
+    }
+
+    .phone {
+      position: relative;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+
+      span {
+        display: block;
+      }
+
+      span.title {
+        position: absolute;
+        top: -8px;
+        left: 19px;
+        font: 14px $DinPro;
+        font-weight: 400;
+        color: white;
+      }
+
+      &:before {
+        @include pseudo(1,0,0,auto,auto);
+        width: 14px;
+        height: 1px;
+        background: white;
+      }
+
+      &:after {
+        @include pseudo(1,auto,0,auto,0);
+        width: calc(100% - 167px);
+        height: 1px;
+        background: white;
+      }
+      label {
+      }
+    }
+
+    .options {
+      &:after {
+        @include pseudo(1,$left:auto,$right:5px,$top:50%,$bottom:auto);
+        transform: translateY(-50%);
+        background: white;
+        width: 15px;
+        height: 10px;
+        mask: url('../img/arrow_drop.svg') center center no-repeat;
+        mask-size: 12px 8px;
+      }
+    }
+
+    .select_styled {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       padding: 19px;
+      border-bottom: 1px solid white;
+      align-items: center;
+      font: 14px $DinPro;
+      font-weight: 400;
+      color: white;
+    }
+
+    .select_options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      right: 0;
+      left: 0;
+      z-index: 8;
+      padding: 30px 24px;
+      list-style: none;
+      background: white;
+      align-items: flex-start;
+
+      li {
+        margin: 1px 0;
+        font: 14px/30px $DinPro;
+        font-weight: 400;
+        color: black;
+        transition: all .3s linear;
+
+        &:hover {
+          color: $green;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .select_options.active {
+      display: flex;
+    }
+
+    .input-checkbox {
+      width: 100%;
+
+      input {
+        display: none;
+      }
+
+      label {
+        position: relative;
+
+        &:before {
+          @include pseudo(1,0,50%,auto,auto);
+          border-radius: 3px;
+          width: 15px;
+          height: 15px;
+          border: 1px solid white;
+          transform: translateY(-50%);
+        }
+      }
 
       span {
+        margin-left: 42px;
         font: 14px $DinPro;
         font-weight: 400;
         color: white;
       }
     }
-  }
 
-  .phone {
-    position: relative;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-
-    span {
-      display: block;
-    }
-
-    span.title {
-      position: absolute;
-      top: -8px;
-      left: 19px;
-      font: 14px $DinPro;
-      font-weight: 400;
-      color: white;
-    }
-
-    &:before {
-      @include pseudo(1,0,0,auto,auto);
-      width: 14px;
-      height: 1px;
-      background: white;
-    }
-
-    &:after {
-      @include pseudo(1,auto,0,auto,0);
-      width: 48%;
-      height: 1px;
-      background: white;
-    }
-    label {
-    }
-  }
-
-  .options {
-    &:after {
-      @include pseudo(1,$left:auto,$right:5px,$top:50%,$bottom:auto);
-      transform: translateY(-50%);
-      background: white;
-      width: 15px;
-      height: 10px;
-      mask: url('../img/arrow_drop.svg') center center no-repeat;
-      mask-size: 12px 8px;
-    }
-  }
-
-  .select_styled {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 19px;
-    border-bottom: 1px solid white;
-    align-items: center;
-    font: 14px $DinPro;
-    font-weight: 400;
-    color: white;
-  }
-
-  .select_options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    right: 0;
-    left: 0;
-    z-index: 8;
-    padding: 30px 24px;
-    list-style: none;
-    background: white;
-    align-items: flex-start;
-
-    li {
-      margin: 1px 0;
-      font: 14px/30px $DinPro;
-      font-weight: 400;
-      color: black;
-      transition: all .3s linear;
-
-      &:hover {
-        color: $green;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .select_options.active {
-    display: flex;
-  }
-
-  .input-checkbox {
-    width: 100%;
-
-    input {
-      display: none;
-    }
-
-    label {
-      position: relative;
-
-      &:before {
-        @include pseudo(1,0,50%,auto,auto);
-        border-radius: 3px;
-        width: 15px;
-        height: 15px;
-        border: 1px solid white;
-        transform: translateY(-50%);
-      }
-    }
-
-    span {
-      margin-left: 42px;
-      font: 14px $DinPro;
-      font-weight: 400;
-      color: white;
-    }
-  }
-
-  .input-checkbox input[type=checkbox]:checked + label {
-    span {
-      u {
-        color: $green;
-      }
-    }
-  }
-
-  .input-checkbox input[type=checkbox]:checked + label:before {
-    content: "\2713";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    line-height: 15px;
-    background: $green;
-    border: 1px solid $green;
-  }
-
-  .btn-submit_wrap {
-    @include btn-more(240px,50px,$green,$green);
-
-    button {
-      transition: all .3s linear;
-
+    .input-checkbox input[type=checkbox]:checked + label {
       span {
-        padding-right: 0;
+        u {
+          color: $green;
+        }
+      }
+    }
+
+    .input-checkbox input[type=checkbox]:checked + label:before {
+      content: "\2713";
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+      font-size: 15px;
+      color: white;
+      text-align: center;
+      line-height: 15px;
+      background: $green;
+      border: 1px solid $green;
+    }
+
+    .btn-submit_wrap {
+      @include btn-more(240px,50px,$green,$green);
+
+      button {
+        transition: all .3s linear;
+
+        span {
+          padding-right: 0;
+        }
+
+        &:hover {
+          background: #027f3d;
+        }
       }
 
-      &:hover {
-        background: #027f3d;
+      @include mq('tablet') {
+        margin-top: 60px;
+        text-align: center;
+
+        @include mq-custom(640px) {
+          margin-top: 40px;
+        }
+
+        @include mq('phone') {
+          margin-top: 0;
+        }
       }
     }
   }

@@ -1,0 +1,116 @@
+@keyframes preloader {
+  0%{ transform: rotate(0deg);
+  transform-origin: center;}
+  50%{ transform: rotate(-180deg);
+    transform-origin: center;}
+  100%{ transform: rotate(-360deg);
+    transform-origin: center;}
+}
+
+.filter-results_btn-more {
+  margin-top: 63px;
+
+  .btn-more {
+    position: relative;
+    width: 265px;
+    padding: 20px 0;
+    @include auto;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      &:before {
+        top: 40%;
+        background-color: $green;
+        animation: preloader 1.5s infinite linear;
+      }
+
+      span {
+        color: $green;
+      }
+    }
+
+    &:before {
+      @include pseudo(1,27%,50%,auto,auto);
+      transform: translateY(-50%);
+      width: 16px;
+      height: 15px;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+      background-color: black;
+      mask-image: url("../img/refresh.svg");
+      mask-size: 16px 15px;
+      transition: background .3s linear;
+    }
+
+    span {
+      margin-left: 29px;
+      font: 14px/22px $DinBold;
+      font-weight: bold;
+      color: black;
+      transition: color .3s linear;
+    }
+  }
+}
+
+.page__back {
+  padding: 100px 0 100px;
+  background: url("../img/back-bg.png") center center no-repeat;
+
+  @include mq('tablet') {
+    padding: 70px 0 80px;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0 60px;
+  }
+
+  .btn-back {
+    position: relative;
+    width: 265px;
+    padding: 20px 0;
+    @include auto;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    background: none;
+
+    &:hover {
+      &:before {
+        background-color: $green;
+      }
+
+      span {
+        color: $green;
+      }
+    }
+
+    &:before {
+      @include pseudo(1,20%,50%,auto,auto);
+      transform: translateY(-50%);
+      width: 22px;
+      height: 15px;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+      background-color: black;
+      mask-image: url("../img/arrow_back.svg");
+      mask-size: 22px 13px;
+      transition: background .3s linear;
+    }
+
+    span {
+      margin-left: 29px;
+      font: 14px/22px $DinBold;
+      font-weight: bold;
+      color: black;
+      transition: color .3s linear;
+    }
+  }
+}

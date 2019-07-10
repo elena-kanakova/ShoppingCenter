@@ -126,7 +126,7 @@ var section_5_slider_2 = new Swiper('.section-5__slider-banner_wrap', {
 });
 
 var section_10_slider = new Swiper('.section-10__slider-wrap', {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 0,
     loop: true,
     centeredSlides: true,
@@ -144,5 +144,36 @@ var section_10_slider = new Swiper('.section-10__slider-wrap', {
                 '<span> / </span>' +
                 '<span class="' + totalClass + '"></span>';
         }
+    },
+    breakpoints: {
+        414: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 2
+        },
+        1280: {
+            slidesPerView: 2
+        },
+        1550: {
+            slidesPerView: 2
+        }
+    }
+});
+
+var shop_open = new Swiper('.shop-open__slider-wrap', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    setWrapperSize: true,
+    pagination: {
+        el: '.shop-open__location-nav_wrap .slider-dots',
+        clickable: true,
+        bulletClass: 'dot',
+        bulletActiveClass: 'active'
     }
 });

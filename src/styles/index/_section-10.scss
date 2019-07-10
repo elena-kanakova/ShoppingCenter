@@ -72,10 +72,13 @@
 
   #section-10__slider {
     .slide {
-      //width: auto !important;
+      width: 100%;
+      height: auto;
 
       img {
         display: block;
+        width: 100%;
+        height: 100%;
       }
     }
   }

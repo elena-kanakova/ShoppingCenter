@@ -90,9 +90,9 @@ gulp.task('sass:dev', function(done) {
     gulp.src(path.src.sass)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer(/*{
-            browsers: ['last 10 versions']
-        }*/))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 versions']
+        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.src.css))
         .pipe(browserSync.stream());

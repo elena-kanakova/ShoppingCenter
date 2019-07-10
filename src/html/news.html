@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Торговый центр "Калужский" - Магазины</title>
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <!-- @endif -->
+</head>
+<body>
+<div id="wrapper">
+    @@include('./general/_header.html')
+    @@include('./news/_bread-crumbs.html')
+    @@include('./news/_section__content.html')
+    @@include('./general/_section-where.html')
+    @@include('./general/_shop-center.html')
+    @@include('./general/_footer.html')
+</div>
+
+<!-- @if NODE_ENV='development' -->
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
+<script src="libs/swiper.min.js"></script>
+<script src="js/scripts.js"></script>
+<!-- @endif -->
+
+<!-- @if NODE_ENV='production' -->
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
+<script src="libs/swiper.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<!-- @endif -->
+</body>
+</html>

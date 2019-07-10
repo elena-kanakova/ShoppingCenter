@@ -8,16 +8,18 @@
 
   @include mq('desktop') {
     background: url("../img/shop-center_bg-1280.jpg") center top no-repeat;
+    background-size: cover;
   }
 
   @include mq('tablet') {
     background: url("../img/shop-center_bg-768.jpg") center top no-repeat;
+    background-size: cover;
   }
 
   .container {
     justify-content: space-between;
 
-    @include mq('tablet') {
+    @include mq-custom(1024px) {
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -26,17 +28,38 @@
 
 .shop-center__left-part {
   padding-top: 226px;
+  padding-right: 50px;
   width: 50%;
   flex: 1 1 50%;
 
   @include mq('desktop') {
     padding-top: 176px;
+    padding-right: 40px;
   }
 
-  @include mq('tablet') {
-    padding-top: 70px;
+  @include mq-custom(1200px) {
+    width: 60%;
+    flex: 1 1 60%;
+  }
+
+  @include mq-custom(1024px) {
+    padding-top: 176px;
+    padding-right: 0;
     width: 100%;
     flex: 1 1 100%;
+  }
+
+  @include mq-custom(860px) {
+    padding-top: 120px;
+  }
+
+  @include mq ('tablet') {
+    padding-top: 70px;
+  }
+
+  @include mq('phone') {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .title {
@@ -55,7 +78,7 @@
   .text {
     margin-top: 60px;
 
-    @include mq('tablet') {
+    @include mq ('tablet') {
       margin-top: 24px;
     }
 
@@ -74,7 +97,7 @@
   .logos {
     margin-top: 65px;
 
-    @include mq('tablet') {
+    @include mq ('tablet') {
       margin-top: 35px;
     }
 
@@ -104,32 +127,70 @@
   flex: 1 1 50%;
   justify-content: flex-end;
 
-  @include mq('desktop') {
+  @include mq ('desktop') {
     padding-top: 176px;
     padding-bottom: 176px;
-    width: 100%;
-    flex: 1 1 100%;
   }
 
-  @include mq('tablet') {
-    padding-top: 40px;
+  @include mq-custom(1200px) {
+    width: 40%;
+    flex: 1 1 40%;
+  }
+
+  @include mq-custom(1024px) {
+    padding-top: 70px;
+    @include auto;
+    width: 80%;
+    flex: 1 1 80%;
+  }
+
+  @include mq-custom(860px) {
+    padding-bottom: 100px;
+  }
+
+  @include mq ('tablet') {
+    padding-top: 45px;
     padding-bottom: 59px;
+    width: 100%;
+    flex: 1 1 100%;
   }
 
   @include mq('phone') {
     padding-top: 40px;
     padding-bottom: 48px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .element {
     position: relative;
     width: 33.3%;
+    flex: 1 1 33.3%;
     min-height: 165px;
     border: 1px solid white;
     transition: all .4s ease;
 
     &:hover {
       transform: scale(1.1);
+    }
+
+    @include mq('desktop') {
+      width: 50%;
+      flex: 1 1 50%;
+    }
+
+    @include mq-custom(1024px) {
+      width: 33.3%;
+      flex: 1 1 33.3%;
+    }
+
+    @include mq-custom(640px) {
+      width: 50%;
+      flex: 1 1 50%;
+    }
+
+    @include mq('phone') {
+      min-height: 125px;
     }
 
     .sc-link_wrap {
@@ -141,6 +202,10 @@
         display: inline-block;
         width: 175px;
         height: 100%;
+
+        @include mq('phone') {
+          width: 100%;
+        }
       }
     }
   }
@@ -150,6 +215,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo1.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -159,6 +228,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo1-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }
@@ -168,6 +241,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo2.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -176,6 +253,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo2-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }
@@ -185,6 +266,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo3.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -193,6 +278,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo3-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }
@@ -202,6 +291,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo4.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -210,6 +303,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo4-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }
@@ -219,6 +316,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo5.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -227,6 +328,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo5-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }
@@ -236,6 +341,10 @@
     .sc-link_wrap {
       a {
         background: url('../img/tz-logo6.png') no-repeat center;
+
+        @include mq('phone') {
+          background-size: 80% auto;
+        }
       }
     }
 
@@ -244,6 +353,10 @@
       .sc-link_wrap {
         a {
           background: url('../img/tz-logo6-a.png') no-repeat center;
+
+          @include mq('phone') {
+            background-size: 80% auto;
+          }
         }
       }
     }

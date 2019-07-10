@@ -61,6 +61,24 @@ $breakpoints: (
   }
 }
 
+@mixin btn-more_link($width: 190px, $height: 55px, $border-color: white, $background: none, $font-size: 14px, $font-color: white) {
+  a {
+    width: $width;
+    height: $height;
+    border: 1px solid $border-color;
+    border-radius: 30px;
+    background: $background;
+    cursor: pointer;
+  }
+
+  span {
+    padding-right: 18px;
+    font: $font-size $DinBold;
+    font-weight: bold;
+    color: $font-color;
+  }
+}
+
 @mixin slider-nav {
   .prev, .next {
     position: absolute;

@@ -41,6 +41,7 @@
       @include mq('tablet') {
         padding: 60px 24px 37px;
         background: url("../img/123_1.svg") #f8f9fb 98% center no-repeat;
+        background-size: 128px 116px;
       }
 
       @include mq('phone') {
@@ -67,8 +68,8 @@
       }
 
       @include mq('tablet') {
-        background: #f8f9fb;
-        background-size: cover;
+        background: url("../img/123_2.svg") #f8f9fb 98% center no-repeat;
+        background-size: 160px 99px;
       }
 
       @include mq('phone') {
@@ -151,6 +152,8 @@
       @include mq('phone') {
         margin-top: -15px;
         margin-left: 90%;
+        background: url('../img/arrow_small_right.svg') center center no-repeat;
+        background-size: 5px 9px;
 
         @include btn-more($width: 35px, $height: 35px, $border-color: #d7d7d7);
 
@@ -181,6 +184,12 @@
       .button {
         button {
           background: white;
+          transition: none;
+
+          @include mq('phone') {
+            background: url('../img/arrow_small_right.svg') center center no-repeat white;
+            background-size: 5px 9px;
+          }
         }
       }
     }

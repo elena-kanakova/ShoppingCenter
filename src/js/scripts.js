@@ -66,6 +66,42 @@ $(function(){
     });
 });
 
+$(function(){
+    $('.news-list__section .news-tabs .js-tab:first').addClass('active');
+    $('.news-list__section .news-content_wrap .js-tab-cont:first').addClass('active');
+    $(".news-list__section").on("click", ".js-tab", function(e){
+        var tabs = $(".news-list__section .news-tabs .js-tab"),
+            cont = $(".news-list__section .news-content_wrap .js-tab-cont");
+
+        // Удаляем классы active
+        tabs.removeClass("active");
+        cont.removeClass("active");
+        // Добавляем классы active
+        $(this).addClass("active");
+        cont.eq($(this).index()).addClass("active");
+
+        return false;
+    });
+});
+
+$(function(){
+    $('.movies-list__section .cinema-tabs .js-tab:first').addClass('active');
+    $('.movies-list__section .cinema-content_wrap .js-tab-cont:first').addClass('active');
+    $(".movies-list__section").on("click", ".js-tab", function(e){
+        var tabs = $(".movies-list__section .cinema-tabs .js-tab"),
+            cont = $(".movies-list__section .cinema-content_wrap .js-tab-cont");
+
+        // Удаляем классы active
+        tabs.removeClass("active");
+        cont.removeClass("active");
+        // Добавляем классы active
+        $(this).addClass("active");
+        cont.eq($(this).index()).addClass("active");
+
+        return false;
+    });
+});
+
 $('.filter-form select').each(function() {
     var $this = $(this)
         , numberOfOptions = $(this).children('option').length;
@@ -190,6 +226,11 @@ var inputs = document.getElementsByClassName('input-text');
     }
 });
 
+// Маска для телефона
+$(function(){
+    $(".js-phone").mask("+7 999 999 99 99");
+});
+
 $('.js-menu-btn').on('click', function (e) {
     $(this).toggleClass('active');
     $('html').toggleClass('fixed');
@@ -250,6 +291,103 @@ $('.rent__form select').each(function() {
     $(document).click(function() {
         $styledSelect.removeClass('active');
         $list.hide();
+    });
+});
+
+//Кнопки соц сетей
+var Shares = {
+    title: 'Поделиться',
+    width: 800,
+    height: 800,
+    init: function() {
+        var share = document.querySelectorAll('.social');
+        for (var i = 0, l = share.length; i < l; i++) {
+            var url = share[i].getAttribute('data-url') || location.href,
+                title = share[i].getAttribute('data-title') || '',
+                desc = share[i].getAttribute('data-desc') || '',
+                el = share[i].querySelectorAll('a');
+            for (var a = 0, al = el.length; a < al; a++) {
+                var id = el[a].getAttribute('data-id');
+                if (id) this.addEventListener(el[a], 'click', {
+                    id: id,
+                    url: url,
+                    title: title,
+                    desc: desc
+                });
+            }
+        }
+    },
+    addEventListener: function(el, eventName, opt) {
+        var _this = this,
+            handler = function() {
+                _this.share(opt.id, opt.url, opt.title, opt.desc);
+            };
+        if (el.addEventListener) {
+            el.addEventListener(eventName, handler);
+        } else {
+            el.attachEvent('on' + eventName, function() {
+                handler.call(el);
+            });
+        }
+    },
+    share: function(id, url, title, desc) {
+        url = encodeURIComponent(url);
+        desc = encodeURIComponent(desc);
+        title = encodeURIComponent(title);
+        switch (id) {
+            case 'fb':
+                this.popupCenter('https://www.facebook.com/sharer/sharer.php?u=' + url, this.title, this.width, this.height);
+                break;
+            case 'vk':
+                this.popupCenter('https://vk.com/share.php?url=' + url + '&description=' + title + '. ' + desc, this.title, this.width, this.height);
+                break;
+            case 'tw':
+                var text = title || desc || '';
+                if (title.length > 0 && desc.length > 0) text = title + ' - ' + desc;
+                if (text.length > 0) text = '&text=' + text;
+                this.popupCenter('https://twitter.com/intent/tweet?url=' + url + text, this.title, this.width, this.height);
+                break;
+            case 'gp':
+                this.popupCenter('https://plus.google.com/share?url=' + url, this.title, this.width, this.height);
+                break;
+            case 'pin':
+                this.popupCenter('https://pinterest.com/pin/create/button/?url=' + url, this.title, this.width, this.height);
+                break;
+            case 'viber':
+                this.popupCenter('viber://forward?text=' + url, this.title, this.width, this.height);
+                break;
+            case 'ok':
+                this.popupCenter('https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=' + url, this.title, this.width, this.height);
+                break;
+        }
+    },
+    newTab: function(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    },
+    popupCenter: function(url, title, w, h) {
+        var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+        var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+        var top = ((height / 3) - (h / 3)) + dualScreenTop;
+        var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        if (window.focus) {
+            newWindow.focus();
+        }
+    }
+};
+jQuery(document).ready(function($) {
+    $('.social a').on('click', function() {
+        var id = $(this).data('id');
+        if (id) {
+            var data = $(this).parent('.social');
+            var url = data.data('url') || location.href,
+                title = data.data('title') || '',
+                desc = data.data('desc') || '';
+            Shares.share(id, url, title, desc);
+        }
     });
 });
 //Some popup code
@@ -381,7 +519,7 @@ var section_5_slider_2 = new Swiper('.section-5__slider-banner_wrap', {
 });
 
 var section_10_slider = new Swiper('.section-10__slider-wrap', {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 0,
     loop: true,
     centeredSlides: true,
@@ -399,5 +537,36 @@ var section_10_slider = new Swiper('.section-10__slider-wrap', {
                 '<span> / </span>' +
                 '<span class="' + totalClass + '"></span>';
         }
+    },
+    breakpoints: {
+        414: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 2
+        },
+        1280: {
+            slidesPerView: 2
+        },
+        1550: {
+            slidesPerView: 2
+        }
+    }
+});
+
+var shop_open = new Swiper('.shop-open__slider-wrap', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    setWrapperSize: true,
+    pagination: {
+        el: '.shop-open__location-nav_wrap .slider-dots',
+        clickable: true,
+        bulletClass: 'dot',
+        bulletActiveClass: 'active'
     }
 });

@@ -2,13 +2,9 @@
   width: 100%;
   max-width: 1920px;
   @include auto;
-  background-image:url('../img/about-center_bg_left-circle.png'), url('../img/about-center_bg_right-circle.png'), url('../img/about-center_bg.jpg');
-  background-position:  -65px center, right center, center top;
+  background-image:url('../img/about-center_bg_circles.png'), url('../img/about-center_bg.jpg');
+  background-position:  center center, center center;
   background-repeat: no-repeat, no-repeat, no-repeat;
-
-  @include mq-custom(1550px) {
-    background-position:  -25% center, 120% center, center top;
-  }
 
   @include mq('desktop') {
     background-image:url('../img/about-center_bg-1280.jpg');
@@ -51,6 +47,11 @@
     flex: 1 1 100%;
     padding-top: 70px;
     padding-right: 0;
+  }
+
+  @include mq('phone') {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .title {
@@ -118,16 +119,14 @@
     margin-top: 20px;
     margin-bottom: 63px;
     margin-right: 0;
+    padding-right: 24px;
     flex-wrap: nowrap;
     justify-content: center;
   }
 
-  @include mq-custom(750px) {
-    padding-right: 24px;
-  }
-
   @include mq-custom(670px) {
     padding-right: 0;
+    padding-left: 24px;
   }
 
   @include mq('phone') {
@@ -135,6 +134,7 @@
   }
 
   @include mq-custom(380px) {
+    padding-left: 0;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -244,9 +244,13 @@
       margin-left: 0;
     }
 
+    @include mq-custom(1250px) {
+      margin-top: -80px;
+    }
+
     @include mq-custom(1024px) {
       margin-top: 0;
-      margin-left: 0;
+      margin-left: -24px;
       position: relative;
       z-index: 2;
       order: 1;
@@ -271,6 +275,9 @@
     }
 
     @include mq-custom(380px) {
+      margin-left: 0;
+      margin-top: 50px;
+      margin-right: -24px;
       width: auto;
       flex: 0 0 auto;
     }
@@ -340,6 +347,10 @@
     display: flex;
     justify-content: flex-start;
 
+    @include mq-custom(1250px) {
+      margin-top: -80px;
+    }
+
     @include mq-custom(1024px) {
       margin-top: 0;
       margin-left: -24px;
@@ -369,7 +380,7 @@
     @include mq-custom(380px) {
       width: auto;
       flex: 0 0 auto;
-      margin-left: 0;
+      margin-top: 50px;
     }
 
     .fb {
@@ -450,7 +461,7 @@
       color: white;
 
       @include mq-custom(670px) {
-        font: 26px/24px $DinBold;
+        font: 24px $DinBold;
         font-weight: bold;
       }
 
@@ -554,11 +565,19 @@
         height: 110px;
       }
 
+      @include mq-custom(380px) {
+        margin-top: -50px;
+      }
+
       img {
         max-width: 68px;
         width: 100%;
 
         @include mq-custom(1250px) {
+          max-width: 68px;
+        }
+
+        @include mq-custom(670px) {
           max-width: 48px;
         }
       }

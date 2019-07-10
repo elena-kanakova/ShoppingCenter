@@ -133,6 +133,52 @@ html.fixed {
 
 @import "general_elements/header-menu";
 
+@import "general_elements/bread-crumbs";
+
+@import "general_elements/back-more_btns";
+
 @import "modals/header-menu_open";
 
 @import "modals/rent-form";
+
+// Общие блоки сайта
+@import "general_sections/section-map";
+@import "general_sections/parking";
+@import "general_sections/about-center";
+@import "general_sections/section-where";
+@import "general_sections/shop-center";
+@import "general_elements/footer";
+
+// Главная
+@import "index/section-1";
+@import "index/section-2";
+@import "index/section-3";
+@import "index/section-4";
+@import "index/section-5";
+@import "index/section-6";
+@import "index/section-10";
+
+// Магазины
+@import "shops/bread-crumbs";
+@import "shops/section__content";
+@import "shops/section__filters";
+
+//Внутренняя страница магазина
+@import "shop-open/bread-crumbs";
+@import "shop-open/section__content";
+
+//Новости
+@import "news/bread-crumbs";
+@import "news/section__content";
+
+//Внутренняя страница новости
+@import "news-open/bread-crumbs";
+@import "news-open/section__content";
+
+//Кинотеатр
+@import "cinema/bread-crumbs";
+@import "cinema/section__content";
+
+//Контакты
+@import "contacts/bread-crumbs";
+@import "contacts/section__content";

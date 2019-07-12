@@ -2,29 +2,25 @@
   width: 100%;
   max-width: 1920px;
   @include auto;
-  background: url(../img/section-2_bg.png) center 244px no-repeat;
+  background: url('../img/section-2_bg.png') center 244px no-repeat;
 
   @include mq-custom(1650px) {
     padding: 0 40px;
   }
 
-  @include mq('desktop') {
-    padding: 0 14px;
-  }
-
-  @include mq-custom(1200px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   @include mq('tablet') {
-    padding: 0 20px;
-    background: url(../img/section-2_bg-768.png) center 259px no-repeat;
+    padding: 0 30px;
+    background: url('../img/section-2_bg-768.png') center 259px no-repeat;
   }
 
-  @include mq-custom(414px) {
+  @include mq-custom(500px) {
+    padding: 0 20px;
+    background: url('../img/section-2_bg-414.png') center 244px no-repeat;
+  }
+
+  @include mq('phone') {
     padding: 0;
-    background: url(../img/section-2_bg-414.png) center 244px no-repeat;
+    background: url('../img/section-2_bg-414.png') center 200px no-repeat;
   }
 
   .container {
@@ -43,8 +39,12 @@
       padding-bottom: 69px;
     }
 
-    @include mq('phone') {
+    @include mq-custom(500px) {
       padding-top: 57px;
+      padding-bottom: 57px;
+    }
+
+    @include mq('phone') {
       padding-bottom: 0;
     }
   }
@@ -72,7 +72,7 @@
   .section-2__tab-nav {
     margin: 62px 0 71px;
 
-    @include mq('phone') {
+    @include mq-custom(500px) {
       margin: 50px 0;
     }
 
@@ -91,7 +91,7 @@
         border-bottom: 2px solid transparent;
         transition: all .3s linear;
 
-        @include mq('phone') {
+        @include mq-custom(500px) {
           margin-right: 27px;
           font: 14px/20px $DinBold;
           font-weight: 600;
@@ -164,8 +164,8 @@
 
   .section-2__slider-nav {
     @include slider-nav;
-
-    @include mq-custom(414px) {
+    
+    @include mq('phone') {
       display: none;
     }
 
@@ -193,16 +193,8 @@
         left: -21px;
       }
 
-      @include mq-custom(1200px) {
-        left: -11px;
-      }
-
-      @include mq-custom(830px) {
-        left: 10px;
-      }
-
-      @include mq('tablet') {
-        left: -11px;
+      @include mq('phone') {
+        left: -19px;
       }
     }
 
@@ -230,143 +222,79 @@
         right: -21px;
       }
 
-      @include mq-custom(1200px) {
-        right: -11px;
-      }
-
-      @include mq-custom(830px) {
-        right: 10px;
-      }
-
-      @include mq('tablet') {
-        right: -11px;
+      @include mq('phone') {
+        right: -19px;
       }
     }
   }
 
   .section-2__slider {
-    .slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      @include mq-custom(830px) {
-        @include auto;
-      }
-
-      @include mq('tablet') {
-        padding: 0 50px;
-      }
-
-      @include mq-custom(640px) {
-        padding: 0 30px;
-      }
-
-      @include mq-custom(500px) {
-        padding: 0 20px;
-      }
-
-      &:hover {
-        .section-2__slide_content {
-          h3 {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      &:nth-child(1) {
-        margin-right: 20px;
-
-        @include mq('desktop') {
-          margin-right: 10px;
-        }
-
-        @include mq-custom(830px) {
-          margin-right: 0;
-        }
-      }
-
-      &:nth-last-child(1) {
-        margin-left: 20px;
-
-        @include mq('desktop') {
-          margin-left: 10px;
-        }
-
-        @include mq-custom(414px) {
-          margin-left: 0;
-        }
-      }
-    }
-
-    .content_wrap {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      width: inherit;
-      height: 100%;
-      margin: 0 auto;
-
-      @include mq-custom(830px) {
-        width: auto;
-        margin: 0 auto;
-      }
-
-      @include mq('tablet') {
-        margin: 0;
-      }
-
-      img {
-        display: block;
-        width: auto;
-        height: 100%;
-        max-height: 465px;
-
-        @include mq-custom(414px) {
-          width: auto;
-          height: 100%;
-        }
-      }
-    }
+    align-content: stretch;
+    align-items: stretch;
   }
 
-  .section-2__slide_content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: 100%;
-    padding: 50px;
+  .section-2__slide {
+    padding: 50px 50px 80px;
     cursor: pointer;
+    border-radius: 10px;
+    min-height: 228px;
+    height: auto;
 
     @include mq('desktop') {
-      padding: 30px;
+      padding: 30px 30px 50px;
     }
 
-    @include mq('tablet') {
-      padding: 50px;
+    @include mq-custom(1100px) {
+      padding: 20px 20px 40px;
+    }
+
+    @include mq-custom(800px) {
+      padding: 50px 50px 80px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 30px 30px 50px;
     }
 
     @include mq-custom(500px) {
-      padding: 30px;
+      padding: 24px;
     }
 
     @include mq('phone') {
-      padding: 24px;
+      max-width: 378px;
+    }
+
+    @include mq-custom(400px) {
+      max-width: 300px;
     }
 
     @include mq-custom(360px) {
       padding: 15px;
     }
 
+    &:hover {
+      .title {
+        h3 {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    img {
+      display: none;
+    }
+
     .sticker {
-      width: 115px;
-      height: 30px;
+      display: inline-block;
+      padding: 10px 34px;
       border-radius: 30px;
 
+      @include mq('tablet') {
+        padding: 5px 34px;
+      }
+
       @include mq-custom(414px) {
-        width: 95px;
-        height: 25px;
+        padding: 0 34px;
       }
 
       span {
@@ -375,7 +303,7 @@
         color: white;
         text-transform: uppercase;
 
-        @include mq-custom(414px) {
+        @include mq-custom(500px) {
           font: 10px/20px $DinBold;
           font-weight: 600;
           color: white;
@@ -401,11 +329,15 @@
         margin-bottom: 10px;
       }
 
-      @include mq-custom(640px) {
+      @include mq-custom(1100px) {
         margin-top: 60px;
       }
 
-      @include mq-custom(414px) {
+      @include mq-custom(860px) {
+        margin-top: 40px;
+      }
+
+      @include mq-custom(500px) {
         margin-top: 15px;
         margin-bottom: 8px;
       }
@@ -450,16 +382,25 @@
         text-decoration: none;
         transition: all .3s linear;
 
-        @include mq-custom(414px) {
+        @include mq-custom(1100px) {
+          font: 22px $DinBold;
+          font-weight: 600;
+        }
+
+        @include mq-custom(800px) {
+          font: 26px/36px $DinBold;
+          font-weight: 600;
+        }
+
+        @include mq-custom(640px) {
+          font: 22px $DinBold;
+          font-weight: 600;
+        }
+
+        @include mq-custom(500px) {
           font: 18px/26px $DinBold;
           font-weight: 600;
           color: white;
-        }
-
-        br {
-          @include mq-custom(414px) {
-            display: none;
-          }
         }
       }
     }
@@ -470,16 +411,19 @@
         font-weight: 400;
         color: white;
 
-        @include mq-custom(414px) {
+        @include mq-custom(1100px) {
           font: 14px/20px $DinPro;
           font-weight: 400;
-          color: white;
         }
 
-        br {
-          @include mq-custom(414px) {
-            display: none;
-          }
+        @include mq-custom(800px) {
+          font: 16px/24px $DinPro;
+          font-weight: 400;
+        }
+
+        @include mq-custom(640px) {
+          font: 14px/20px $DinPro;
+          font-weight: 400;
         }
       }
     }

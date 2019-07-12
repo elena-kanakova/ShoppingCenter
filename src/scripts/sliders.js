@@ -31,19 +31,15 @@ var section_2_slider = new Swiper('.section-2__slider-wrap', {
     },
     breakpoints: {
         414: {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween : 5,
+            navigation: false
+        },
+        800: {
             spaceBetween: 0,
             centeredSlides: true,
             slidesPerView: 1
-        },
-        820: {
-            spaceBetween: 0,
-            centeredSlides: true,
-            slidesPerView: 1
-        },
-        1200: {
-            spaceBetween: 5,
-            centeredSlides: true,
-            slidesPerView: 2
         },
         1230: {
             spaceBetween: 5,
@@ -68,10 +64,26 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
         prevEl: '.section-3__slider-nav .prev',
     },
     breakpoints: {
-        414: {
-            spaceBetween: 0,
+        320: {
             centeredSlides: true,
-            slidesPerView: 3
+            slidesPerView: 1,
+            spaceBetween : 5,
+            slidesPerGroup: 1,
+            navigation: false
+        },
+        360: {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween : 10,
+            slidesPerGroup: 2,
+            navigation: false
+        },
+        414: {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween : 15,
+            slidesPerGroup: 2,
+            navigation: false
         },
         740: {
             spaceBetween: 10,
@@ -89,7 +101,7 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
 
 var section_5_slider = new Swiper('.section-5__slider-cafe_wrap', {
     slidesPerView: 5,
-    spaceBetween: 0,
+    spaceBetween: 10,
     loop: true,
     setWrapperSize: true,
     navigation: {
@@ -98,12 +110,16 @@ var section_5_slider = new Swiper('.section-5__slider-cafe_wrap', {
     },
     breakpoints: {
         414: {
-            slidesPerView: 2
+            centeredSlides: true,
+            slidesPerView: 2,
+            spaceBetween : 15,
+            slidesPerGroup: 2,
+            navigation: false
         },
         768: {
             slidesPerView: 2
         },
-        1024: {
+        1200: {
             slidesPerView: 3
         },
         1465: {
@@ -126,10 +142,10 @@ var section_5_slider_2 = new Swiper('.section-5__slider-banner_wrap', {
 });
 
 var section_10_slider = new Swiper('.section-10__slider-wrap', {
-    slidesPerView: 3,
     spaceBetween: 0,
     loop: true,
     centeredSlides: true,
+    slidesPerView: 3,
     navigation: {
         nextEl: '.section-10__slider-nav .next',
         prevEl: '.section-10__slider-nav .prev',
@@ -147,7 +163,11 @@ var section_10_slider = new Swiper('.section-10__slider-wrap', {
     },
     breakpoints: {
         414: {
-            slidesPerView: 2
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween : 5,
+            navigation: false,
+            pagination: false
         },
         768: {
             slidesPerView: 2
@@ -176,4 +196,18 @@ var shop_open = new Swiper('.shop-open__slider-wrap', {
         bulletClass: 'dot',
         bulletActiveClass: 'active'
     }
+});
+
+$('.section-2__slide img').each(function() {
+    $(this).parent().css({
+        'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
+        'background-size': 'cover'
+    });
+});
+
+$('.shop-open__slider-wrap .photo img').each(function() {
+    $(this).parent().css({
+        'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
+        'background-size': 'cover'
+    });
 });

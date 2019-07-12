@@ -50,12 +50,66 @@
 
     .slide {
       .photo {
+        height: 430px;
+
+        @include mq('desktop') {
+          height: 360px;
+        }
+
+        @include mq-custom(1200px) {
+          height: 340px;
+        }
+
+        @include mq-custom(1100px) {
+          height: 320px;
+        }
+
+        @include mq-custom(1024px) {
+          height: 300px;
+        }
+
+        @include mq-custom(950px) {
+          height: 280px;
+        }
+
+        @include mq-custom(860px) {
+          height: 260px;
+        }
+
+        @include mq-custom(800px) {
+          height: 240px;
+        }
+
+        @include mq('tablet') {
+          height: 468px;
+        }
+
+        @include mq-custom(700px) {
+          height: 440px;
+        }
+
+        @include mq-custom(640px) {
+          height: 400px;
+        }
+
+        @include mq-custom(600px) {
+          height: 360px;
+        }
+
+        @include mq-custom(550px) {
+          height: 320px;
+        }
+
+        @include mq-custom(500px) {
+          height: 280px;
+        }
+
+        @include mq('phone') {
+          height: 244px;
+        }
+
         img {
-          display: block;
-          width: inherit;
-          max-width: 100%;
-          height: auto;
-          overflow: hidden;
+          display: none;
         }
       }
     }

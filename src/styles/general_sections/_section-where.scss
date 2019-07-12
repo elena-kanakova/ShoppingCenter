@@ -17,7 +17,6 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    //transition: background .3s linear;
     cursor: pointer;
 
     @include mq('tablet') {
@@ -27,6 +26,10 @@
       align-items: flex-start;
       justify-content: flex-start;
       text-align: left;
+    }
+
+    @include mq('phone') {
+      padding: 40px 20px 30px;
     }
 
     &:nth-child(1) {

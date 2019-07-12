@@ -30,31 +30,9 @@
     text-align: center;
 
     span {
-      position: relative;
-      padding-left: 28px;
       font: 16px/22px DINRoundProMedi, sans-serif;
       font-weight: 500;
       color: white;
-
-      &:before {
-        position: absolute;
-        content: '';
-        z-index: 1;
-        left: 0;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 15px;
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        background-color: white;
-        mask-image: url('../img/123_1.svg');
-        mask-size: 16px 15px;
-      }
     }
   }
 }

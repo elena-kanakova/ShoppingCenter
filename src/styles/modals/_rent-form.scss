@@ -1,34 +1,41 @@
 #rent-modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  height: 0;
+  min-height: 0;
   max-width: 1920px;
-  height: 100vh;
-  min-height: 768px;
+  padding: 200px 0;
   @include auto;
-  background: url('../img/rent_modal-bg.jpg') center center no-repeat;
+  background: url('../img/rent_modal-bg.png') right center no-repeat #131672;
+  transition: opacity .6s linear 1s;
 
   @include mq-custom(1550px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 200px 40px;
   }
 
   @include mq('desktop') {
-    background: url('../img/rent_modal-bg-1280.jpg') center center no-repeat;
+    padding: 100px 40px;
+    background: url('../img/rent_modal-bg-1280.png') right center no-repeat #131672;
+  }
+
+  @include mq-custom(1100px) {
+    padding: 100px 40px 0;
+    transition: opacity .3s linear 0s;
   }
 
   @include mq('tablet') {
-    padding-left: 10px;
-    padding-right: 10px;
-    background: url('../img/rent_modal-bg-768.jpg') center center no-repeat;
+    padding: 0 10px;
+    background: url('../img/rent_modal-bg-768.png') right center no-repeat #131672;
   }
 
   @include mq('phone') {
-    background: url('../img/rent_modal-bg-414.jpg') center center no-repeat;
+    background: url('../img/rent_modal-bg-414.png') right center no-repeat #131672;
   }
 
   .rent-modal_wrap {
@@ -44,7 +51,15 @@
       align-items: flex-start;
     }
 
-    @include mq('tablet') {
+    @include mq('desktop') {
+      padding-right: 60px;
+    }
+
+    @include mq-custom(1200px) {
+      padding-right: 0;
+    }
+
+    @include mq-custom(1100px) {
       padding-bottom: 130px;
     }
 
@@ -59,11 +74,16 @@
     margin-top: 10px;
     align-self: flex-start;
 
+    @include mq('desktop') {
+      margin-top: 20px;
+      padding: 200px 30px 0 88px;
+    }
+
     @include mq-custom(1024px) {
       padding: 200px 20px 0 88px;
     }
 
-    @include mq('tablet') {
+    @include mq-custom(1100px) {
       flex-direction: row;
       align-items: center;
       margin: 20px auto 160px;
@@ -94,7 +114,7 @@
       transform: translateX(-50%);
       cursor: pointer;
 
-      @include mq('tablet') {
+      @include mq-custom(1100px) {
         writing-mode: horizontal-tb;
         position: relative;
         top: 0;
@@ -111,7 +131,7 @@
         display: block;
         margin-bottom: 23px;
 
-        @include mq('tablet') {
+        @include mq-custom(1100px) {
           margin-bottom: 0;
           margin-right: 15px;
         }
@@ -124,7 +144,7 @@
         color: white;
         transform: rotate(180deg);
 
-        @include mq('tablet') {
+        @include mq-custom(1100px) {
           transform: none;
         }
       }
@@ -139,7 +159,7 @@
       padding-top: 50px;
     }
 
-    @include mq('tablet') {
+    @include mq-custom(1100px) {
       padding-top: 0;
       flex: 1 1 100%;
       flex-direction: column;
@@ -177,6 +197,11 @@
   }
 
   .rent-modal__form_wrap {
+    @include mq-custom(1100px) {
+      width: auto;
+      flex: 1 1 auto;
+    }
+
     @include mq('tablet') {
       width: 100%;
       flex: 1 1 100%;
@@ -194,35 +219,6 @@
       margin-top: 20px;
     }
 
-    .select_hidden {
-      display: none;
-      visibility: hidden;
-      padding-right: 10px;
-    }
-
-    .select {
-      cursor: pointer;
-      position: relative;
-    }
-
-    .input-wrap, .input-checkbox {
-      position: relative;
-      width: 50%;
-      height: 60px;
-      margin-right: 53px;
-      margin-top: 70px;
-
-      @media screen and (max-height: 768px){
-        margin-top: 50px;
-      }
-
-      @include mq-custom(550px) {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 30px;
-      }
-    }
-
     .text-input_wrap, .select-input_wrap  {
       @include mq-custom(550px) {
         flex-direction: column;
@@ -230,15 +226,86 @@
     }
 
     .input-wrap {
+      position: relative;
+      width: 50%;
+      height: 70px;
+      margin-right: 53px;
+      margin-top: 70px;
+      overflow: hidden;
+      border-bottom: 1px solid white;
+
+      @include mq-custom(1200px) {
+        margin-right: 30px;
+      }
+
+      @include mq-custom(1100px) {
+        width: auto;
+      }
+
+      @include mq('tablet') {
+        width: 50%;
+      }
+
+      @include mq-custom(550px) {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 30px;
+      }
 
       &:nth-child(2n) {
         margin-right: 0;
+      }
+
+      label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding: 21px 19px 19px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        transition: border .3s linear 0s;
+        pointer-events: none;
+
+        span.title {
+          position: relative;
+          padding: 0 5px;
+          top: 0;
+          display: inline-block;
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: white;
+          transition: top .3s linear .3s;
+
+          &:before {
+            @include pseudo(1,auto,50%,auto,100%);
+            width: 1000px;
+            height: 0;
+            background: white;
+            transform: translateY(-50%);
+            transition: height .3s linear 0s;
+          }
+
+          &:after {
+            @include pseudo(1,100%,50%,auto,auto);
+            width: 1000px;
+            height: 0;
+            background: white;
+            transform: translateY(-50%);
+            transition: height .3s linear 0s;
+          }
+        }
       }
 
       input {
         @include input-rent;
         width: 380px;
         height: 100%;
+
+        @include mq-custom(1366px) {
+          width: 350px;
+        }
 
         @include mq('desktop') {
           width: 330px;
@@ -253,116 +320,65 @@
         }
       }
 
-      label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 21px 19px 19px;
+      input:focus ~ label {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        transition: border .3s linear .3s;
 
         span {
-          font: 14px $DinPro;
-          font-weight: 400;
-          color: white;
+          top: -30px;
+          transition: top .3s linear 0s;
+
+          &:before {
+            height: 1px;
+            transition: height .3s linear .3s;
+          }
+
+          &:after {
+            height: 1px;
+            transition: height .3s linear .3s;
+          }
         }
       }
-    }
 
-    .phone {
-      position: relative;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      input.active ~ label {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        transition: border .3s linear .3s;
 
-      span {
-        display: block;
-      }
+        span {
+          top: -30px;
+          transition: top .3s linear 0s;
 
-      span.title {
-        position: absolute;
-        top: -8px;
-        left: 19px;
-        font: 14px $DinPro;
-        font-weight: 400;
-        color: white;
-      }
+          &:before {
+            height: 1px;
+            transition: height .3s linear .3s;
+          }
 
-      &:before {
-        @include pseudo(1,0,0,auto,auto);
-        width: 14px;
-        height: 1px;
-        background: white;
-      }
-
-      &:after {
-        @include pseudo(1,auto,0,auto,0);
-        width: calc(100% - 167px);
-        height: 1px;
-        background: white;
-      }
-      label {
-      }
-    }
-
-    .options {
-      &:after {
-        @include pseudo(1,$left:auto,$right:5px,$top:50%,$bottom:auto);
-        transform: translateY(-50%);
-        background: white;
-        width: 15px;
-        height: 10px;
-        mask: url('../img/arrow_drop.svg') center center no-repeat;
-        mask-size: 12px 8px;
-      }
-    }
-
-    .select_styled {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 19px;
-      border-bottom: 1px solid white;
-      align-items: center;
-      font: 14px $DinPro;
-      font-weight: 400;
-      color: white;
-    }
-
-    .select_options {
-      display: none;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      right: 0;
-      left: 0;
-      z-index: 8;
-      padding: 30px 24px;
-      list-style: none;
-      background: white;
-      align-items: flex-start;
-
-      li {
-        margin: 1px 0;
-        font: 14px/30px $DinPro;
-        font-weight: 400;
-        color: black;
-        transition: all .3s linear;
-
-        &:hover {
-          color: $green;
-          text-decoration: underline;
+          &:after {
+            height: 1px;
+            transition: height .3s linear .3s;
+          }
         }
       }
-    }
-
-    .select_options.active {
-      display: flex;
     }
 
     .input-checkbox {
+      position: relative;
       width: 100%;
+      margin-right: 53px;
+      margin-top: 70px;
+      height: 60px;
+
+      @media screen and (max-height: 768px){
+        margin-top: 50px;
+      }
+
+      @include mq-custom(550px) {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 30px;
+      }
 
       input {
         display: none;
@@ -423,7 +439,7 @@
         }
       }
 
-      @include mq('tablet') {
+      @include mq-custom(1100px) {
         margin-top: 60px;
         text-align: center;
 
@@ -437,8 +453,4 @@
       }
     }
   }
-}
-
-#rent-modal.active {
-  display: block;
 }

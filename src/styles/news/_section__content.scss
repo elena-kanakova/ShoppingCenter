@@ -215,8 +215,10 @@
     }
 
     .date {
-      width: 135px;
-      height: 28px;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 7px 14px;
       margin-bottom: 30px;
       background: #ebebeb;
       border-bottom-left-radius: 30px;

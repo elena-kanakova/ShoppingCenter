@@ -285,9 +285,16 @@
   }
 
   .section-3__slider {
+    align-items: stretch;
+    align-content: stretch;
+    height: auto;
 
     .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 222px !important;
+      height: auto;
       @include auto;
 
       &:hover {
@@ -300,6 +307,8 @@
 
       @include mq('phone') {
         width: auto !important;
+        max-width: 178px;
+        margin-left: 0;
       }
 
       .poster {

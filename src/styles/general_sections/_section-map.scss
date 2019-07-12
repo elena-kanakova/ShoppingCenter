@@ -3,22 +3,22 @@
   max-width: 1920px;
   @include auto;
 
-  @include mq-custom(1500px) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  @include mq-custom(1024px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   @include mq('tablet') {
     background: #f8f9fb;
   }
 
+  @include mq('phone') {
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 0 25px 0 rgba(.75,.75,.75,.3);
+  }
+
   .container {
     padding: 0;
+
+    @include mq('phone') {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 }
 
@@ -30,9 +30,17 @@
   min-height: 750px;
   @include auto;
 
+  @include mq('phone') {
+    min-height: 360px;
+  }
+
   #YMapsID {
     width: 100%;
     height: 750px;
+
+    @include mq('phone') {
+      height: 360px;
+    }
   }
 }
 
@@ -96,6 +104,10 @@
 
     &:nth-last-child(1) {
       border-right: none;
+
+      @include mq('phone') {
+        border-bottom: none;
+      }
     }
 
     .title {

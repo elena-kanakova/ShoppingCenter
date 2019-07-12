@@ -95,13 +95,13 @@
     padding-right: 0;
   }
 
-  @include mq('phone') {
-    padding-right: 0;
-    flex: 0 0 auto;
-  }
-
   @include mq-custom(400px) {
     @include auto;
+  }
+
+  @include mq('phone') {
+    padding-right: 0;
+    flex: 1 1 auto;
   }
 
   a {
@@ -118,6 +118,10 @@
 
     @include mq('phone') {
       margin-right: 30px;
+    }
+
+    @include mq-custom(360px) {
+      margin-right: 10px;
     }
 
     img {
@@ -236,13 +240,13 @@
     margin-bottom: 30px;
   }
 
-  @include mq('phone') {
-    flex: 0 0 auto;
-  }
-
   @include mq-custom(400px) {
     justify-content: center;
     @include auto;
+  }
+
+  @include mq('phone') {
+    flex: 1 1 auto;
   }
 
   img {
@@ -288,6 +292,10 @@
         @include mq('tablet') {
           margin-left: 0;
         }
+
+        @include mq('phone') {
+          margin: 0;
+        }
       }
 
       &:nth-last-child(1) {
@@ -310,6 +318,7 @@
       @include mq('phone') {
         width: 50%;
         padding: 0;
+        margin: 0;
       }
     }
   }
@@ -334,6 +343,14 @@
     img {
       display: block;
       margin-right: 20px;
+
+      @include mq('phone') {
+        margin-right: 14px;
+      }
+
+      @include mq-custom(360px) {
+        margin-right: 5px;
+      }
     }
 
     span {

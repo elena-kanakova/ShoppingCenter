@@ -16,6 +16,11 @@
     background-size: cover;
   }
 
+  @include mq('phone') {
+    background: url("../img/shop-center_bg-414.jpg") center top no-repeat;
+    background-size: cover;
+  }
+
   .container {
     justify-content: space-between;
 
@@ -57,7 +62,7 @@
     padding-top: 70px;
   }
 
-  @include mq('phone') {
+  @include mq-custom(390px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -69,8 +74,8 @@
       color: white;
 
       @include mq('tablet') {
-        font: 22px/30px $DinBold;
-        font-weight: bold;
+        font: 22px/30px $DinMedi;
+        font-weight: 500;
       }
     }
   }
@@ -158,8 +163,8 @@
   @include mq('phone') {
     padding-top: 40px;
     padding-bottom: 48px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .element {
@@ -217,7 +222,7 @@
         background: url('../img/tz-logo1.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 105px auto;
         }
       }
     }
@@ -230,7 +235,7 @@
           background: url('../img/tz-logo1-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 105px auto;
           }
         }
       }
@@ -243,7 +248,7 @@
         background: url('../img/tz-logo2.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 123px auto;
         }
       }
     }
@@ -255,7 +260,7 @@
           background: url('../img/tz-logo2-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 123px auto;
           }
         }
       }
@@ -268,7 +273,7 @@
         background: url('../img/tz-logo3.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 86px auto;
         }
       }
     }
@@ -280,7 +285,7 @@
           background: url('../img/tz-logo3-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 86px auto;
           }
         }
       }
@@ -293,7 +298,7 @@
         background: url('../img/tz-logo4.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 108px auto;
         }
       }
     }
@@ -305,7 +310,7 @@
           background: url('../img/tz-logo4-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 108px auto;
           }
         }
       }
@@ -318,7 +323,7 @@
         background: url('../img/tz-logo5.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 105px auto;
         }
       }
     }
@@ -330,7 +335,7 @@
           background: url('../img/tz-logo5-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 105px auto;
           }
         }
       }
@@ -343,7 +348,7 @@
         background: url('../img/tz-logo6.png') no-repeat center;
 
         @include mq('phone') {
-          background-size: 80% auto;
+          background-size: 93px auto;
         }
       }
     }
@@ -355,7 +360,7 @@
           background: url('../img/tz-logo6-a.png') no-repeat center;
 
           @include mq('phone') {
-            background-size: 80% auto;
+            background-size: 93px auto;
           }
         }
       }

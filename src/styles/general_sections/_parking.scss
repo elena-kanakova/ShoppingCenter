@@ -12,8 +12,6 @@
   }
 
   @include mq-custom(1550px) {
-    padding-left: 40px;
-    padding-right: 40px;
     background-image:  url("../img/parking_car-bg.png");
     background-position: 150% 98px;
     background-repeat: no-repeat;
@@ -58,15 +56,25 @@
 
 
   @include mq('phone') {
-    background-position: 110% 45%;
+    background-position: 100% 52%;
   }
 
   .container {
     padding: 0;
 
+    @include mq-custom(1550px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
     @include mq('desktop') {
       padding-left: 20px;
       padding-right: 20px;
+    }
+
+    @include mq-custom(450px) {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     @include mq('phone') {
@@ -289,10 +297,19 @@
   padding: 79px 0 95px;
   background: #f8f9fb;
 
+  @include mq('phone') {
+    padding: 68px 0 65px;
+  }
+
   .container {
     position: relative;
     z-index: 1;
     background: url('../img/parking-P-icon.png') 417px 45% no-repeat;
+
+    @include mq('phone') {
+      background: url('../img/parking-P-icon.png') right 25% no-repeat;
+      background-size: 120px auto;
+    }
   }
 }
 
@@ -340,6 +357,7 @@
       color: $dark-grey;
 
       @include mq('phone') {
+        margin-top: 18px;
         font: 14px $DinPro;
         font-weight: 400;
       }
@@ -365,8 +383,13 @@
   margin-top: 50px;
 
   @include btn-more(240px,50px,$green,$green);
+  button {
+    span {
+      padding-right: 0;
+    }
+  }
 
   @include mq('phone') {
-    @include btn-more(188px,45px,$green,$green);
+    @include btn-more(180px,45px,$green,$green);
   }
 }

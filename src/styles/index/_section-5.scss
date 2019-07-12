@@ -2,34 +2,108 @@
   width: 100%;
   max-width: 1920px;
   @include auto;
-  background: url(../img/section-5_bg.jpg) center top no-repeat;
+  background: url('../img/section-5_bg.jpg') center top no-repeat;
   background-size: cover;
 
   @include mq('desktop') {
-    background: url(../img/section-5_bg-1280.jpg) center top no-repeat;
+    background: url('../img/section-5_bg-1280.jpg') center top no-repeat;
     background-size: cover;
   }
 
   @include mq('tablet') {
-    background: url(../img/section-5_bg-768.jpg) center top no-repeat;
+    background: url('../img/section-5_bg-768.jpg') center top no-repeat;
+    background-size: cover;
+  }
+
+    @include mq('phone') {
+    background: url('../img/section-5_bg-414.jpg') center top no-repeat;
     background-size: cover;
   }
 
   .container {
-    padding-top: 96px;
     padding-bottom: 107px;
 
     @include mq('phone') {
-      width: 100%;
+      max-width: 100%;
       padding-left: 0;
       padding-right: 0;
-      padding-top: 60px;
       padding-bottom: 0;
     }
   }
 
   .section-5__top-content {
+    padding-top: 96px;
+    padding-bottom: 115px;
     justify-content: space-between;
+    background: url("../img/section-5_bg-center.png");
+    background-repeat: no-repeat;
+    background-position: 55.9% bottom;
+    background-size: 769px auto;
+
+    @include mq-custom(1350px) {
+      background-position: 56.9% bottom;
+      background-size: 700px auto;
+    }
+
+    @include mq ('desktop') {
+      background-position: 57.9% bottom;
+      background-size: 650px auto;
+    }
+
+    @include mq-custom(1200px) {
+      background-position: 45.9% bottom;
+      background-size: 600px auto;
+    }
+
+    @include mq-custom(1024px) {
+      background-position: 55.9% bottom;
+      background-size: 550px auto;
+    }
+
+    @include mq-custom(850px) {
+      background-position: 75% bottom;
+    }
+
+    @include mq('tablet') {
+      padding-bottom: 134px;
+      background: url("../img/section-5_bg-center-768.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+
+    @include mq-custom(650px) {
+      background-size: 400px auto;
+    }
+
+    @include mq-custom(600px) {
+      background-size: 380px auto;
+    }
+
+    @include mq-custom(565px) {
+      padding-bottom: 80px;
+      background-size: 350px auto;
+    }
+
+    @include mq-custom(488px) {
+      padding-bottom: 40px;
+      background-size: 300px auto;
+    }
+
+    @include mq('phone') {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 55px;
+      background: url("../img/section-5_bg-center-414.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 198px auto;
+    }
+
+    @include mq-custom(360px) {
+      padding-left: 5px;
+      padding-right: 5px;
+      background-size: 168px auto;
+    }
   }
 
   .section-5__title-desc-about {
@@ -47,6 +121,7 @@
 
         @include mq-custom(450px) {
           font: 48px $DinBold;
+          font-weight: 600;
         }
 
         @include mq('phone') {
@@ -77,14 +152,23 @@
         }
       }
 
-      @include mq(desktop) {
+      @include mq('desktop') {
         margin-top: 30px;
         margin-bottom: 40px;
+      }
+
+      @include mq('phone') {
+        margin-top: 20px;
+        margin-bottom: 25px;
       }
     }
 
     .btn-more {
       @include btn-more_link;
+
+      @include mq('phone') {
+        @include btn-more_link($width:159px,$height:45px);
+      }
 
       a {
         transition: all .3s linear;
@@ -110,12 +194,21 @@
     }
 
     .number {
+      @include mq-custom(1024px) {
+        margin-top: -20px;
+      }
+
       p {
         font: 203px/150px $DinBlack;
         font-weight: 900;
         letter-spacing: -10px;
         color: white;
         text-transform: uppercase;
+
+        @include mq-custom(1024px) {
+          font: 170px/150px $DinBlack;
+          font-weight: 900;
+        }
       }
     }
 
@@ -127,37 +220,46 @@
         color: white;
         text-transform: uppercase;
         text-align: right;
+
+        @include mq-custom(1024px) {
+          margin-top: 20px;
+        }
       }
     }
   }
 
   .section-5__content-top {
-    margin-top: 115px;
     padding: 61px 0 49px;
     background: #f9f9f9;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
-    @include mq('tablet') {
-      margin-top: 134px;
-    }
-
-    @include mq-custom(565px) {
-      margin-top: 80px;
-    }
-
-    @include mq-custom(488px) {
-      margin-top: 40px;
+    @include mq-custom(1024px) {
+      padding: 0 0 49px;
     }
 
     @include mq('phone') {
-      margin-top: 55px;
-      padding: 40px 0;
+      padding: 30px 0 40px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
     .btn-all {
       margin-top: 34px;
       @include btn-more_link (190px,55px,#d7d7d7,none,14px,black);
+
+      @include mq-custom(1024px) {
+        margin-top: 0;
+      }
+
+      @include mq-custom(640px) {
+        margin-top: 34px;
+      }
+
+      @include mq('phone') {
+        margin-top: 20px;
+        @include btn-more_link (230px,50px,#d7d7d7,none,14px,black);
+      }
 
       a {
         margin: 0 auto;
@@ -182,9 +284,21 @@
     }
   }
 
+  .section-5__slider-cafe_wrap {
+    padding: 0 15px;
+  }
+
   .section-5__slider-cafe_nav-wrap {
     position: relative;
     padding: 0 85px 0;
+
+    @include mq-custom(1024px) {
+      padding: 45px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 0 25px 0;
+    }
 
     @include mq('phone') {
       padding: 0;
@@ -192,6 +306,7 @@
 
     .slider-nav {
       @include slider-nav;
+
 
       .prev, .next {
         top: 50%;
@@ -204,6 +319,14 @@
         background-size: 16px 26px;
         transition: all .3s linear;
         cursor: pointer;
+
+        @include mq-custom(1024px) {
+          left: 15px;
+        }
+
+        @include mq-custom(640px) {
+          left: 3px;
+        }
 
         &:hover {
           background: url("../img/arrow_left_green.svg") center center no-repeat;
@@ -222,6 +345,14 @@
         transition: all .3s linear;
         cursor: pointer;
 
+        @include mq-custom(1024px) {
+          right: 15px;
+        }
+
+        @include mq-custom(640px) {
+          right: 3px;
+        }
+
         &:hover {
           background: url("../img/arrow_right_gereen.svg") center center no-repeat;
           background-size: 16px 26px;
@@ -233,6 +364,8 @@
   #section-5__slider-cafe {
     padding: 10px 0;
     justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
 
     .slide {
       width: 230px !important;
@@ -250,6 +383,7 @@
 
       @include mq('phone') {
         width: 181px !important;
+        height: auto;
       }
 
       &:nth-last-child(1) {
@@ -260,13 +394,23 @@
         height: 158px;
         border-bottom: 1px solid #ebebeb;
 
+        @include mq('phone') {
+          height: 127px;
+        }
+
         img {
           display: block;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
 
       .cafe-about {
         padding: 36px 20px 20px;
+
+        @include mq('phone') {
+          padding: 18px 20px 10px;
+        }
 
         .name {
           p {
@@ -350,6 +494,7 @@
 
       img {
         display: block;
+        width: 100%;
       }
     }
   }

@@ -307,6 +307,9 @@
     .slider-nav {
       @include slider-nav;
 
+      @include mq('phone') {
+        display: none;
+      }
 
       .prev, .next {
         top: 50%;

@@ -195,6 +195,16 @@ jQuery(function($){
     });
 });
 
+/*jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $('#index__section-6'); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.removeClass('active'); // скрываем его
+        }
+    });
+});*/
+
 $('.footer__up').click(function () {
     $("html, body").animate({
         scrollTop: 0
@@ -237,6 +247,18 @@ $('.js-menu-btn').on('click', function (e) {
     $('#header-menu_open').toggleClass('active');
 });
 
+// Для инпутов при изменении в форме аренды
+$('document').ready(function(){
+    $("#rent-modal .input-wrap input").change(function() {
+        if ($(this).val().trim().length) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+});
+
+// Форма с арендой
 $('.js-btn-rent').on('click', function (e) {
     //$('html').addClass('fixed');
     $('#index__section-6').addClass('perspective freeze').addClass('active');
@@ -247,15 +269,75 @@ $('.js-btn-rent_back').on('click', function (e) {
     $('#index__section-6').removeClass('active').removeClass('perspective freeze');
 });
 
-// Для инпутов при изменении в форме аренды
-$('document').ready(function(){
-    $("#rent-modal .input-wrap input").change(function() {
-        if ($(this).val().trim().length) {
-            $(this).addClass('active');
-        } else {
-            $(this).removeClass('active');
-        }
-    });
+$('#index__section-6 .freeze').on('click', function (e) {
+    //$('html').removeClass('fixed');
+    $(this).parent().parent().parent().removeClass('active').removeClass('perspective freeze');
+});
+
+var wrap_rent, wrap_rent_pos, wrap_rent_height, rent_start, rent_end;
+
+$('.js-btn-rent').on('click', function (e) {
+// контейнер с блоком и формой
+    wrap_rent = $('#index__section-6');
+// позиция контейнера в активном виде
+    wrap_rent_pos = wrap_rent.offset().top;
+// высота контейнера в активном виде
+    wrap_rent_height = wrap_rent.outerHeight();
+
+    rent_start = wrap_rent_pos - wrap_rent_height;
+
+    rent_end = wrap_rent_pos + wrap_rent_height;
+});
+
+$(window).scroll(function () {
+    if (jQuery(this).scrollTop() > rent_end) {
+        wrap_rent.removeClass('active').removeClass('perspective freeze');
+    }
+
+    if (jQuery(this).scrollTop() < rent_start) {
+        wrap_rent.removeClass('active').removeClass('perspective freeze');
+    }
+});
+
+// Форма с машинами
+$('.js-btn-car').on('click', function (e) {
+    //$('html').addClass('fixed');
+    $('#parking').addClass('perspective freeze').addClass('active');
+});
+
+$('.js-btn-car_back').on('click', function (e) {
+    //$('html').removeClass('fixed');
+    $('#parking').removeClass('active').removeClass('perspective freeze');
+});
+
+$('#parking .freeze').on('click', function (e) {
+    //$('html').removeClass('fixed');
+    $(this).parent().parent().removeClass('active').removeClass('perspective freeze');
+});
+
+var wrap_car, wrap_car_pos, wrap_car_height, car_start, car_end;
+
+$('.js-btn-car').on('click', function (e) {
+// контейнер с блоком и формой
+    wrap_car = $('#parking');
+// позиция контейнера в активном виде
+    wrap_car_pos = wrap_car.offset().top;
+// высота контейнера в активном виде
+    wrap_car_height = wrap_car.outerHeight();
+
+    car_start = wrap_car_pos - wrap_car_height;
+
+    car_end = wrap_car_pos + wrap_car_height;
+});
+
+$(window).scroll(function () {
+    if (jQuery(this).scrollTop() > car_end) {
+        wrap_car.removeClass('active').removeClass('perspective freeze');
+    }
+
+    if (jQuery(this).scrollTop() < car_start) {
+        wrap_car.removeClass('active').removeClass('perspective freeze');
+    }
 });
 //Some popup code
 //Слайдеры
@@ -319,6 +401,7 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
     spaceBetween: 0,
     loop: true,
     setWrapperSize: true,
+    calculateHeight: true,
     navigation: {
         nextEl: '.section-3__slider-nav .next',
         prevEl: '.section-3__slider-nav .prev',

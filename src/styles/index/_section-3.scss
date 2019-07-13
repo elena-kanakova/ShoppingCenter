@@ -288,13 +288,14 @@
     align-items: stretch;
     align-content: stretch;
     height: auto;
+    min-height: 100%;
 
     .swiper-slide {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       width: 222px !important;
       height: auto;
+      min-height: 100%;
       @include auto;
 
       &:hover {
@@ -339,6 +340,8 @@
       }
 
       .title {
+        flex: 1;
+
         p {
           display: inline;
           font: 16px $DinBold;
@@ -349,9 +352,15 @@
         }
       }
 
-      .time {
+      .btn-time_wrap {
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
+      .time {
+        flex: 1;
         p {
           font: 14px $DinPro;
           font-weight: 400;
@@ -367,6 +376,7 @@
 
           span {
             padding-right: 30px;
+            padding-bottom: 4px;
             background: url('../img/ticket_2.svg') right center no-repeat;
             background-size: 18px 10px;
             transition: all .3s linear;

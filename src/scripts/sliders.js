@@ -59,6 +59,7 @@ var section_3_slider = new Swiper('.section-3__slider-wrap', {
     spaceBetween: 0,
     loop: true,
     setWrapperSize: true,
+    calculateHeight: true,
     navigation: {
         nextEl: '.section-3__slider-nav .next',
         prevEl: '.section-3__slider-nav .prev',

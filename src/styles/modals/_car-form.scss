@@ -1,4 +1,4 @@
-#rent-modal {
+#car-modal {
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -38,7 +38,7 @@
     background: url('../img/rent_modal-bg-414.png') right center no-repeat #131672;
   }
 
-  .rent-modal_wrap {
+  .car-modal_wrap {
     padding: 0;
     max-width: 1280px;
     height: inherit;
@@ -151,7 +151,7 @@
     }
   }
 
-  .rent-modal__content {
+  .car-modal__content {
     flex: 1 0 auto;
     justify-content: flex-end;
 
@@ -196,7 +196,7 @@
     }
   }
 
-  .rent-modal__form_wrap {
+  .car-modal__form_wrap {
     width: 80%;
     max-width: 813px;
 
@@ -215,7 +215,7 @@
     }
   }
 
-  .rent__form {
+  .car__form {
     margin-top: 58px;
 
     @include mq('desktop') {

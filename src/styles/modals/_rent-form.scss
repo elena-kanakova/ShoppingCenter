@@ -12,7 +12,8 @@
   max-width: 1920px;
   padding: 200px 0;
   @include auto;
-  background: url('../img/rent_modal-bg.png') right center no-repeat #131672;
+  background: url('../img/rent_modal-bg.png') right bottom no-repeat #131672;
+  background-size: auto 100%;
   transition: opacity .6s linear 1s;
 
   @include mq-custom(1550px) {
@@ -21,7 +22,8 @@
 
   @include mq('desktop') {
     padding: 100px 40px;
-    background: url('../img/rent_modal-bg-1280.png') right center no-repeat #131672;
+    background: url('../img/rent_modal-bg-1280.png') right bottom no-repeat #131672;
+    background-size: auto 100%;
   }
 
   @include mq-custom(1100px) {
@@ -31,11 +33,13 @@
 
   @include mq('tablet') {
     padding: 0 10px;
-    background: url('../img/rent_modal-bg-768.png') right center no-repeat #131672;
+    background: url('../img/rent_modal-bg-768.png') left top no-repeat #131672;
+    background-size: auto 100%;
   }
 
   @include mq('phone') {
-    background: url('../img/rent_modal-bg-414.png') right center no-repeat #131672;
+    background: url('../img/rent_modal-bg-414.png') left top no-repeat #131672;
+    background-size: cover;
   }
 
   .rent-modal_wrap {
@@ -340,7 +344,7 @@
         }
       }
 
-      input:active ~ label {
+      input.active ~ label {
         border-left: 1px solid white;
         border-right: 1px solid white;
         transition: border .3s linear .3s;

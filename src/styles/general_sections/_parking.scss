@@ -4,6 +4,7 @@
   max-width: 1920px;
   height: 100%;
   @include auto;
+  overflow: hidden;
 
   .section-content {
     width: 100%;
@@ -57,34 +58,6 @@
       @include mq('phone') {
         padding-left: 5px;
         padding-right: 5px;
-      }
-    }
-  }
-
-  .circle-bottom_wrap {
-    position: relative;
-
-    .circle-bottom {
-      position: absolute;
-      z-index: 2;
-      left: 508px;
-      bottom: -89px;
-
-      @include mq-custom(1024px) {
-        left: auto;
-        right: -56px;
-      }
-
-      @include mq-custom(640px) {
-        bottom: -62px;
-        right: 15px;
-      }
-
-      img {
-        @include mq-custom(640px) {
-          width: 125px;
-          height: 125px;
-        }
       }
     }
   }
@@ -484,27 +457,27 @@
     position: absolute;
     z-index: 3;
     margin-top: 115px;
-    transform: perspective(1500px) translateZ(0) translateX(-40%) rotateY(75deg);
+    transform: perspective(1500px) translateZ(0) translateX(40%) rotateY(-75deg);
     transition: transform .6s linear 0s;
 
     @include mq-custom(1750px) {
-      transform: perspective(1500px) translateZ(0) translateX(-41%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(41%) rotateY(-75deg);
     }
 
     @include mq-custom(1600px) {
-      transform: perspective(1500px) translateZ(0) translateX(-42%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(42%) rotateY(-75deg);
     }
 
     @include mq-custom(1550px) {
-      transform: perspective(1500px) translateZ(0) translateX(-43%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(43%) rotateY(-75deg);
     }
 
     @include mq-custom(1450px) {
-      transform: perspective(1500px) translateZ(0) translateX(-45%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(45%) rotateY(-75deg);
     }
 
     @include mq-custom(1366px) {
-      transform: perspective(1500px) translateZ(0) translateX(-43%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(43%) rotateY(-75deg);
     }
 
     @include mq('desktop') {
@@ -512,7 +485,7 @@
     }
 
     @include mq-custom(1200px) {
-      transform: perspective(1500px) translateZ(0) translateX(-42%) rotateY(75deg);
+      transform: perspective(1500px) translateZ(0) translateX(42%) rotateY(-75deg);
     }
 
     @include mq-custom(1100px) {

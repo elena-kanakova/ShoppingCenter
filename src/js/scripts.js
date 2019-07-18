@@ -258,6 +258,16 @@ $('document').ready(function(){
     });
 });
 
+$('document').ready(function(){
+    $("#car-modal .input-wrap input").change(function() {
+        if ($(this).val().trim().length) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+});
+
 // Форма с арендой
 $('.js-btn-rent').on('click', function (e) {
     //$('html').addClass('fixed');

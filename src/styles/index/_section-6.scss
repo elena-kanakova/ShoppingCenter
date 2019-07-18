@@ -3,6 +3,7 @@
   max-width: 1920px;
   height: 100%;
   @include auto;
+  overflow: hidden;
 
   .index__section-6_wrap {
     position: relative;

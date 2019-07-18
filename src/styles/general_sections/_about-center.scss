@@ -26,6 +26,34 @@
       align-items: flex-start;
     }
   }
+
+  .circle-bottom_wrap {
+    position: relative;
+
+    .circle-bottom {
+      position: absolute;
+      z-index: 2;
+      left: 508px;
+      top: -89px;
+
+      @include mq-custom(1024px) {
+        left: auto;
+        right: -56px;
+      }
+
+      @include mq-custom(640px) {
+        bottom: -62px;
+        right: 15px;
+      }
+
+      img {
+        @include mq-custom(640px) {
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+  }
 }
 
 .about-center_left-part {

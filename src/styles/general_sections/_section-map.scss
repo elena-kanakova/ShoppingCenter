@@ -2,6 +2,8 @@
   width: 100%;
   max-width: 1920px;
   @include auto;
+  position: relative;
+  z-index: 10;
 
   @include mq('tablet') {
     background: #f8f9fb;

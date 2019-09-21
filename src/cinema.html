@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Торговый центр "Калужский" - Магазины</title>
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="css/general.css">
+
+</head>
+<body>
+<div id="wrapper">
+    <header id="main-header">
+    <div class="container flex wrap">
+        <div class="header-logo">
+            <a href="#">
+                <picture>
+                    <img src="img/logo.svg" alt="Лого">
+                </picture>
+            </a>
+        </div>
+        <div class="header-address flex">
+            <div class="header-address_icon">
+                <img src="img/head_1.svg" alt="Иконка">
+            </div>
+            <div class="header-address_text">
+                <p>м. Калужская <br>
+                    <span>ул. Профсоюзная, 61A</span>
+                </p>
+            </div>
+        </div>
+        <div class="header-time flex">
+            <div class="header-time_icon">
+                <img src="img/head_2.svg" alt="Иконка">
+            </div>
+            <div class="header-time_text">
+                <p>Время работы <br>
+                    <span>с 10:00 до 23:00</span>
+                </p>
+            </div>
+        </div>
+        <div class="header-phone">
+            <a href="tel:+7 495 727 43 00">+7 (495) 727 43 00</a>
+        </div>
+        <div class="header-buttons flex">
+            <div class="header_search-wrap">
+                <div class="btn header_btn-search flex center">
+                    <img src="img/head_search.svg" alt="Поиск">
+                </div>
+                <div class="header-search">
+                    <form action="" id="header-search">
+                        <div class="input-wrap">
+                            <label for="header-search_input" class="flex">
+                                <span>Введите слово для поиска</span>
+                            </label>
+                            <input type="text" id="header-search_input" name="header-search_input" class="input-text">
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <img src="img/head_search.svg" alt="Поиск">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="btn location flex center" onclick="location.href='#section-map'">
+                <img src="img/head_location.svg" alt="Иконка">
+            </div>
+            <div class="btn parking flex center" onclick="location.href='#parking'">
+                <img src="img/heap_parking.svg" alt="Иконка">
+            </div>
+        </div>
+        <div class="header-menu js-menu-btn">
+            <div class="btn-menu flex column">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </div>
+        </div>
+    </div>
+</header>
+    <header id="cinema" class="page-header inner">
+    <div class="container flex column">
+        <div class="bread-crumbs flex">
+            <picture>
+                <img src="img/home-icon.png" alt="Домой">
+            </picture>
+            <ul class="bread-crumbs_wrap flex">
+                <li class="active">Главная<span>//</span></li>
+                <li>Кинотеатр</li>
+            </ul>
+        </div>
+        <div class="page-title_wrap flex column center">
+            <div class="page-title flex">
+                <h1>Кинотеатр</h1>
+                <picture>
+                    <source media="(max-width: 414px)" srcset="img/section-3_logo-cinema-414.png">
+                    <source media="(max-width: 768px)" srcset="img/section-3_logo-cinema-768.png">
+                    <img src="img/section-3_logo-cinema.png" alt="Кинотеатр">
+                </picture>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="movies-list__section">
+    <div class="container">
+        <div class="cinema-tabs">
+            <ul class="flex">
+                <li class="js-tab">
+                    <span class="day">Сегодня</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Завтра</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Суббота</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Воскресенье</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Понедельник</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Вторник</span>
+                    <span class="date">16 мая</span>
+                </li>
+                <li class="js-tab">
+                    <span class="day">Среда</span>
+                    <span class="date">16 мая</span>
+                </li>
+            </ul>
+        </div>
+        <div class="cinema-content_wrap">
+            <div class="cinema-content flex wrap js-tab-cont">
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cinema-content flex wrap js-tab-cont">
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="poster"><img src="img/cinema-slide-1.jpg" alt="Кино-постер"></div>
+                    <div class="title">
+                        <p>Коридор бессмертия</p>
+                    </div>
+                    <div class="time">
+                        <p>ср 13:20, ср 16:15</p>
+                    </div>
+                    <div class="btn-order">
+                        <button class="flex center"><span>Купить билет</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-results_btn-more">
+                <button class="btn-more flex js-btn-more"><span>Показать еще</span></button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="section-where" class="flex">
+    <a href="#" class="element flex column">
+        <div class="title">
+            <h3>МАГАЗИНЫ</h3>
+        </div>
+        <div class="text">
+            <p>Одежда и обувь, подарки и аксессуары, товары для спорта
+                и отдыха. Тысячи предложений ждут в бутиках и магазинах
+                торгового центра.
+            </p>
+        </div>
+        <div class="button">
+            <button class="flex center"><span>Подробнее</span></button>
+        </div>
+    </a>
+    <a href="#" class="element flex column">
+        <div class="title">
+            <h3>ГДЕ ПОЕСТЬ</h3>
+        </div>
+        <div class="text">
+            <p>Загляните в уютные кинозалы, кафе и рестораны. Здесь вы
+                сможете отдохнуть, провести время вдвоем или целой
+                компанией.</p>
+        </div>
+        <div class="button">
+            <button class="flex center"><span>Подробнее</span></button>
+        </div>
+    </a>
+    <a href="#" class="element flex column">
+        <div class="title">
+            <h3>РАЗВЛЕЧЕНИЯ</h3>
+        </div>
+        <div class="text">
+            <p>Краткий описательный текст про развлечения в торговом цетре
+                и все что с этим связано в несколько срок</p>
+        </div>
+        <div class="button">
+            <button class="flex center"><span>Подробнее</span></button>
+        </div>
+    </a>
+</section>
+    <section id="shop-center">
+    <div class="container flex">
+        <div class="shop-center__left-part">
+            <div class="title">
+                <h2>Торговые центры, входящие в группу
+                    «САФМАР» Михаила Гуцериева</h2>
+            </div>
+            <div class="text">
+                <p>Группа «САФМАР» - одна из крупнейших промышленно-финансовых групп России.
+                    В нее входят промышленные и финансовые активы, компании в области коммерческой
+                    недвижимости, строительства и девелопмента, розничной торговли</p>
+            </div>
+            <div class="logos flex">
+                <a href="http://www.safmargroup.ru/">
+                    <img src="img/safmar-icon.png" alt="Лого">
+                </a>
+                <a href="">
+                    <img src="img/and-icon.png" alt="Лого">
+                </a>
+            </div>
+        </div>
+        <div class="shop-center__right-part flex wrap">
+            <div class="element sc-1 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://petrovskiy-center.ru/"></a>
+                </div>
+            </div>
+            <div class="element sc-2 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://kaleidoscope-center.ru/"></a>
+                </div>
+            </div>
+            <div class="element sc-3 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://tc-kaluzhsky.ru/"></a>
+                </div>
+            </div>
+            <div class="element sc-4 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://festival-center.ru/"></a>
+                </div>
+            </div>
+            <div class="element sc-5 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://smolenskiy.ru/"></a>
+                </div>
+            </div>
+            <div class="element sc-6 flex center column">
+                <div class="sc-link_wrap">
+                    <a href="http://smolenskiy-2.ru/"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer id="footer">
+    <div class="container">
+        <div class="footer__logo-phone-intel_wrap flex">
+            <div class="footer__logos flex">
+                <a href="http://www.safmargroup.ru/">
+                    <img src="img/footer-safmar-logo.png" alt="Лого">
+                </a>
+                <a href="https://www.a-n-d.pro/">
+                    <img src="img/footer-and-logo.png" alt="Лого">
+                </a>
+            </div>
+            <div class="footer__phone-logo flex">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/k.svg" alt="Лого">
+                    </a>
+                </div>
+                <div class="phone">
+                    <a href="tel:+74957274300">+7 (495) 727 43 00</a>
+                </div>
+            </div>
+            <div class="footer__intel flex">
+                <a href="http://intel-web.ru/">
+                    <img src="img/footer-intel-logo.png" alt="Интел М">
+                </a>
+            </div>
+        </div>
+        <div class="footer__bottom-wrap flex">
+            <div class="footer__address-copyright_wrap flex column">
+                <div class="footer__address">
+                    <p>м. Калужская, ул. Профсоюзная, 61А</p>
+                </div>
+                <div class="footer__copyright">
+                    <p>© 2013 - 2018, Калужский</p>
+                </div>
+            </div>
+            <div class="footer__menu-social-links_wrap flex column">
+                <nav class="footer__footer-menu">
+                    <ul class="flex wrap">
+                        <li><a href="#">О комплексе</a></li>
+                        <li><a href="#">Наши магазины</a></li>
+                        <li><a href="#">План комплекса</a></li>
+                        <li><a href="#">Новости и акции</a></li>
+                        <li><a href="#">Арендаторам</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__social-links flex">
+                    <div class="fb flex">
+                        <a href="#" class="flex"><img src="img/Socio_facebook.svg" alt="Лого" class="logo"><span>facebook</span></a>
+                    </div>
+                    <div class="vk flex">
+                        <a href="#" class="flex"><img src="img/socio_vk.svg" alt="Лого" class="logo"><span>vkontakte</span></a>
+                    </div>
+                    <div class="insta flex">
+                        <a href="#" class="flex"><img src="img/socio_inst.svg" alt="Лого" class="logo"><span>instagram</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__time-arrow_wrap flex column">
+                <div class="footer__time">
+                    <p>Время работы с 10:00 до 23:00</p>
+                </div>
+                <div class="footer__up flex center"><span></span></div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
+<script src="libs/swiper.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+.news-open__section {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+  background: url("../img/shop-open_bg.png") center center no-repeat;
+}
+
+.news-open__content {
+  padding-top: 138px;
+
+  @include mq('desktop') {
+    padding-top: 100px;
+  }
+
+  @include mq('tablet') {
+    padding-top: 26px;
+    flex-direction: column;
+  }
+
+  @include mq-custom(400px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .left-part {
+    padding-right: 35px;
+    width: 50%;
+    height: 100%;
+
+    @include mq('tablet') {
+      width: 100%;
+    }
+
+    @include mq('desktop') {
+      padding-right: 25px;
+    }
+
+    @include mq-custom(1024px) {
+      padding-right: 15px;
+    }
+
+    @include mq('tablet') {
+      padding-right: 0;
+    }
+
+    .photo {
+      img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 430px;
+
+        @include mq('desktop') {
+          max-height: 400px;
+        }
+
+        @include mq-custom(1200px) {
+          max-height: 350px;
+        }
+
+        @include mq-custom(1024px) {
+          max-height: 300px;
+        }
+
+        @include mq-custom(860px) {
+          max-height: 250px;
+        }
+
+        @include mq('tablet') {
+          height: auto;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .right-part {
+    padding-left: 35px;
+    padding-bottom: 75px;
+    width: 50%;
+    justify-content: space-between;
+
+    @include mq('desktop') {
+      padding-left: 25px;
+      padding-bottom: 0;
+    }
+
+    @include mq-custom(1024px) {
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
+    @include mq('tablet') {
+      width: 100%;
+      margin-top: 55px;
+    }
+
+    @include mq('phone') {
+      margin-top: 37px;
+    }
+
+    .text {
+      position: relative;
+      padding-top: 70px;
+
+      @include mq-custom(1024px) {
+        padding-top: 40px;
+      }
+
+      @include mq('tablet') {
+        padding-top: 60px;
+      }
+
+      @include mq('phone') {
+        padding-top: 0;
+      }
+
+      p {
+        margin-bottom: 30px;
+        font: 16px $DinPro;
+        font-weight: 400;
+        color: black;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        @include mq('phone') {
+          margin-bottom: 20px;
+        }
+      }
+
+      &:after {
+        @include pseudo(1,$right:auto,$bottom:auto);
+        width: 228px;
+        height: 1px;
+        background: #b796c5;
+
+        @include mq('phone') {
+          display: none;
+        }
+      }
+    }
+
+    .links {
+      margin-top: 55px;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include mq-custom(1024px) {
+        margin-top: 35px;
+      }
+
+      @include mq('tablet') {
+        margin-top: 45px;
+      }
+
+      @include mq('phone') {
+        margin-top: 35px;
+      }
+
+      .links-title {
+        margin-right: 26px;
+
+        p {
+          font: 14px $DinBold;
+          font-weight: bold;
+          color: #000;
+          text-transform: lowercase;
+        }
+      }
+    }
+
+    .link-wrap {
+      .link {
+        margin-right: 16px;
+
+        @include mq('phone') {
+          margin-right: 10px;
+        }
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+
+      %links {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:after {
+          @include pseudo(1,$top:50%,$left:50%,$right:auto,$bottom:auto);
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .pluso-vkontakte {
+        @extend %links;
+        background: linear-gradient(0deg, #4a76a8 0%, #628ec0 100%);
+        transition: all .3s linear;
+
+        &:after {
+          width: 21px;
+          height: 11px;
+          background: url('../img/cosio_big_vk.svg');
+          background-size: 21px 11px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+
+        &:hover {
+          background: linear-gradient(0deg, $green 0%, $green 100%);
+        }
+      }
+
+      .pluso-facebook {
+        @extend %links;
+        background: linear-gradient(0deg, #4267b2 0%, #355494 100%);
+        transition: all .3s linear;
+
+        &:after {
+          width: 8px;
+          height: 17px;
+          background: url("../img/socio_big_f.svg");
+          background-size: 8px 17px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+
+        &:hover {
+          background: linear-gradient(0deg, $green 0%, $green 100%);
+        }
+      }
+
+      .pluso-odnoklassniki {
+        @extend %links;
+        margin-right: 0;
+        background: linear-gradient(0deg, #ee2f41 0%, #f3683f 100%) ;
+        transition: all .3s linear;
+
+        &:after {
+          width: 11px;
+          height: 17px;
+          background: url("../img/ok.png");
+          background-size: 11px 17px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+
+        &:hover {
+          background: linear-gradient(0deg, $green 0%, $green 100%);
+        }
+      }
+
+      .pluso-wrap {
+        background: none;
+      }
+
+      .pluso-more, .pluso-counter {
+        display: none;
+      }
+    }
+  }
+}

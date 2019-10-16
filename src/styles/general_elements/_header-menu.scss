@@ -1,0 +1,203 @@
+/* Меню */
+.header_main-nav {
+  position: relative;
+  z-index: 9;
+
+  @include mq('tablet') {
+    display: none;
+  }
+
+  .nav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 auto;
+      border-right: 1px solid #f0ebeb;
+
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+
+      a {
+        //transition: all .3s linear;
+
+        span {
+          display: block;
+          padding-bottom: 2px;
+          font: 15px $DinMedi;
+          font-weight: 500;
+          color: #000;
+          transition: all .3s linear;
+        }
+      }
+
+      .shop-link {
+        background: url("../img/menu_1.svg");
+        background-size: 21px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        span {
+          margin-left: 36px;
+          border-bottom: 2px solid #b796c5;
+
+          @include mq-custom(800px) {
+            margin-left: 30px;
+          }
+        }
+
+        &:hover {
+          background: url("../img/menu_1_2.svg");
+          background-size: 21px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #b796c5;
+          }
+        }
+      }
+
+      .cafe-link {
+        background: url("../img/menu_2.svg");
+        background-size: 21px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        span {
+          margin-left: 36px;
+          border-bottom: 2px solid #94d8f1;
+
+          @include mq-custom(800px) {
+            margin-left: 30px;
+          }
+        }
+
+        &:hover {
+          background: url("../img/menu_2_2.svg");
+          background-size: 21px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #94d8f1;
+          }
+        }
+      }
+
+      .news-link {
+        background: url("../img/menu_3.svg");
+        background-size: 21px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        span {
+          margin-left: 36px;
+          border-bottom: 2px solid #7dc142;
+
+          @include mq-custom(800px) {
+            margin-left: 30px;
+          }
+        }
+
+        &:hover {
+          background: url("../img/menu_3_2.svg");
+          background-size: 21px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #7dc142;
+          }
+        }
+      }
+
+      .cinema-link {
+        background: url("../img/menu_4.svg");
+        background-size: 25px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        span {
+          margin-left: 40px;
+          border-bottom: 2px solid #f05838;
+
+          @include mq-custom(800px) {
+            margin-left: 35px;
+          }
+        }
+
+        &:hover {
+          background: url("../img/menu_4_2.svg");
+          background-size: 25px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #f05838;
+          }
+        }
+      }
+
+      .kids-link {
+        background: url("../img/menu_5.svg");
+        background-size: 12px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background: url("../img/menu_5_2.svg");
+          background-size: 12px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #e8a83a;
+          }
+        }
+
+        span {
+          margin-left: 27px;
+          border-bottom: 2px solid #e8a83a;
+
+          @include mq-custom(800px) {
+            margin-left: 22px;
+          }
+        }
+      }
+
+      .service-link {
+        background: url("../img/menu_6.svg");
+        background-size: 19px auto;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background: url("../img/menu_6_2.svg");
+          background-size: 19px auto;
+          background-position: left center;
+          background-repeat: no-repeat;
+
+          span {
+            color: #ce6fab;
+          }
+        }
+
+        span {
+          margin-left: 34px;
+          border-bottom: 2px solid #ce6fab;
+
+          @include mq-custom(800px) {
+            margin-left: 29px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,50 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Архистрой</title>
     <!-- @if NODE_ENV='development' -->
-    <link rel="stylesheet" href="libs/swiper.min.css"/>
-    <link rel="stylesheet" href="libs/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="css/general.css">
     <!-- @endif -->
 
     <!-- @if NODE_ENV='production' -->
-    <link rel="stylesheet" href="libs/swiper.min.css/>
-    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/swiper.min.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
     <!-- @endif -->
 </head>
 <body>
 <div id="wrapper">
-    @@include('./_header.html')
-    @@include('./_index-section-1.html')
-    @@include('./_index-section-2.html')
-    @@include('./_index-section-3.html')
-    @@include('./_index-section-4.html')
-    @@include('./_index-section-5.html')
-    @@include('./_index-section-6.html')
-    @@include('./_section-map.html')
-    @@include('./_parking.html')
-    @@include('./_about-center.html')
-    @@include('./_index-section-10.html')
-    @@include('./_section-where.html')
-    @@include('./_shop-center.html')
-    @@include('./_footer.html')
+    @@include('./general/_header.html')
+    @@include('./menu/_header-menu.html')
+    @@include('./index/_index-section-1.html')
+    @@include('./index/_index-section-2.html')
+    @@include('./index/_index-section-3.html')
+    @@include('./index/_index-section-4.html')
+    @@include('./index/_index-section-5.html')
+    @@include('./index/_index-section-6.html')
+    @@include('./general/_section-map.html')
+    @@include('./general/_parking.html')
+    @@include('./general/_about-center.html')
+    @@include('./index/_index-section-10.html')
+    @@include('./general/_section-where.html')
+    @@include('./general/_shop-center.html')
+    @@include('./general/_footer.html')
+    @@include('./menu/_menu-open.html')
 </div>
 
 <!-- @if NODE_ENV='development' -->
 <script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
 <script src="libs/swiper.min.js"></script>
-<script src="libs/owl.carousel.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3158b50-9877-4e46-b70e-71cfdfdb28ae"></script>
 <script src="js/scripts.js"></script>
 <!-- @endif -->
 
 <!-- @if NODE_ENV='production' -->
 <script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
 <script src="libs/swiper.min.js"></script>
-<script src="libs/owl.carousel.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3158b50-9877-4e46-b70e-71cfdfdb28ae"></script>
 <script src="js/scripts.min.js"></script>
 <!-- @endif -->
 </body>

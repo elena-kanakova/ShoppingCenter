@@ -1,0 +1,719 @@
+#index__section-4 {
+  width: 100%;
+  max-width: 1920px;
+  @include auto;
+
+  .container {
+    padding-top: 96px;
+    padding-bottom: 100px;
+
+    @include mq('tablet') {
+      padding-top: 79px;
+      padding-bottom: 84px;
+    }
+
+    @include mq('phone') {
+      padding-top: 55px;
+      padding-bottom: 44px;
+    }
+  }
+
+  .section-4__title {
+    h2 {
+      font: 52px $DinBold;
+      font-weight: 600;
+      color: #000;
+      text-align: center;
+
+      @include mq-custom(450px) {
+        font: 48px $DinBold;
+      }
+
+      @include mq('phone') {
+        font: 32px $DinBold;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .section-4__content-wrap {
+    justify-content: space-between;
+
+    @include mq-custom(900px) {
+      flex-direction: column;
+    }
+    @include mq-custom(700px) {
+      margin-top: 40px;
+    }
+
+    @include mq('phone') {
+      margin-top: 25px;
+    }
+  }
+
+  .section-4_search-wrap {
+    margin-top: 60px;
+    justify-content: center;
+
+    @include mq-custom(900px) {
+      margin-top: 30px;
+    }
+  }
+
+  #section-4_map-search {
+
+    .input-wrap {
+      position: relative;
+      width: 520px;
+      height: 55px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border: 1px solid $light-grey;
+
+      @include mq-custom(1024px) {
+        width: 320px;
+      }
+
+      @include mq-custom(900px) {
+        width: 100%;
+      }
+
+      @include mq('phone') {
+        height: 50px;
+      }
+
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 26px;
+        padding-right: 26px;
+        align-items: center;
+
+        span {
+          font: 15px $DinMedi;
+          font-weight: 500;
+          color: black;
+        }
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        padding-left: 26px;
+        padding-right: 26px;
+        background: none;
+        border: none;
+      }
+    }
+
+    button {
+      width: 145px;
+      height: 55px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      border: 1px solid $light-grey;
+      background: $green;
+      cursor: pointer;
+
+      @include mq('phone') {
+        width: 80px;
+        height: 50px;
+      }
+
+      span {
+        font: 15px $DinMedi;
+        font-weight: 500;
+        color: white;
+
+        @include mq('phone') {
+          display: none;
+        }
+      }
+
+      img {
+        margin-left: 12px;
+        width: 11px;
+
+        @include mq('phone') {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  %nav-elements {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .section-4__tab-nav_wrap {
+    margin-top: -50px;
+    background: url("../img/section-4_nav-left_border.png") 20px top no-repeat;
+
+    @include mq-custom(900px) {
+      margin-top: 0;
+      background: none;
+      padding: 0 27px;
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include mq('phone') {
+      padding: 0 5px 0;
+      order: 2;
+      justify-content: center;
+    }
+
+    .tab-nav {
+      cursor: pointer;
+      padding: 35px 0;
+      justify-content: flex-start;
+
+      @include mq-custom(700px) {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include mq('phone') {
+        margin-right: 15px;
+      }
+
+      &:nth-child(1) {
+        margin-left: 70px;
+
+        @include mq-custom(900px) {
+          margin-left: 0;
+          padding: 0;
+        }
+
+        .number-floor {
+          p {
+            background: #c40b85;
+          }
+        }
+
+        &:hover {
+          .number-floor {
+            p {
+              background: #c40b85;
+            }
+
+            &:before {
+              border: 1px solid #c40b85;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 17px;
+
+        @include mq-custom(900px) {
+          margin-left: 0;
+        }
+
+        .number-floor {
+          p {
+            background: #ff8000;
+          }
+        }
+
+        &:hover {
+          .number-floor {
+            p {
+              background: #ff8000;
+            }
+
+            &:before {
+              border: 1px solid #ff8000;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .number-floor {
+          p {
+            background: $blue;
+          }
+        }
+
+        &:hover {
+          .number-floor {
+            p {
+              background: $blue;
+            }
+
+            &:before {
+              border: 1px solid $blue;
+            }
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        margin-left: 10px;
+
+        @include mq-custom(900px) {
+          margin-left: 0;
+        }
+
+        .number-floor {
+          p {
+            background: #81b930;
+          }
+        }
+
+        &:hover {
+          .number-floor {
+            p {
+              background: #81b930;
+            }
+
+            &:before {
+              border: 1px solid #81b930;
+            }
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        margin-left: 58px;
+
+        @include mq-custom(900px) {
+          margin-left: 0;
+        }
+
+        @include mq('phone') {
+          margin-right: 0;
+        }
+
+        .number-floor {
+          p {
+            background: #b796c5;
+          }
+        }
+
+        &:hover {
+          .number-floor {
+            p {
+              background: #b796c5;
+            }
+
+            &:before {
+              border: 1px solid #b796c5;
+            }
+          }
+        }
+      }
+
+      .number-floor {
+        position: relative;
+        margin-right: 15px;
+
+        @include mq('phone') {
+          margin-right: 0;
+        }
+
+        &:before {
+          @include pseudo(1,-6px,-6px,-6px,-6px);
+          background: white;
+          border-radius: 50%;
+          border: 1px solid white;
+          transition: all .3s linear;
+        }
+
+        p {
+          position: relative;
+          z-index: 2;
+          padding-top: 20px;
+          @extend %nav-elements;
+          font: 18px/7px $DinBold;
+          font-weight: 600;
+          color: white;
+          text-align: center;
+          transition: all .3s linear;
+        }
+      }
+
+      .name-floor {
+        @include mq-custom(700px) {
+          margin-top: 15px;
+        }
+
+        @include mq('phone') {
+          margin-top: 8px;
+        }
+
+        p {
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: black;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(1).active {
+      .number-floor {
+        p {
+          background: #c40b85;
+        }
+
+        &:before {
+          border: 1px solid #c40b85;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(2).active {
+      .number-floor {
+        p {
+          background: #ff8000;
+        }
+
+        &:before {
+          border: 1px solid #ff8000;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(3).active {
+      .number-floor {
+        p {
+          background: $blue;
+        }
+
+        &:before {
+          border: 1px solid $blue;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(4).active {
+      .number-floor {
+        p {
+          background: #81b930;
+        }
+
+        &:before {
+          border: 1px solid #81b930;
+        }
+      }
+    }
+
+    .tab-nav:nth-child(5).active {
+      .number-floor {
+        p {
+          background: #b796c5;
+        }
+
+        &:before {
+          border: 1px solid #b796c5;
+        }
+      }
+    }
+  }
+
+  .section-4__tab-content_wrap {
+    align-items: center;
+
+    @include mq-custom(900px) {
+      order: 3;
+      margin-top: 53px;
+    }
+
+    .maps-wrap {
+      margin-top: 50px;
+      position: relative;
+      justify-content: center;
+      @include mq-custom(900px) {
+        margin-top: 0;
+      }
+
+      .compass_m {
+        z-index: -1;
+        top: 180px;
+        left: -150px;
+        position: absolute;
+
+        @include mq-custom(900px) {
+          display: none;
+        }
+      }
+
+      .compass_p {
+        z-index: -1;
+        top: 180px;
+        right: -70px;
+        position: absolute;
+
+        @include mq-custom(900px) {
+          display: none;
+        }
+      }
+
+      .map_floor {
+        display: none;
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+
+      .map_floor.active {
+        display: block;
+      }
+    }
+
+    .compass_c {
+      margin-left: 80%;
+      margin-bottom: -15px;
+
+      @include mq-custom(900px) {
+        display: none;
+      }
+    }
+  }
+
+  .section-4__right-elements {
+    margin-top: -50px;
+    background: url("../img/section-4_nav-right_border.png") left top no-repeat;
+
+    @include mq-custom(900px) {
+      background: none;
+      order: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+    }
+
+    @include mq('phone') {
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .element {
+      align-items: center;
+      justify-content: flex-end;
+
+      @include mq('phone') {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      &:nth-child(1) {
+        margin-top: 160px;
+        margin-bottom: 54px;
+        margin-right: 15px;
+
+        @include mq-custom(900px) {
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-right: 56px;
+        }
+
+        @include mq-custom(700px) {
+          margin-right: 15px;
+        }
+
+        @include mq('phone') {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+        margin-bottom: 54px;
+
+        @include mq-custom(900px) {
+          margin-bottom: 0;
+          margin-right: 56px;
+        }
+
+        @include mq-custom(700px) {
+          margin-right: 15px;
+        }
+
+        @include mq('phone') {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-right: 5px;
+
+        @include mq-custom(900px) {
+          margin-right: 0;
+        }
+      }
+
+      .text {
+
+        @include mq('phone') {
+          order: 2;
+          margin-top: 5px;
+        }
+
+        p {
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: black;
+          text-transform: uppercase;
+        }
+      }
+
+      .icon {
+        position: relative;
+        margin-left: 15px;
+        @extend %nav-elements;
+        background: white;
+
+        @include mq('phone') {
+          order: 1;
+          margin-left: 0;
+        }
+
+        &:before {
+          @include pseudo(1,-6px,-6px,-6px,-6px);
+          background: white;
+          border-radius: 50%;
+          border: 1px solid white;
+        }
+
+        &:after {
+          @include pseudo(1);
+          background: white;
+          border-radius: 50%;
+          border: 1px solid $light-grey;
+        }
+
+        img {
+          position: relative;
+          z-index: 2;
+          display: block;
+        }
+      }
+    }
+
+    .element-btn {
+      display: none;
+
+      @include mq('phone') {
+        display: flex;
+      }
+
+      .left {
+        width: 50px;
+        height: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border: 1px solid #d7d7d7;
+        background: none;
+      }
+
+      .right {
+        width: 50px;
+        height: 50px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border: 1px solid #d7d7d7;
+        border-left: none;
+        background: none;
+      }
+    }
+  }
+
+  .section-4__modal-about {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: auto;
+    z-index: 2;
+    padding: 50px 33px;
+    background: white;
+    text-align: center;
+
+    .shop_title {
+      h3 {
+        font: 22px $DinBold;
+        font-weight: 600;
+        color: black;
+      }
+    }
+
+    .shop_text {
+      margin-top: 20px;
+
+      p {
+        font: 14px $DinPro;
+        font-weight: 400;
+        color: black;
+      }
+    }
+
+    .shop_site {
+      margin-top: 25px;
+
+      a {
+        display: block;
+        font: 16px $DinPro;
+        font-weight: 400;
+        color: $green;
+        text-decoration: none;
+      }
+    }
+
+    .shop_logo {
+      margin-top: 25px;
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .section-4__btn-all {
+    margin-top: -20px;
+    @include btn-more_link(240px,55px,#d7d7d7,none,14px,black);
+
+    @include mq-custom(900px) {
+      margin-top: 63px;
+    }
+
+    @include mq('phone') {
+      margin-top: 40px;
+    }
+
+    a {
+      margin: 0 auto;
+      transition: all .3s linear;
+
+      span {
+        background: url('../img/arrow_small_right.svg') 99% center no-repeat;
+        background-size: 5px 9px;
+        transition: all .3s linear;
+      }
+
+      &:hover {
+        background: $green;
+
+        span {
+          color: white;
+          background: url('../img/arrow_small_white.svg') 99% center no-repeat;
+          background-size: 5px 9px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,673 @@
+#about-center {
+  width: 100%;
+  max-width: 1920px;
+  @include auto;
+  background-image:url('../img/about-center_bg_circles.png'), url('../img/about-center_bg.jpg');
+  background-position:  center center, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+
+  @include mq('desktop') {
+    background-image:url('../img/about-center_bg-1280.jpg');
+    background-position:  center top;
+    background-repeat: no-repeat;
+  }
+
+  @include mq('tablet') {
+    background-image:url('../img/about-center_bg-768.jpg');
+    background-position:  center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    @include mq-custom(1024px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .circle-bottom_wrap {
+    position: relative;
+
+    .circle-bottom {
+      position: absolute;
+      z-index: 2;
+      left: 508px;
+      top: -89px;
+
+      @include mq-custom(1024px) {
+        left: auto;
+        right: -56px;
+      }
+
+      @include mq-custom(640px) {
+        bottom: -62px;
+        right: 15px;
+      }
+
+      img {
+        @include mq-custom(640px) {
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+  }
+}
+
+.about-center_left-part {
+  width: 50%;
+  flex: 1 1 50%;
+  padding-top: 210px;
+  padding-right: 20px;
+
+  @include mq('desktop') {
+    padding-right: 0;
+  }
+
+  @include mq-custom(1250px) {
+    padding-top: 150px;
+  }
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding-top: 70px;
+    padding-right: 0;
+  }
+
+  @include mq('phone') {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title {
+    h2 {
+      font: 32px/40px $DinBold;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+
+      @include mq('phone') {
+        font: 24px/36px $DinBold;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .text {
+    margin-top: 60px;
+
+    @include mq-custom(1024px) {
+      margin-top: 40px;
+    }
+
+    p {
+      margin-bottom: 28px;
+      font: 16px/24px $DinPro;
+      font-weight: 500;
+      color: white;
+
+      @include mq('phone') {
+        font: 14px/20px $DinPro;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+%circle {
+  width: 296px;
+  height: 296px;
+  border-radius: 50%;
+}
+
+.about-center_right-part {
+  position: relative;
+  width: 50%;
+  flex: 1 1 50%;
+  margin-top: 125px;
+  margin-bottom: 135px;
+
+  @include mq('desktop') {
+    margin-right: -44px;
+  }
+
+  @include mq-custom(1250px) {
+    width: 40%;
+    flex: 1 1 40%;
+    margin-right: -24px;
+  }
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 63px;
+    margin-right: 0;
+    padding-right: 24px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  @include mq-custom(670px) {
+    padding-right: 0;
+    padding-left: 24px;
+  }
+
+  @include mq('phone') {
+    margin-bottom: 60px;
+  }
+
+  .insta-wrap {
+    width: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+
+    @include mq-custom(1024px) {
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      flex: 0 0 200px;
+      order: 2;
+      margin-left: -24px;
+      padding-bottom: 0;
+    }
+
+    @include mq-custom(750px) {
+      width: 170px;
+      flex: 0 0 170px;
+    }
+
+    @include mq-custom(670px) {
+      width: 130px;
+      flex: 0 0 130px;
+    }
+
+    @include mq('phone') {
+      z-index: 2;
+      width: 110px;
+      flex: 0 0 110px;
+    }
+
+    @include mq-custom(380px) {
+      width: 100px;
+      flex: 0 0 100px;
+      padding-right: 5px;
+    }
+
+    @include mq-custom(360px) {
+      width: 90px;
+      flex: 0 0 90px;
+    }
+
+    .insta {
+      padding-bottom: 60px;
+      @extend %circle;
+      background: rgb(238,47,65);
+      background: linear-gradient(0deg, rgba(238,47,65,1) 0%, rgba(243,104,63,1) 100%);
+
+      @include mq-custom(1250px) {
+        padding-bottom: 40px;
+        width: 230px;
+        height: 230px;
+      }
+
+      @include mq-custom(1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq-custom(750px) {
+        width: 170px;
+        height: 170px;
+      }
+
+      @include mq-custom(670px) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
+
+      @include mq-custom(380px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include mq-custom(360px) {
+        width: 90px;
+        height: 90px;
+      }
+
+      .logo {
+        img {
+          max-width: 78px;
+          width: 100%;
+
+          @include mq-custom(1250px) {
+            max-width: 58px;
+          }
+
+          @include mq-custom(670px) {
+            max-width: 38px;
+          }
+
+          @include mq-custom(360px) {
+            max-width: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .vk-wrap {
+    margin-top: -111px;
+    width: 50%;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include mq('desktop') {
+      margin-left: 0;
+    }
+
+    @include mq-custom(1250px) {
+      margin-top: -80px;
+    }
+
+    @include mq-custom(1024px) {
+      margin-top: 0;
+      margin-left: -24px;
+      position: relative;
+      z-index: 2;
+      order: 1;
+      width: 200px;
+      flex: 0 0 200px;
+    }
+
+    @include mq-custom(750px) {
+      width: 170px;
+      flex: 0 0 170px;
+    }
+
+    @include mq-custom(670px) {
+      width: 130px;
+      flex: 0 0 130px;
+    }
+
+    @include mq('phone') {
+      z-index: 1;
+      width: 110px;
+      flex: 0 0 110px;
+    }
+
+    @include mq-custom(380px) {
+      width: 100px;
+      flex: 0 0 100px;
+    }
+
+    @include mq-custom(360px) {
+      width: 90px;
+      flex: 0 0 90px;
+    }
+
+    .vk {
+      padding-right: 30px;
+      padding-top: 20px;
+      @extend %circle;
+      background: rgb(74,118,168);
+      background: linear-gradient(0deg, rgba(74,118,168,1) 0%, rgba(98,142,192,1) 100%);
+
+      @include mq-custom(1250px) {
+        width: 230px;
+        height: 230px;
+      }
+
+      @include mq-custom(1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq-custom(750px) {
+        width: 170px;
+        height: 170px;
+      }
+
+      @include mq-custom(670px) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
+
+      @include mq-custom(380px) {
+        width: 100px;
+        height: 100px;
+        padding-right: 5px;
+      }
+
+      @include mq-custom(360px) {
+        width: 90px;
+        height: 90px;
+      }
+
+      .logo {
+        img {
+          max-width: 107px;
+          width: 100%;
+
+          @include mq-custom(1250px) {
+            max-width: 87px;
+          }
+
+          @include mq-custom(670px) {
+            max-width: 67px;
+          }
+
+          @include mq-custom(380px) {
+            max-width: 47px;
+          }
+
+          @include mq-custom(360px) {
+            max-width: 37px;
+          }
+        }
+      }
+    }
+  }
+
+  .fb-wrap {
+    margin-left: -22px;
+    margin-top: -111px;
+    width: 50%;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-start;
+
+    @include mq-custom(1250px) {
+      margin-top: -80px;
+    }
+
+    @include mq-custom(1024px) {
+      margin-top: 0;
+      margin-left: -24px;
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      flex: 0 0 200px;
+      order: 3;
+    }
+
+    @include mq-custom(750px) {
+      width: 170px;
+      flex: 0 0 170px;
+    }
+
+    @include mq-custom(670px) {
+      width: 130px;
+      flex: 0 0 130px;
+    }
+
+    @include mq('phone') {
+      z-index: 3;
+      width: 110px;
+      flex: 0 0 110px;
+    }
+
+    @include mq-custom(380px) {
+      width: 100px;
+      flex: 0 0 100px;
+      padding-right: 5px;
+    }
+
+    @include mq-custom(360px) {
+      width: 90px;
+      flex: 0 0 90px;
+    }
+
+    .fb {
+      padding-left: 30px;
+      padding-top: 20px;
+      @extend %circle;
+      background: rgb(66,103,178);
+      background: linear-gradient(0deg, rgba(66,103,178,1) 0%, rgba(53,84,148,1) 100%);
+
+      @include mq-custom(1250px) {
+        width: 230px;
+        height: 230px;
+      }
+
+      @include mq-custom(1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-top: 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq-custom(750px) {
+        width: 170px;
+        height: 170px;
+      }
+
+      @include mq-custom(670px) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
+
+      @include mq-custom(380px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include mq-custom(360px) {
+        width: 90px;
+        height: 90px;
+      }
+
+      .logo {
+        img {
+          max-width: 49px;
+          width: 100%;
+
+          @include mq-custom(1250px) {
+            max-width: 29px;
+          }
+
+          @include mq-custom(670px) {
+            max-width: 19px;
+          }
+
+          @include mq-custom(360px) {
+            max-width: 9px;
+          }
+        }
+      }
+    }
+  }
+
+  .text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+
+    @include mq-custom(1250px) {
+      margin-left: 15px;
+    }
+
+    @include mq-custom(1024px) {
+      margin-left: 0;
+      margin-top: 20px;
+
+      @include mq-custom(670px) {
+        margin-top: 0;
+      }
+    }
+
+    .number {
+      font: 32px/24px $DinBold;
+      font-weight: bold;
+      color: white;
+
+      @include mq-custom(670px) {
+        font: 24px $DinBold;
+        font-weight: bold;
+      }
+
+      @include mq('phone') {
+        font: 18px/24px $DinBold;
+        font-weight: bold;
+      }
+    }
+
+    .text {
+      font: 14px $DinPro;
+      font-weight: 400;
+      color: white;
+
+      @include mq('phone') {
+        font: 8px $DinPro;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .about-center_icon {
+    position: absolute;
+    z-index: 1;
+    margin-top: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    @include mq-custom(1250px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include mq-custom(1024px) {
+      position: relative;
+      left: auto;
+      top: 0;
+      transform: translate(0,0);
+      width: 130px;
+      flex: 0 0 130px;
+      margin-top: 0;
+      margin-left: -24px;
+      order: 4;
+      z-index: 2;
+    }
+
+    @include mq-custom(750px) {
+      width: 130px;
+      flex: 0 0 130px;
+      margin-left: -44px;
+    }
+
+    @include mq-custom(670px) {
+      width: 130px;
+      flex: 0 0 130px;
+      margin-left: -24px;
+    }
+
+    @include mq('phone') {
+      z-index: 4;
+      width: 110px;
+      flex: 0 0 110px;
+    }
+
+    @include mq-custom(380px) {
+      width: 100px;
+      flex: 0 0 100px;
+    }
+
+    @include mq-custom(360px) {
+      width: 90px;
+      flex: 0 0 90px;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgb(255,255,255);
+      background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+
+      @include mq-custom(1250px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include mq-custom(1024px) {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq-custom(750px) {
+        width: 170px;
+        height: 170px;
+      }
+
+      @include mq-custom(670px) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include mq('phone') {
+        width: 110px;
+        height: 110px;
+      }
+
+      @include mq-custom(380px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include mq-custom(360px) {
+        width: 90px;
+        height: 90px;
+      }
+
+      img {
+        max-width: 68px;
+        width: 100%;
+
+        @include mq-custom(1250px) {
+          max-width: 68px;
+        }
+
+        @include mq-custom(670px) {
+          max-width: 48px;
+        }
+
+        @include mq-custom(360px) {
+          max-width: 38px;
+        }
+      }
+    }
+  }
+}

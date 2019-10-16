@@ -1,0 +1,88 @@
+#index__section-10 {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+
+  .section-10__slider_nav-wrap {
+    position: relative;
+  }
+
+  .section-10__slider-nav {
+    position: absolute;
+    z-index: 2;
+    width: 322px;
+    height: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+    background: white;
+    border-radius: 30px;
+
+    @include mq('phone') {
+      display: none;
+    }
+
+    .prev {
+      margin-right: 20px;
+      width: 69px;
+      height: 10px;
+      mask: url("../img/gallery_arrow_1.svg") left center no-repeat, url("../img/section-10_dots.png") right center no-repeat;
+      mask-size: 36px 10px, 13px 10px;
+      transition: all .3s linear;
+      cursor: pointer;
+      background: black;
+
+      &:hover {
+        background: $green;
+      }
+    }
+
+    .next {
+      margin-left: 20px;
+      width: 69px;
+      height: 10px;
+      mask: url("../img/section-10_dots.png") left center no-repeat, url("../img/gallery_arrow_23.svg") right center no-repeat;
+      mask-size: 13px 10px, 36px 10px;
+      transition: all .3s linear;
+      cursor: pointer;
+      background: black;
+
+      &:hover {
+        background: $green;
+      }
+    }
+
+    .numbers {
+      width: auto !important;
+
+      .slide-number {
+        font: 18px $DinBold;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .active {
+        font: 18px $DinBold;
+        font-weight: bold;
+        color: $green;
+      }
+    }
+  }
+
+  #section-10__slider {
+    .slide {
+      height: 550px;
+
+      img {
+        display: block;
+        height: 100%;
+      }
+
+      @include mq('phone') {
+        width: 80%;
+        height: 250px;
+      }
+    }
+  }
+}

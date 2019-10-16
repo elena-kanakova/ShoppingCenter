@@ -1,0 +1,286 @@
+.news-list__section {
+  @include mq-custom(1550px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include mq('tablet') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq('phone') {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .news-tabs {
+    margin: 65px auto 65px;
+
+    @include mq('tablet') {
+      margin: 55px auto 50px;
+    }
+
+    @include mq('phone') {
+      margin: 30px auto;
+    }
+
+    ul {
+      justify-content: center;
+      align-items: flex-start;
+
+      @include mq('phone') {
+        justify-content: space-around;
+      }
+
+      li {
+        margin-right: 67px;
+        padding-bottom: 15px;
+        font: 16px/20px $DinBold;
+        font-weight: 600;
+        color: #a5a5a5;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: all .3s linear;
+
+        @include mq('phone') {
+          margin-right: 0;
+          font: 14px/20px $DinBold;
+          font-weight: 600;
+        }
+
+        &:nth-child(1) {
+          position: relative;
+
+          &:before {
+            @include pseudo(1,auto,10px,auto,100%);
+            width: 2000px;
+            height: 2px;
+            margin-right: 39px;
+            background: #f8f9fb;
+          }
+
+        }
+
+        &:nth-last-child(1) {
+          position: relative;
+          margin-right: 0;
+
+          &:after {
+            @include pseudo(1,100%,10px,auto,auto);
+            width: 2000px;
+            height: 2px;
+            margin-left: 39px;
+            background: #f8f9fb;
+          }
+        }
+      }
+
+      li.active {
+        font: 16px/20px $DinBold;
+        font-weight: 600;
+        color: black;
+        border-bottom: 2px solid $green;
+
+        @include mq-custom(414px) {
+          font: 14px/20px $DinBold;
+          font-weight: 600;
+        }
+      }
+
+      li:hover {
+        font: 16px/20px $DinBold;
+        font-weight: 600;
+        color: $green;
+        border-bottom: 2px solid transparent;
+
+        @include mq-custom(414px) {
+          font: 14px/20px $DinBold;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .news-content {
+    display: none;
+    margin: 0 -40px;
+
+    @include mq('tablet') {
+      margin: 0;
+    }
+  }
+
+  .news-content.active {
+    display: flex;
+  }
+
+  .news-element_wrap {
+    position: relative;
+    display: block;
+    width: 33.3%;
+    padding: 40px;
+    margin-bottom: 45px;
+    cursor: pointer;
+    background: none;
+
+    @include mq('desktop') {
+      padding: 20px;
+      margin-bottom: 65px;
+    }
+
+    @include mq-custom(1024px) {
+      width: 50%;
+      padding: 40px;
+      margin-bottom: 25px;
+    }
+
+    @include mq('tablet') {
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 10px;
+      margin-bottom: 35px;
+    }
+
+    @include mq-custom(600px) {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    &:before {
+      @include pseudo();
+      opacity: 0;
+      background: url('../img/news-element_bg.png') top center no-repeat;
+      background-size: 100% auto;
+      transition: all .3s linear;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+
+      .title {
+        h3 {
+          color: $green;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &:nth-last-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(1), &:nth-last-child(2) , &:nth-last-child(3) {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+      @include mq('tablet') {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-last-child(1) {
+      @include mq('phone') {
+        margin-bottom: 0;
+      }
+    }
+
+    .photo {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 21px;
+
+      @include mq('tablet') {
+        margin-bottom: 29px;
+      }
+
+      @include mq('phone') {
+        margin-bottom: 16px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .date {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 7px 14px;
+      margin-bottom: 30px;
+      background: #ebebeb;
+      border-bottom-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+      p {
+        padding-left: 22px;
+        font: 12px $DinPro;
+        font-weight: 400;
+        color: #000;
+        background: url('../img/time-grey-icon.png') left center no-repeat;
+        background-size: 13px 13px;
+      }
+    }
+
+    .title {
+      margin-bottom: 30px;
+
+      h3 {
+        font: 22px/32px $DinBold;
+        font-weight: bold;
+        color: #000;
+        transition: all .3s linear;
+
+        @include mq-custom(640px) {
+          font: 20px/32px $DinBold;
+          font-weight: bold;
+        }
+
+        @include mq('phone') {
+          font: 18px/32px $DinBold;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .text {
+      p {
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: #000;
+
+        @include mq('phone') {
+          font: 14px/22px $DinPro;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .filter-results_btn-more {
+    margin-bottom: 100px;
+
+    @include mq('tablet') {
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+
+    @include mq('phone') {
+      margin-top: 40px;
+      margin-bottom: 46px;
+    }
+  }
+}

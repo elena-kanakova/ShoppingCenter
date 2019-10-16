@@ -1,0 +1,362 @@
+#index__section-6 {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+  overflow: hidden;
+
+  .index__section-6_wrap {
+    position: relative;
+
+    .content {
+      width: 100%;
+      max-width: 1920px;
+      @include auto;
+      position: relative;
+      z-index: 2;
+      transform: perspective(0) translateZ(0) translateX(0) translateY(0) rotateY(0);
+      background: url('../img/section-6_arenda_bg.jpg') center top no-repeat;
+      transition: transform .6s linear 0s;
+
+      @include mq('desktop') {
+        background: url('../img/section-6_arenda_bg-1280.jpg') center top no-repeat;
+        background-size: cover;
+      }
+
+      @include mq-custom(1100px) {
+        margin-left: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s linear 1s;
+      }
+
+      @include mq('tablet') {
+        background: url('../img/section-6_arenda_bg-768.jpg') center top no-repeat;
+        background-size: cover;
+      }
+
+      .container {
+        padding-top: 156px;
+        padding-bottom: 105px;
+        justify-content: space-between;
+
+        @include mq-custom(1024px) {
+          flex-wrap: wrap;
+          padding-top: 59px;
+          padding-bottom: 42px;
+        }
+
+        @include mq-custom(400px) {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .section-6__logo-btn {
+    width: 50%;
+    justify-content: space-around;
+
+    @include mq('desktop') {
+      justify-content: center;
+    }
+
+    @include mq-custom(1024px) {
+      order: 1;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .section-6__title-text {
+    width: 50%;
+    padding-left: 135px;
+    padding-right: 20px;
+
+    @include mq-custom(1650px) {
+      padding-left: 100px;
+    }
+
+    @include mq-custom(1450px) {
+      padding-left: 80px;
+    }
+
+    @include mq-custom(1366px) {
+      padding-left: 0;
+    }
+
+    @include mq('desktop') {
+      padding-right: 10px;
+    }
+
+    @include mq-custom(1024px) {
+      order: 1;
+      width: 100%;
+    }
+
+    .title {
+      h2 {
+        font: 52px $DinBold;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+
+        @include mq-custom(450px) {
+          font: 48px $DinBold;
+        }
+
+        @include mq-custom(500px) {
+          font: 32px $DinBold;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .text {
+      p {
+        margin: 25px 0;
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: white;
+
+        @include mq-custom(500px) {
+          margin: 20px 0;
+        }
+
+        br {
+          @include mq-custom(1024px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section-6__logo {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: white;
+
+    @include mq('desktop') {
+      flex: 0 0 auto;
+      margin-right: 58px;
+    }
+
+    @include mq-custom(1100px) {
+      margin-right: 30px;
+    }
+
+    @include mq-custom(1024px) {
+      order: 2;
+      margin-right: 0;
+    }
+
+    @include mq-custom(640px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include mq-custom(500px) {
+      margin-top: 20px;
+      width: 125px;
+      height: 125px;
+    }
+
+    @include mq-custom(360px) {
+      width: 100px;
+      height: 100px;
+      margin-right: 0;
+    }
+
+    &:before {
+      @include pseudo(1,90px,-90px,auto,auto);
+      position: absolute;
+      width: 1px;
+      height: 55px;
+      background: white;
+
+      @include mq-custom(1024px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include pseudo(1,90px,auto,-90px,auto);
+      position: absolute;
+      width: 1px;
+      height: 55px;
+      background: white;
+
+      @include mq-custom(1024px) {
+        display: none;
+      }
+    }
+
+    img {
+      display: block;
+      width: 82px;
+
+      @include mq-custom(500px) {
+        width: 50px;
+        height: 54px;
+      }
+    }
+  }
+
+  .section-6__btn {
+    width: 230px;
+
+    @include mq('desktop') {
+      flex: 0 0 auto;
+    }
+
+    @include mq-custom(1024px) {
+      width: auto;
+      margin-top: 20px;
+      order: 1;
+    }
+
+    @include mq-custom(640px) {
+      width: 50%;
+    }
+
+    @include mq-custom(500px) {
+      width: 190px;
+    }
+
+    p {
+      margin-bottom: 35px;
+      font: 26px/36px $DinBold;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+
+      @include mq-custom(1024px) {
+        margin-bottom: 30px;
+      }
+
+      @include mq-custom(500px) {
+        font: 20px/28px $DinBold;
+        font-weight: bold;
+      }
+    }
+
+    @include btn-more(220px, 50px, $green, $green);
+
+    button {
+      transition: all .3s linear;
+
+
+      @include mq-custom(500px) {
+        span {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        width: 17px;
+        height: 13px;
+
+        @include mq-custom(500px) {
+          margin-left: 5px;
+        }
+      }
+
+      &:hover {
+        background: #027f3d;
+        border: 1px solid #027f3d;
+      }
+    }
+
+    @include mq-custom(500px) {
+      @include btn-more(180px, 45px, $green, $green);
+    }
+  }
+}
+
+#index__section-6.active {
+  z-index: 2;
+
+  .content {
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all .6s linear 0s;
+
+    @include mq-custom(1100px) {
+      margin-left: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .freeze {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  #rent-modal {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    height: 100%;
+    min-height: 768px;
+    transition: opacity .6s linear 0s;
+
+    @include mq-custom(1100px) {
+      transition: opacity .3s linear 1s;
+    }
+  }
+}
+
+#index__section-6.perspective {
+  .content {
+    position: absolute;
+    z-index: 3;
+    margin-top: 240px;
+    transform: perspective(1500px) translateZ(0) translateX(-40%) rotateY(75deg);
+    transition: transform .6s linear 0s;
+
+    @include mq-custom(1750px) {
+      transform: perspective(1500px) translateZ(0) translateX(-41%) rotateY(75deg);
+    }
+
+    @include mq-custom(1600px) {
+      transform: perspective(1500px) translateZ(0) translateX(-42%) rotateY(75deg);
+    }
+
+    @include mq-custom(1550px) {
+      transform: perspective(1500px) translateZ(0) translateX(-43%) rotateY(75deg);
+    }
+
+    @include mq-custom(1450px) {
+      transform: perspective(1500px) translateZ(0) translateX(-45%) rotateY(75deg);
+    }
+
+    @include mq-custom(1366px) {
+      transform: perspective(1500px) translateZ(0) translateX(-43%) rotateY(75deg);
+    }
+
+    @include mq('desktop') {
+      margin-top: 190px;
+    }
+
+    @include mq-custom(1200px) {
+      transform: perspective(1500px) translateZ(0) translateX(-42%) rotateY(75deg);
+    }
+
+    @include mq-custom(1100px) {
+      transform: translateZ(0) translateX(0) rotateY(0);
+      margin-top: 0;
+      transition: opacity .3s linear 0s;
+    }
+  }
+}

@@ -1,0 +1,504 @@
+#filters {
+  width: 100%;
+  max-width: 1920px;
+  margin: 68px auto;
+
+  .open-filter {
+    display: none;
+  }
+
+  .filter-form {
+    justify-content: space-between;
+  }
+
+  .filter {
+    position: relative;
+  }
+
+  .filter__search {
+    position: relative;
+    margin-right: 35px;
+    width: 265px;
+
+    @include mq('desktop') {
+      width: 212px;
+    }
+
+    .input-search  {
+      width: 100%;
+      padding-bottom: 22px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #d7d7d7;
+      @include placeholder(#000000,16px);
+    }
+
+    &:after {
+      @include pseudo($z:1,$top:0,$left:auto,$bottom:auto,$right:0);
+      width: 15px;
+      height: 15px;
+      background: url('../img/head_search.svg') center center no-repeat;
+    }
+  }
+
+  .select {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .select_hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+
+  .select_styled {
+    position: relative;
+    width: 265px;
+    margin-right: 35px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #d7d7d7;
+
+    @include mq('desktop') {
+      width: 212px;
+    }
+
+    @include mq-custom(1180px) {
+      width: 170px;
+    }
+
+    span {
+      font: 16px $DinMedi;
+      font-weight: 500;
+      color: black;
+    }
+
+    &:after {
+      @include pseudo($z:1,$top:0,$left:auto,$bottom:auto,$right:0);
+      width: 15px;
+      height: 15px;
+      background: url('../img/arrow_drop.svg') center center no-repeat;
+    }
+  }
+
+  .select_options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 265px;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin-top: 15px;
+    padding: 30px 24px;
+    list-style: none;
+    background: #f8f9fb;
+    border: 1px solid #e9ecef;
+    border-radius: 30px;
+    align-items: flex-start;
+
+    li {
+      margin: 1px 0;
+      font: 14px/30px $DinPro;
+      font-weight: 400;
+      color: black;
+      transition: all .3s linear;
+
+      &:hover {
+        color: $green;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .select_options.active {
+    display: flex;
+  }
+
+  .select_styled.active, .select_styled:active {
+    background: #fff;
+  }
+
+  .filter__list-type {
+    width: 265px;
+    input[type=radio] {
+      display: none;
+    }
+
+    @include mq-custom(1024px) {
+      width: 340px;
+    }
+
+    @include mq-custom(700px) {
+      width: 250px;
+    }
+
+    @include mq-custom(550px) {
+      width: 130px;
+    }
+
+    input[type=radio]:checked+label.list-type1 {
+      background: url('../img/shop_pl_2.svg') no-repeat 23px 2px #fff;
+      background-size: 13px;
+      border-bottom: 1px solid $green;
+
+      span {
+        color: $green;
+      }
+
+      @include mq-custom(1024px) {
+        background: url('../img/shop_pl.svg') no-repeat 33px center $green;
+        background-size: 13px;
+        border: 1px solid $green;
+
+        span {
+          color: white;
+        }
+      }
+
+      @include mq-custom(700px) {
+        background: url('../img/shop_pl.svg') no-repeat center center $green;
+        background-size: 13px;
+      }
+    }
+
+    input[type=radio]+label.list-type1 {
+      background: url('../img/shop_pl.svg') no-repeat 23px 2px #fff;
+      background-size: 13px;
+      border-bottom: 1px solid #d7d7d7;
+      transition: all .3s linear;
+
+      @include mq-custom(1024px) {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background: url('../img/shop_pl.svg') no-repeat 33px center #fff;
+        background-size: 13px;
+        border: 1px solid #d7d7d7;
+      }
+
+      @include mq-custom(700px) {
+        background: url('../img/shop_pl.svg') no-repeat center center #fff;
+        background-size: 13px;
+      }
+    }
+
+    input[type=radio]:checked+label.list-type2 {
+      background: url('../img/shop_list_2.svg') no-repeat 23px 2px #fff;
+      background-size: 17px;
+      border-bottom: 1px solid $green;
+
+      span {
+        color: $green;
+      }
+
+      @include mq-custom(1024px) {
+        background: url('../img/shop_list.svg') no-repeat 33px center $green;
+        background-size: 17px;
+        border: 1px solid $green;
+
+        span {
+          color: white;
+        }
+      }
+
+      @include mq-custom(700px) {
+        background: url('../img/shop_list.svg') no-repeat center center $green;
+        background-size: 17px;
+      }
+    }
+
+    input[type=radio]+label.list-type2 {
+      background: url('../img/shop_list.svg') no-repeat 23px 2px #fff;
+      background-size: 17px;
+      border-bottom: 1px solid #d7d7d7;
+      transition: all .3s linear;
+
+      @include mq-custom(1024px) {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background: url('../img/shop_list.svg') no-repeat 33px center #fff;
+        background-size: 17px;
+        border: 1px solid #d7d7d7;
+      }
+
+      @include mq-custom(700px) {
+        background: url('../img/shop_list.svg') no-repeat center center #fff;
+        background-size: 17px;
+      }
+    }
+
+    input[type=radio]+label {
+      display: block;
+      width: 50%;
+      padding-bottom: 22px;
+
+      @include mq-custom(1024px) {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+
+      @include mq-custom(700px) {
+        height: 44px;
+        span {
+          display: none;
+        }
+      }
+    }
+
+    span {
+      margin-left: 50px;
+      font: 16px $DinMedi;
+      font-weight: 500;
+      color: #b2b2b2;
+    }
+  }
+
+  .open-filter {
+    display: none;
+
+    button {
+      width: 340px;
+      height: 50px;
+      background: none;
+      border-radius: 30px;
+      border: 1px solid #b2b2b2;
+
+      @include mq-custom(700px) {
+        width: 220px;
+        height: 44px;
+      }
+
+      img {
+        margin-right: 15px;
+      }
+
+      span {
+        font: 14px $DinMedi;
+        font-weight: 500;
+        color: $green;
+      }
+    }
+
+    @include mq-custom(1024px) {
+      display: flex;
+    }
+  }
+
+  .filter {
+    @include mq-custom(1024px) {
+      display: none;
+    }
+  }
+}
+
+#filter-open_modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  .container {
+    padding-top: 30px;
+    padding-bottom: 65px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .select_options {
+    margin-top: 15px;
+    padding: 30px 24px;
+    list-style: none;
+    background: #f8f9fb;
+    border: 1px solid #e9ecef;
+    border-radius: 30px;
+    align-items: flex-start;
+
+    li {
+      margin: 1px 0;
+      font: 14px/30px $DinPro;
+      font-weight: 400;
+      color: black;
+      transition: all .3s linear;
+
+      &:hover {
+        color: $green;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .filter__search_modal {
+    position: relative;
+    width: 100%;
+
+    .input-search  {
+      width: 100%;
+      padding-bottom: 15px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #d7d7d7;
+      @include placeholder(#000000,16px);
+    }
+
+    &:after {
+      @include pseudo($z:1,$top:0,$left:auto,$bottom:auto,$right:0);
+      width: 15px;
+      height: 15px;
+      background: url('../img/head_search.svg') center center no-repeat;
+      background-size: 15px;
+    }
+  }
+
+  .filter-modal__btn-back {
+
+    button {
+      margin: 0 auto;
+      background: none;
+      border: none;
+
+      img {
+        width: 14px;
+        display: block;
+        margin-right: 16px;
+      }
+
+      span {
+        font: 14px $DinPro;
+        font-weight: 400;
+        color: #000;
+      }
+    }
+  }
+
+  .filter-modal__title {
+    margin-top: 55px;
+
+    span {
+      font: 32px $DinBold;
+      font-weight: bold;
+      color: #b796c5;
+    }
+  }
+
+  .filter-form_modal {
+    margin-top: 30px;
+  }
+
+  .filter-modal {
+    margin-top: 54px;
+    width: 50%;
+    flex: 1 1 50%;
+
+    .title {
+      span {
+        font: 18px $DinMedi;
+        font-weight: 500;
+        color: #000;
+      }
+    }
+
+    .list {
+      margin-top: 13px;
+
+      ul {
+        li {
+          margin: 3px 0;
+          font: 16px/30px $DinPro;
+          font-weight: 400;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .filter-modal__btn-close {
+    margin-top: 70px;
+
+    button {
+      display: block;
+      @include auto;
+      width: 240px;
+      height: 44px;
+      border-radius: 30px;
+      border: 1px solid $green;
+      background: $green;
+
+      span {
+        font: 13px $DinMedi;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}
+
+
+.list-type {
+  display: none;
+
+  .filter-results_wrap {
+    margin-top: 20px;
+
+    .section-letter_wrap {
+      width: 100%;
+      flex: 1 1 100%;
+      border-bottom: 1px solid #d7d7d7;
+    }
+
+    .section_letter {
+      padding-top: 45px;
+      width: 100%;
+      flex: 1 1 100%;
+
+      .letter-wrap {
+        .letter {
+          font: 44px $DinBold;
+          font-weight: bold;
+          color: #b796c5;
+        }
+      }
+    }
+
+    .results-letter_wrap {
+      justify-content: flex-start;
+
+      .shop {
+        width: 265px;
+        padding: 30px 0 48px;
+        margin-right: 35px;
+
+        &:hover {
+          .shop-about {
+            .name {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .shop-type {
+        margin-top: 10px;
+      }
+
+      .location-more {
+        margin-top: 5px;
+      }
+    }
+
+    .results-letter_wrap.shop {
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+}

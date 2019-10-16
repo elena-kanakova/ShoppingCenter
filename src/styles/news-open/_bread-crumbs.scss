@@ -1,0 +1,24 @@
+#news-open.page-header {
+  height: 100%;
+  background: url('../img/news-open_bg.jpg') center center no-repeat;
+  background-size: cover;
+
+  .page-title_wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .page-title {
+      h1 {
+        text-transform: none;
+      }
+    }
+
+    .shop-type {
+      span {
+        padding-left: 34px;
+        background: url("../img/time.svg") left center no-repeat;
+        background-size: 17px 17px;
+      }
+    }
+  }
+}

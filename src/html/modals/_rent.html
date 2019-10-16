@@ -1,0 +1,65 @@
+<div id="rent-modal" class="modal">
+    <div class="container rent-modal_wrap flex">
+        <div class="rent-modal__content flex">
+            <div class="back-wrap flex column">
+                <div class="back js-btn-rent_back">
+                    <img src="img/btn-more_results-white.png" alt="Назад">
+                    <span class="text-back">Вернуться назад</span>
+                </div>
+            </div>
+            <div class="rent-modal__form_wrap">
+                <div class="form-title">
+                    <h3>Арендаторам</h3>
+                </div>
+                <div class="form-desc">
+                    <p>Заполните заявку, чтобы мы могли сформировать <br>
+                        для вас коммерческое предложение </p>
+                </div>
+                <form action="" id="rent__form" class="rent__form">
+                    <div class="text-input_wrap flex">
+                        <div class="input-wrap">
+                            <label for="brend_name">
+                                <span>Название бренда</span>
+                            </label>
+                            <input id="brend_name" type="text" name="brend_name" class="input-text">
+                        </div>
+                        <div class="input-wrap phone">
+                            <span class="title">Контактсный телефон</span>
+                            <label for="phone">
+                                <span>+7(</span>
+                            </label>
+                            <input id="phone" type="tel" name=phone" class="input-text js-phone">
+                        </div>
+                    </div>
+                    <div class="select-input_wrap flex">
+                        <div class="input-wrap options">
+                            <select name="company_profile" id="company_profile" data-name="Профиль компании">
+                                <option value="Профиль 1">Профиль 1</option>
+                                <option value="Профиль 1">Профиль 1</option>
+                                <option value="Профиль 1">Профиль 1</option>
+                                <option value="Профиль 1">Профиль 1</option>
+                            </select>
+                        </div>
+                        <div class="input-wrap options">
+                            <select name="size" id="size" data-name="Размер торговой площади">
+                                <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
+                                <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
+                                <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
+                                <option value="от 50 до 100м2">от 50 до 100м&sup2;</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-checkbox">
+                        <input id="rent-form_checkbox" type="checkbox">
+                        <label for="rent-form_checkbox" class="flex">
+                            <span>Я согласен с условиями <u>Политики конфиденциальности</u></span>
+                        </label>
+                    </div>
+                    <div class="btn-submit_wrap">
+                        <button class="btn-form_submit" type="submit"><span>Отправить сообщение</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

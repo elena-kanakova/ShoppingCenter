@@ -1,0 +1,38 @@
+#cinema.page-header {
+  background: url('../img/cinema_bg.jpg') center center no-repeat;
+  background-size: cover;
+
+  .page-title {
+    @include mq('tablet') {
+      align-items: center;
+    }
+
+    @include mq-custom(640px) {
+      flex-direction: column;
+    }
+
+    @include mq('phone') {
+      flex-direction: row;
+    }
+
+    @include mq-custom(330px) {
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-right: 50px;
+
+      @include mq('tablet') {
+        margin-right: 40px;
+      }
+
+      @include mq-custom(640px) {
+        margin-right: 0;
+      }
+
+      @include mq('phone') {
+        margin-right: 20px;
+      }
+    }
+  }
+}

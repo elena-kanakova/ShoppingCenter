@@ -1,0 +1,244 @@
+.movies-list__section {
+  @include mq-custom(1550px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include mq('desktop') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq('tablet') {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include mq('phone') {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .cinema-tabs {
+
+    ul {
+      padding: 65px 0 80px;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: auto;
+
+      @include mq('tablet') {
+        padding: 45px 0 55px;
+      }
+
+      @include mq('phone') {
+        padding: 30px 0 40px;
+      }
+
+      li {
+        width: 100%;
+        margin-right: 28px;
+        font: 16px/20px $DinBold;
+        font-weight: 600;
+        color: #a5a5a5;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+
+        span.day {
+          display: block;
+          padding-bottom: 18px;
+          border-bottom: 1px solid #d7d7d7;
+          font: 16px $DinBold;
+          font-weight: bold;
+          color: black;
+          transition: all .3s linear;
+        }
+
+        span.date {
+          display: block;
+          padding-top: 18px;
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: black;
+          transition: all .3s linear;
+        }
+
+        &:hover {
+          span.day {
+            color: $green;
+            border-bottom: 1px solid $green;
+          }
+
+          span.date {
+            color: $green;
+          }
+        }
+      }
+
+      li.active {
+        span.day {
+          color: $green;
+          border-bottom: 1px solid $green;
+        }
+
+        span.date {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .cinema-content {
+    display: none;
+    justify-content: flex-start;
+
+    @include mq-custom(370px) {
+      justify-content: center;
+    }
+  }
+
+  .cinema-content.active {
+    display: flex;
+  }
+
+  .movie {
+    position: relative;
+    display: block;
+    width: 222px;
+    margin-right: 50px;
+    margin-bottom: 51px;
+    cursor: pointer;
+    background: none;
+
+    @include mq-custom(1550px) {
+      margin-right: 20px;
+    }
+
+    @include mq-custom(830px) {
+      margin-right: 10px;
+    }
+
+    @include mq-custom(500px) {
+      width: auto;
+    }
+
+    @include mq('phone') {
+      margin-right: 5px;
+    }
+
+
+      &:hover {
+        .title {
+          p {
+            border-bottom: 1px solid white;
+          }
+        }
+      }
+
+      @include mq('phone') {
+        width: auto !important;
+      }
+
+      .poster {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 24px;
+        width: 212px;
+
+        @include mq-custom(500px) {
+          width: 178px;
+        }
+
+        @include mq-custom(370px) {
+          width: 212px;
+        }
+
+        &:after {
+          @include pseudo(1,10px,-10px,20px,-10px);
+          background: #eeeeee;
+
+          @include mq-custom(550px) {
+            display: none;
+          }
+        }
+
+        img {
+          position: relative;
+          z-index: 2;
+          display: block;
+          max-width: 212px;
+
+          @include mq-custom(500px) {
+            max-width: 178px;
+          }
+
+          @include mq-custom(370px) {
+            max-width: 212px;
+          }
+        }
+      }
+
+      .title {
+        p {
+          display: inline;
+          font: 16px $DinBold;
+          font-weight: 600;
+          color: black;
+          border-bottom: 1px solid transparent;
+          transition: all .3s linear;
+        }
+      }
+
+      .time {
+        margin-top: 20px;
+
+        p {
+          font: 14px $DinPro;
+          font-weight: 400;
+          color: black;
+        }
+      }
+
+      .btn-order {
+        margin-top: 23px;
+        @include btn-more(165px,35px,$green,$green,14px,white);
+
+        button {
+          transition: all .3s linear;
+
+          span {
+            padding-right: 30px;
+            background: url('../img/ticket_1.svg') right center no-repeat;
+            background-size: 18px 10px;
+            transition: all .3s linear;
+          }
+
+          &:hover {
+            background: white;
+            border: 1px solid black;
+
+            span {
+              color: black;
+              background: url('../img/ticket_2.svg') right center no-repeat;
+              background-size: 18px 10px;
+            }
+          }
+        }
+      }
+    }
+
+  .filter-results_btn-more {
+    margin-bottom: 100px;
+
+    @include mq('tablet') {
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+
+    @include mq('phone') {
+      margin-top: 40px;
+      margin-bottom: 46px;
+    }
+  }
+}

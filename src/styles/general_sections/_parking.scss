@@ -1,0 +1,497 @@
+#parking {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  @include auto;
+  overflow: hidden;
+
+  .section-content {
+    width: 100%;
+    max-width: 1920px;
+    @include auto;
+    padding: 84px 0 0;
+    z-index: 2;
+    background: white;
+    transform: perspective(0) translateZ(0) translateX(0) translateY(0) rotateY(0);
+    transition: transform .6s linear 0s;
+
+    @include mq('desktop') {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include mq-custom(1100px) {
+      margin-left: 0;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s linear 1s;
+      background-position: 160% 98px;
+    }
+
+    @include mq-custom(1024px) {
+      padding: 102px 0 0;
+    }
+
+    @include mq-custom(640px) {
+      padding: 50px 0 0;
+    }
+
+    .container {
+      padding: 0;
+
+      @include mq-custom(1550px) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      @include mq('desktop') {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @include mq-custom(450px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include mq('phone') {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.parking__title-desc {
+  width: 50%;
+  flex: 1 1 50%;
+  justify-content: space-between;
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include mq-custom(640px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .title {
+    h2 {
+      font: 52px $DinBold;
+      font-weight: bold;
+      color: $dark-grey;
+      text-transform: uppercase;
+
+      @include mq-custom(668px) {
+        font: 48px $DinBold;
+      }
+
+      @include mq('phone') {
+        font: 32px $DinBold;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .desc {
+    align-items: center;
+
+    @include mq-custom(640px) {
+      margin-top: 25px;
+    }
+
+    .icon {
+      margin-right: 22px;
+
+      img {
+        display: block;
+        width: 20px;
+      }
+    }
+
+    .text {
+      p {
+        font: 14px/20px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+
+        span {
+          font: 14px/20px $DinBold;
+          font-weight: bold;
+          color: $dark-grey;
+
+          @include mq('phone') {
+            font: 12px $DinBold;
+            font-weight: bold;
+          }
+        }
+
+        @include mq('phone') {
+          font: 12px $DinPro;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.parking__top_content-wrap {
+  padding: 60px 0 58px;
+  width: 50%;
+  flex: 1 1 50%;
+
+  @include mq('desktop') {
+    width: 80%;
+    flex: 1 1 80%;
+  }
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 60px 0 70px;
+  }
+
+  @include mq-custom(640px) {
+    padding: 35px 0 80px;
+  }
+
+  .title-2 {
+
+    @include mq-custom(1024px) {
+      width: 70%;
+      flex: 1 1 70%;
+      margin-bottom: 20px;
+    }
+
+    @include mq-custom(640px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    h3 {
+      font: 18px $DinBold;
+      font-weight: 600;
+      color: $dark-grey;
+
+      @include mq('phone') {
+        font: 16px $DinBold;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .time-desc {
+    margin-top: 36px;
+    align-items: center;
+
+    @include mq-custom(1024px) {
+      width: 50%;
+      flex: 1 1 50%;
+      flex-wrap: wrap;
+    }
+
+    @include mq-custom(640px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    .icon {
+      margin-right: 14px;
+
+      img {
+        width: 44px;
+      }
+    }
+
+    .desc {
+      margin-right: 20px;
+
+      @include mq-custom(640px) {
+        margin-right: 0;
+      }
+
+      p {
+        font: 16px $DinBold;
+        font-weight: bold;
+        color: $dark-grey;
+      }
+    }
+
+    .time {
+      @include mq-custom(1024px) {
+        width: 100%;
+        flex: 1 1 100%;
+        margin-top: 10px;
+        padding-right: 30px;
+      }
+
+      p {
+        font: 16px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+
+        @include mq('phone') {
+          font: 14px $DinPro;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.parking__bottom {
+  position: relative;
+  padding: 79px 0 95px;
+
+  &:before {
+    @include pseudo($left:-2000px,$right:-2000px);
+    background: #f8f9fb;
+  }
+
+  &:after {
+    @include pseudo($top:-100%,$left:0,$right:0);
+    background-image: url("../img/parking_car-bg.png"), url("../img/parking_circle-2.png");
+    background-position: right 98px, -15px center;
+    background-repeat: no-repeat, no-repeat;
+
+    @include mq-custom(1750px) {
+      background-position: right 98px, -110px center;
+    }
+
+    @include mq-custom(1550px) {
+      background-image:  url("../img/parking_car-bg.png");
+      background-position: 150% 98px;
+      background-repeat: no-repeat;
+    }
+
+    @include mq-custom(1350px) {
+      background-position: 200% 98px;
+    }
+
+    @include mq('desktop') {
+      background-image:  url("../img/parking_car-bg-1280.png"), url("../img/parking_circle-2-1280.png");
+      background-position: 120% 98px;
+      background-repeat: no-repeat, no-repeat;
+    }
+
+    @include mq-custom(1200px) {
+      background-position: 160% 98px;
+    }
+
+    @include mq-custom(1024px) {
+      background-image:  url("../img/parking_car-bg-768.png");
+      background-position: right 90px;
+      background-repeat: no-repeat;
+    }
+
+    @include mq-custom(950px) {
+      background-image:  url("../img/parking_car-bg-768.png");
+      background-position: right 80px;
+      background-repeat: no-repeat;
+    }
+
+    @include mq-custom(750px) {
+      background-position: 150% 218px;
+    }
+
+    @include mq-custom(640px) {
+      background-image:  url("../img/parking_car-bg-414.png");
+      background-position: right 50%;
+    }
+
+    @include mq('phone') {
+      background-position: 100% 47%;
+    }
+  }
+
+  @include mq('phone') {
+    padding: 68px 0 65px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    background: url('../img/parking-P-icon.png') 417px 45% no-repeat;
+
+    @include mq-custom(700px) {
+      background: url('../img/parking-P-icon.png') 317px 45% no-repeat;
+    }
+
+    @include mq-custom(640px) {
+      background: url('../img/parking-P-icon.png') 98% 45% no-repeat;
+    }
+
+    @include mq('phone') {
+      background: url('../img/parking-P-icon.png') right 25% no-repeat;
+      background-size: 120px auto;
+    }
+  }
+}
+
+.parking__bottom-title {
+  width: 55%;
+  flex: 1 1 55%;
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  h3 {
+    font: 18px $DinBold;
+    font-weight: 600;
+    color: $dark-grey;
+  }
+}
+
+.parking__bottom_content-wrap {
+  width: 55%;
+  flex: 1 1 55%;
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include mq-custom(640px) {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-right: 48px;
+    justify-content: space-between;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    .price {
+      margin-top: 33px;
+      font: 16px $DinPro;
+      font-weight: 400;
+      color: $dark-grey;
+
+      @include mq('phone') {
+        margin-top: 18px;
+        font: 14px $DinPro;
+        font-weight: 400;
+      }
+    }
+
+    .time {
+      margin-right: 20px;
+    }
+
+    .desc {
+      margin-top: 20px;
+
+      p {
+        font: 12px/16px $DinPro;
+        font-weight: 400;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.parking__btn {
+  margin-top: 50px;
+
+  @include btn-more(240px,50px,$green,$green);
+  button {
+    span {
+      padding-right: 0;
+    }
+  }
+
+  @include mq('phone') {
+    @include btn-more(180px,45px,$green,$green);
+  }
+}
+
+#parking.active {
+  z-index: 2;
+
+  .section-content {
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all .6s linear 0s;
+
+    @include mq-custom(1100px) {
+      margin-left: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .freeze {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  #car-modal {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    height: 100%;
+    min-height: 768px;
+    transition: opacity .6s linear 0s;
+
+    @include mq-custom(1100px) {
+      transition: opacity .3s linear 1s;
+    }
+  }
+}
+
+#parking.perspective {
+  .section-content {
+    position: absolute;
+    z-index: 3;
+    margin-top: 115px;
+    transform: perspective(1500px) translateZ(0) translateX(40%) rotateY(-75deg);
+    transition: transform .6s linear 0s;
+
+    @include mq-custom(1750px) {
+      transform: perspective(1500px) translateZ(0) translateX(41%) rotateY(-75deg);
+    }
+
+    @include mq-custom(1600px) {
+      transform: perspective(1500px) translateZ(0) translateX(42%) rotateY(-75deg);
+    }
+
+    @include mq-custom(1550px) {
+      transform: perspective(1500px) translateZ(0) translateX(43%) rotateY(-75deg);
+    }
+
+    @include mq-custom(1450px) {
+      transform: perspective(1500px) translateZ(0) translateX(45%) rotateY(-75deg);
+    }
+
+    @include mq-custom(1366px) {
+      transform: perspective(1500px) translateZ(0) translateX(43%) rotateY(-75deg);
+    }
+
+    @include mq('desktop') {
+      margin-top: 43px;
+    }
+
+    @include mq-custom(1200px) {
+      transform: perspective(1500px) translateZ(0) translateX(42%) rotateY(-75deg);
+    }
+
+    @include mq-custom(1100px) {
+      transform: translateZ(0) translateX(0) rotateY(0);
+      margin-top: 0;
+      transition: opacity .3s linear 0s;
+    }
+  }
+}

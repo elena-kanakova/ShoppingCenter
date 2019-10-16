@@ -1,0 +1,200 @@
+#section-where {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  @include auto;
+  justify-content: space-between;
+
+  @include mq('tablet') {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .element {
+    width: 33.3%;
+    flex: 1 1 33.3%;
+    padding: 97px 30px 68px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    @include mq('tablet') {
+      width: 100%;
+      flex: 1 1 100%;
+      padding: 40px 24px 37px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    @include mq('phone') {
+      padding: 40px 20px 30px;
+    }
+
+    &:nth-child(1) {
+      background: url("../img/123_1.svg") #f8f9fb center center no-repeat;
+      background-size: 128px 116px;
+
+      &:hover {
+        background: url("../img/section-where_element-1_bg-hover.jpg") center center no-repeat;
+        background-size: cover;
+      }
+
+      @include mq('tablet') {
+        padding: 60px 24px 37px;
+        background: url("../img/123_1.svg") #f8f9fb 98% center no-repeat;
+        background-size: 128px 116px;
+      }
+
+      @include mq('phone') {
+        padding: 40px 24px 37px;
+        background: url("../img/123_1.svg") #f8f9fb 98% 20px no-repeat;
+        background-size: 74px 67px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+    }
+
+    &:nth-child(2) {
+      background: url("../img/123_2.svg") #f8f9fb center center no-repeat;
+      background-size: 160px 99px;
+
+      &:hover {
+        background: url("../img/section-where_element-2_bg-hover.jpg") center center no-repeat;
+        background-size: cover;
+      }
+
+      .title {
+        h3 {
+          color: #286cfb;
+        }
+      }
+
+      @include mq('tablet') {
+        background: url("../img/123_2.svg") #f8f9fb 98% center no-repeat;
+        background-size: 160px 99px;
+      }
+
+      @include mq('phone') {
+        background: url("../img/123_2.svg") #f8f9fb 98% 20px no-repeat;
+        background-size: 84px 52px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+    }
+
+    &:nth-child(3) {
+      background: url("../img/section-where_element-3_bg.png") #f8f9fb center center no-repeat;
+      background-size: 121px 122px;
+
+      &:hover {
+        background: url("../img/section-where_element-3_bg-hover.jpg") center center no-repeat;
+        background-size: cover;
+      }
+
+      .title {
+        h3 {
+          color: #ce6fab;
+        }
+      }
+
+      @include mq('tablet') {
+        background: url("../img/section-where_element-3_bg.png") #f8f9fb 98% center no-repeat;
+      }
+
+      @include mq('phone') {
+        background: url("../img/section-where_element-3_bg-414.png") #f8f9fb 98% 20px no-repeat;
+        background-size: 74px 74px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+    }
+
+    .title {
+      h3 {
+        font: 26px $DinMedi;
+        font-weight: 500;
+        color: #b75593;
+        text-transform: uppercase;
+      }
+    }
+
+    .text {
+      margin-top: 33px;
+
+      @include mq('tablet') {
+        width: 80%;
+      }
+
+      p {
+        font: 16px/24px $DinPro;
+        font-weight: 400;
+        color: black;
+
+        br {
+          @include mq('tablet') {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      margin-top: 60px;
+
+      button {
+        transition: all .3s linear;
+
+        span {
+          background: url('../img/arrow_small_right.svg') 99% center no-repeat;
+          background-size: 5px 9px;
+          transition: all .3s linear;
+        }
+      }
+
+      @include btn-more($width: 200px, $height: 55px, $border-color: #d7d7d7, $font-color: black);
+
+      @include mq('phone') {
+        margin-top: -15px;
+        margin-left: 90%;
+        background: url('../img/arrow_small_right.svg') center center no-repeat;
+        background-size: 5px 9px;
+
+        @include btn-more($width: 35px, $height: 35px, $border-color: #d7d7d7);
+
+        span {
+          display: none;
+        }
+
+        img {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &:hover {
+
+      .title {
+        h3 {
+          color: white;
+        }
+      }
+
+      .text {
+        p {
+          color: white;
+        }
+      }
+
+      .button {
+        button {
+          background: white;
+          transition: none;
+
+          @include mq('phone') {
+            background: url('../img/arrow_small_right.svg') center center no-repeat white;
+            background-size: 5px 9px;
+          }
+        }
+      }
+    }
+  }
+}

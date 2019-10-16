@@ -31,7 +31,7 @@ var path = {
     },
     src: {
         root: 'src/',
-        html: 'src/html/[^_]*.html',
+        html: 'src/html/**/[^_]*.html',
         sass: 'src/styles/**/*.scss',
         scripts: 'src/scripts/**/*.js',
         css: 'src/css/',
@@ -44,15 +44,15 @@ var path = {
         sass: 'src/styles/**/*.scss',
         scripts: 'src/scripts/**/*.js'
     },
-    clean_dev: ['src/css/*.css', 'src/index.html', 'src/js/*.js'],
-    clean_prod: ['prod/css/*.css', 'prod/index.html', 'prod/js/*.js']
+    clean_dev: ['src/css/*.css', 'src/index.html', 'src/shops.html', 'src/js/*.js'],
+    clean_prod: ['prod/css/*.css', 'prod/index.html', 'prod/shops.html', 'prod/js/*.js']
 };
 
 // Конфиги для локального вебсервера
 var webserver = {
     dev: {
         server: {
-            baseDir: './src'
+            baseDir: './src',
         },
         tunnel: true,
         host: 'localhost',
@@ -91,7 +91,7 @@ gulp.task('sass:dev', function(done) {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 10 versions']
+            overrideBrowserslist: ['last 10 versions']
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.src.css))
@@ -103,7 +103,7 @@ gulp.task('sass:dev', function(done) {
 gulp.task('sass:prod', function(done) {
     gulp.src(path.src.sass)
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(autoprefixer({
+        .pipe(autoprefyixer({
             browsers: ['last 10 versions']
         }))
         .pipe(gulp.dest(path.build.css));
@@ -180,13 +180,18 @@ gulp.task('html:prod', function(done) {
 
 // development
 gulp.task('watch:dev', function(done) {
-
+    //browserSync(webserver.dev);
+    /**/
     var files = [ '*.html', 'css/*.css', 'js/*.js', 'styles/*.scss', 'scripts/**/*.js', 'html/**/[^_]*.html' ];
-    browserSync.init(files, { server: { baseDir: './src' } });
+    browserSync.init(files, {
+        server: {
+            baseDir: "./src",
+            directory: true
+        } });
 
-    gulp.watch('src/styles/*.scss', gulp.parallel('sass:dev'));
+    gulp.watch('src/styles/**/*.scss', gulp.parallel('sass:dev'));
     gulp.watch('src/scripts/*.js', gulp.parallel('js:dev'));
-    gulp.watch('src/html/*.html', gulp.parallel('html:dev'));
+    gulp.watch('src/html/**/*.html', gulp.parallel('html:dev'));
     gulp.watch('src/**/*.html').on('change', () => {
         browserSync.reload();
         done();
@@ -235,5 +240,5 @@ gulp.task('dev', gulp.series(
 
 gulp.task('prod', gulp.series(
     'clean:prod',
-    gulp.parallel('html:prod','sass:prod','js:prod','img')
+    gulp.parallel('html:prod','sass:prod','js:prod')
 ));
